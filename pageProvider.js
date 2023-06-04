@@ -1809,7 +1809,7 @@
       );
     }
     ((l = v = v || {})[(l.SIGN_TX = 0)] = "SIGN_TX"),
-      (l[(l.SEND_BITCOIN = 1)] = "SEND_BITCOIN"),
+      (l[(l.SEND_DOGECOIN = 1)] = "SEND_DOGECOIN"),
       (l[(l.SEND_INSCRIPTION = 2)] = "SEND_INSCRIPTION");
     t(N, s.EventEmitter), (j = i(N));
     var l = e(N),
@@ -2199,7 +2199,7 @@
           function (e, t) {
             return c.apply(this, arguments);
           })),
-        (o.sendBitcoin =
+        (o.sendDogecoin =
           ((a = p(
             P().mark(function e(t, r, n) {
               return P().wrap(function (e) {
@@ -2209,12 +2209,12 @@
                       return e.abrupt(
                         "return",
                         o._request({
-                          method: "sendBitcoin",
+                          method: "sendDogecoin",
                           params: {
                             toAddress: t,
                             satoshis: r,
                             feeRate: null == n ? void 0 : n.feeRate,
-                            type: v.SEND_BITCOIN,
+                            type: v.SEND_DOGECOIN,
                           },
                         })
                       );

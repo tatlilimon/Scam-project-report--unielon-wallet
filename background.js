@@ -73,32 +73,32 @@
               Y = nt(29388),
               I = nt(53229),
               A = nt(3406),
-              x = nt(49601),
+              O = nt(49601),
               X = nt(56878),
               J = nt.n(X),
               $ = nt(68420),
-              O = nt(67994),
+              x = nt(67994),
               P = nt(82904),
               T = nt(65307),
               M = nt(33676),
               R = nt(46756),
               Q = nt(84920),
-              B = t([A, O, P]),
+              B = t([A, x, P]),
               tt =
-                (([A, O, P] = B.then ? (await B)() : B),
+                (([A, x, P] = B.then ? (await B)() : B),
                 (r = Reflect.metadata("SAFE", !0)),
                 (n = Reflect.metadata("SAFE", !0)),
                 (i = Reflect.metadata("APPROVAL", [
                   "SwitchNetwork",
                   function (t) {
                     var e = t.data.params.network;
-                    if (x.kW[T.td.MAINNET].validNames.includes(e))
+                    if (O.kW[T.td.MAINNET].validNames.includes(e))
                       t.data.params.networkType = T.td.MAINNET;
                     else {
-                      if (!x.kW[T.td.TESTNET].validNames.includes(e))
+                      if (!O.kW[T.td.TESTNET].validNames.includes(e))
                         throw new Error(
                           "the network is invalid, supported networks: ".concat(
-                            x.kW
+                            O.kW
                               .map(function (t) {
                                 return t.name;
                               })
@@ -107,7 +107,7 @@
                         );
                       t.data.params.networkType = T.td.TESTNET;
                     }
-                    if (t.data.params.networkType === O.Z.getNetworkType())
+                    if (t.data.params.networkType === x.Z.getNetworkType())
                       return !0;
                   },
                 ])),
@@ -191,7 +191,7 @@
                                   }
                                   return t.abrupt("return", []);
                                 case 3:
-                                  return (t.next = 5), O.Z.getCurrentAccount();
+                                  return (t.next = 5), x.Z.getCurrentAccount();
                                 case 5:
                                   return (
                                     (r = t.sent),
@@ -225,8 +225,8 @@
                             switch ((t.prev = t.next)) {
                               case 0:
                                 return (
-                                  (e = O.Z.getNetworkType()),
-                                  t.abrupt("return", x.kW[e].name)
+                                  (e = x.Z.getNetworkType()),
+                                  t.abrupt("return", O.kW[e].name)
                                 );
                               case 2:
                               case "end":
@@ -252,8 +252,8 @@
                                 case 0:
                                   return (
                                     (r = e.data.params.networkType),
-                                    O.Z.setNetworkType(r),
-                                    t.abrupt("return", x.kW[r].name)
+                                    x.Z.setNetworkType(r),
+                                    t.abrupt("return", O.kW[r].name)
                                   );
                                 case 3:
                                 case "end":
@@ -281,7 +281,7 @@
                           for (;;)
                             switch ((t.prev = t.next)) {
                               case 0:
-                                return (t.next = 2), O.Z.getCurrentAccount();
+                                return (t.next = 2), x.Z.getCurrentAccount();
                               case 2:
                                 if ((e = t.sent)) {
                                   t.next = 5;
@@ -317,7 +317,7 @@
                                     (r = n.cursor),
                                     (n = n.size),
                                     (t.next = 3),
-                                    O.Z.getCurrentAccount()
+                                    x.Z.getCurrentAccount()
                                   );
                                 case 3:
                                   if ((i = t.sent)) {
@@ -328,7 +328,7 @@
                                 case 6:
                                   return (
                                     (t.next = 8),
-                                    O.Z.openapi.getAddressInscriptions(
+                                    x.Z.openapi.getAddressInscriptions(
                                       i.address,
                                       r,
                                       n
@@ -367,7 +367,7 @@
                           for (;;)
                             switch ((t.prev = t.next)) {
                               case 0:
-                                return (t.next = 2), O.Z.getCurrentAccount();
+                                return (t.next = 2), x.Z.getCurrentAccount();
                               case 2:
                                 if ((e = t.sent)) {
                                   t.next = 5;
@@ -376,7 +376,7 @@
                                 return t.abrupt("return", null);
                               case 5:
                                 return (
-                                  (t.next = 7), O.Z.getAddressBalance(e.address)
+                                  (t.next = 7), x.Z.getAddressBalance(e.address)
                                 );
                               case 7:
                                 return (
@@ -396,7 +396,7 @@
                     );
                   },
                 })),
-                (j = (0, I.Z)(m.prototype, "sendBitcoin", [u], {
+                (j = (0, I.Z)(m.prototype, "sendDogecoin", [u], {
                   configurable: !0,
                   enumerable: !0,
                   writable: !0,
@@ -417,7 +417,7 @@
                                       (i = i.feeRate),
                                       (t.prev = 1),
                                       (t.next = 4),
-                                      O.Z.getCurrentAccount()
+                                      x.Z.getCurrentAccount()
                                     );
                                   case 4:
                                     if ((o = t.sent)) {
@@ -428,7 +428,7 @@
                                   case 7:
                                     return (
                                       (t.next = 9),
-                                      O.Z.getAddressUtxo(o.address, n)
+                                      x.Z.getAddressUtxo(o.address, n)
                                     );
                                   case 9:
                                     return (
@@ -453,7 +453,7 @@
                                         type: o.type,
                                       }),
                                       (t.next = 14),
-                                      O.Z.getPrivateKeys(a)
+                                      x.Z.getPrivateKeys(a)
                                     );
                                   case 14:
                                     return (
@@ -477,7 +477,7 @@
                                       ),
                                       (h = c.toString()),
                                       (t.next = 27),
-                                      O.Z.pushTx(h)
+                                      x.Z.pushTx(h)
                                     );
                                   case 27:
                                     return t.abrupt("return", t.sent);
@@ -522,7 +522,7 @@
                                     (r = r.extractTransaction()),
                                     (r = r.toHex()),
                                     (t.next = 6),
-                                    O.Z.pushTx(r)
+                                    x.Z.pushTx(r)
                                   );
                                 case 6:
                                   return t.abrupt("return", t.sent);
@@ -560,12 +560,12 @@
                                   )
                                     return t.abrupt(
                                       "return",
-                                      O.Z.signBIP322Simple(n)
+                                      x.Z.signBIP322Simple(n)
                                     );
                                   t.next = 5;
                                   break;
                                 case 5:
-                                  return t.abrupt("return", O.Z.signMessage(n));
+                                  return t.abrupt("return", x.Z.signMessage(n));
                                 case 6:
                                 case "end":
                                   return t.stop();
@@ -596,7 +596,7 @@
                                   return (
                                     (r = e.data.params.rawtx),
                                     (t.next = 3),
-                                    O.Z.pushTx(r)
+                                    x.Z.pushTx(r)
                                   );
                                 case 3:
                                   return t.abrupt("return", t.sent);
@@ -632,7 +632,7 @@
                                     (r = n.psbtHex),
                                     (n = n.options),
                                     (t.next = 3),
-                                    O.Z.getCurrentAccount()
+                                    x.Z.getCurrentAccount()
                                   );
                                 case 3:
                                   if (t.sent) {
@@ -642,11 +642,11 @@
                                   throw null;
                                 case 6:
                                   return (
-                                    (i = O.Z.getNetworkType()),
+                                    (i = x.Z.getNetworkType()),
                                     (i = (0, P.Jh)(i)),
                                     (i = M.Psbt.fromHex(r, { network: i })),
                                     (t.next = 11),
-                                    O.Z.signPsbt(i, n)
+                                    x.Z.signPsbt(i, n)
                                   );
                                 case 11:
                                   return t.abrupt("return", i.toHex());
@@ -682,7 +682,7 @@
                                     (r = n.psbtHexs),
                                     (n = n.options),
                                     (t.next = 3),
-                                    O.Z.getCurrentAccount()
+                                    x.Z.getCurrentAccount()
                                   );
                                 case 3:
                                   if (t.sent) {
@@ -691,7 +691,7 @@
                                   }
                                   throw null;
                                 case 6:
-                                  (i = O.Z.getNetworkType()),
+                                  (i = x.Z.getNetworkType()),
                                     (i = (0, P.Jh)(i)),
                                     (o = []),
                                     (s = n || []),
@@ -703,7 +703,7 @@
                                         network: i,
                                       })),
                                       (t.next = 15),
-                                      O.Z.signPsbt(u, s[a])
+                                      x.Z.signPsbt(u, s[a])
                                     );
                                   t.next = 19;
                                   break;
@@ -747,7 +747,7 @@
                                     (r = r.extractTransaction()),
                                     (r = r.toHex()),
                                     (t.next = 6),
-                                    O.Z.pushTx(r)
+                                    x.Z.pushTx(r)
                                   );
                                 case 6:
                                   return t.abrupt("return", t.sent);
@@ -826,14 +826,14 @@
                             }
                             throw Q.Sy.provider.unauthorized();
                           case 3:
-                            return (t.next = 5), O.Z.getCurrentAccount();
+                            return (t.next = 5), x.Z.getCurrentAccount();
                           case 5:
                             return (
                               (n = t.sent),
                               (n = n ? [n.address] : []),
                               A.Fc.broadcastEvent("accountsChanged", n),
                               A.Pv.getConnectedSite(r) &&
-                                ((i = O.Z.getNetworkName()),
+                                ((i = x.Z.getNetworkName()),
                                 A.Fc.broadcastEvent(
                                   "networkChanged",
                                   { network: i },
@@ -857,7 +857,7 @@
               (0, _.Z)(t, "getPublicKey", w, (0, E.Z)(t)),
               (0, _.Z)(t, "getInscriptions", L, (0, E.Z)(t)),
               (0, _.Z)(t, "getBalance", U, (0, E.Z)(t)),
-              (0, _.Z)(t, "sendBitcoin", j, (0, E.Z)(t)),
+              (0, _.Z)(t, "sendDogecoin", j, (0, E.Z)(t)),
               (0, _.Z)(t, "sendInscription", H, (0, E.Z)(t)),
               (0, _.Z)(t, "signMessage", D, (0, E.Z)(t)),
               (0, _.Z)(t, "pushTx", F, (0, E.Z)(t)),
@@ -1126,7 +1126,7 @@
                                 )
                               );
                             case 6:
-                              m.Pv.addConnectedSite(n, i, o, y.h.BTC);
+                              m.Pv.addConnectedSite(n, i, o, y.h.DOGE);
                             case 7:
                               return t.abrupt("return", r());
                             case 8:
@@ -1349,36 +1349,35 @@
         "use strict";
         l.a(t, async function (t, e) {
           try {
-            var j = l(74165),
-              H = l(15861),
+            var L = l(74165),
+              U = l(15861),
               r = l(43144),
-              D = l(15671),
-              F = l(97326),
+              j = l(15671),
+              H = l(97326),
               n = l(60136),
               i = l(29388),
-              K = l(33676),
+              D = l(33676),
               o = l(85893),
               s = l(28004),
-              z = l(3406),
-              Z = l(47788),
-              q = l(49601),
-              V = l(65307),
-              W = l(97346),
-              G = l(57826),
-              Y = l(82904),
+              F = l(3406),
+              K = l(47788),
+              z = l(49601),
+              Z = l(65307),
+              q = l(57826),
+              V = l(82904),
               a = l(68420),
-              X = l(5647).Buffer,
-              u = t([s, z, W, Y]),
-              J = (([s, z, W, Y] = u.then ? (await u)() : u), {}),
-              $ = (0, o.ZP)(s),
-              c = ((f = a.Z), (0, n.Z)(Q, f), (tt = (0, i.Z)(Q)), (0, r.Z)(Q));
+              W = l(5647).Buffer,
+              u = t([s, F, V]),
+              G = (([s, F, V] = u.then ? (await u)() : u), {}),
+              Y = (0, o.ZP)(s),
+              c = ((f = a.Z), (0, n.Z)(X, f), (J = (0, i.Z)(X)), (0, r.Z)(X));
             (h.Z = new c()), e();
           } catch (t) {
             e(t);
           }
-          function Q() {
+          function X() {
             var d;
-            (0, D.Z)(this, Q);
+            (0, j.Z)(this, X);
             for (
               var i,
                 r,
@@ -1405,61 +1404,59 @@
                 E,
                 I,
                 A,
-                x,
                 O,
+                x,
                 P,
                 T,
                 M,
                 R,
                 B,
-                N,
-                C,
-                L = arguments.length,
-                U = new Array(L),
-                t = 0;
-              t < L;
-              t++
+                t = arguments.length,
+                C = new Array(t),
+                N = 0;
+              N < t;
+              N++
             )
-              U[t] = arguments[t];
+              C[N] = arguments[N];
             return (
-              ((d = tt.call.apply(tt, [this].concat(U))).openapi = z.hs),
+              ((d = J.call.apply(J, [this].concat(C))).openapi = F.hs),
               (d.boot = function (t) {
-                return z.fh.boot(t);
+                return F.fh.boot(t);
               }),
               (d.isBooted = function () {
-                return z.fh.isBooted();
+                return F.fh.isBooted();
               }),
-              (d.getApproval = z.BF.getApproval),
-              (d.resolveApproval = z.BF.resolveApproval),
-              (d.rejectApproval = z.BF.rejectApproval),
+              (d.getApproval = F.BF.getApproval),
+              (d.resolveApproval = F.BF.resolveApproval),
+              (d.rejectApproval = F.BF.rejectApproval),
               (d.hasVault = function () {
-                return z.fh.hasVault();
+                return F.fh.hasVault();
               }),
               (d.verifyPassword = function (t) {
-                return z.fh.verifyPassword(t);
+                return F.fh.verifyPassword(t);
               }),
               (d.changePassword = function (t, e) {
-                return z.fh.changePassword(t, e);
+                return F.fh.changePassword(t, e);
               }),
-              (d.initAlianNames = (0, H.Z)(
-                (0, j.Z)().mark(function t() {
+              (d.initAlianNames = (0, U.Z)(
+                (0, L.Z)().mark(function t() {
                   var e, r, n;
-                  return (0, j.Z)().wrap(function (t) {
+                  return (0, L.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
                           return (
-                            z.$8.changeInitAlianNameStatus(),
+                            F.$8.changeInitAlianNameStatus(),
                             (e = d.listContact()),
                             (t.next = 4),
-                            z.fh.getAllDisplayedKeyrings()
+                            F.fh.getAllDisplayedKeyrings()
                           );
                         case 4:
                           (n = t.sent).forEach(function (r) {
                             r.accounts.forEach(function (t, e) {
                               d.updateAlianName(
                                 t.pubkey,
-                                "".concat(q.zp[r.type], " ").concat(e + 1)
+                                "".concat(z.zp[r.type], " ").concat(e + 1)
                               );
                             });
                           }),
@@ -1487,24 +1484,24 @@
                 })
               )),
               (d.isReady = function () {
-                return !!z.b3.store;
+                return !!F.b3.store;
               }),
               (d.unlock =
-                ((C = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((B = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r, n;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              (r = z.$8.getInitAlianNameStatus()),
-                              (n = z.b3.listAlias()),
+                              (r = F.$8.getInitAlianNameStatus()),
+                              (n = F.b3.listAlias()),
                               (t.next = 4),
-                              z.fh.submitPassword(e)
+                              F.fh.submitPassword(e)
                             );
                           case 4:
-                            z.Fc.broadcastEvent("unlock"),
+                            F.Fc.broadcastEvent("unlock"),
                               r || 0 !== n.length || d.initAlianNames();
                           case 6:
                           case "end":
@@ -1514,21 +1511,21 @@
                   })
                 )),
                 function (t) {
-                  return C.apply(this, arguments);
+                  return B.apply(this, arguments);
                 })),
               (d.isUnlocked = function () {
-                return z.fh.memStore.getState().isUnlocked;
+                return F.fh.memStore.getState().isUnlocked;
               }),
-              (d.lockWallet = (0, H.Z)(
-                (0, j.Z)().mark(function t() {
-                  return (0, j.Z)().wrap(function (t) {
+              (d.lockWallet = (0, U.Z)(
+                (0, L.Z)().mark(function t() {
+                  return (0, L.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
-                          return (t.next = 2), z.fh.setLocked();
+                          return (t.next = 2), F.fh.setLocked();
                         case 2:
-                          z.Fc.broadcastEvent("accountsChanged", []),
-                            z.Fc.broadcastEvent("lock");
+                          F.Fc.broadcastEvent("accountsChanged", []),
+                            F.Fc.broadcastEvent("lock");
                         case 4:
                         case "end":
                           return t.stop();
@@ -1537,79 +1534,21 @@
                 })
               )),
               (d.setPopupOpen = function (t) {
-                z.$8.setPopupOpen(t);
+                F.$8.setPopupOpen(t);
               }),
               (d.getAddressBalance =
-                ((N = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((R = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            return (t.next = 2), z.hs.getAddressBalance(e);
+                            return (t.next = 2), F.hs.getAddressBalance(e);
                           case 2:
                             return (
                               (r = t.sent),
-                              z.$8.updateAddressBalance(e, r),
-                              t.abrupt("return", r)
-                            );
-                          case 5:
-                          case "end":
-                            return t.stop();
-                        }
-                    }, t);
-                  })
-                )),
-                function (t) {
-                  return N.apply(this, arguments);
-                })),
-              (d.getMultiAddressAssets =
-                ((B = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
-                    return (0, j.Z)().wrap(function (t) {
-                      for (;;)
-                        switch ((t.prev = t.next)) {
-                          case 0:
-                            return t.abrupt(
-                              "return",
-                              z.hs.getMultiAddressAssets(e)
-                            );
-                          case 1:
-                          case "end":
-                            return t.stop();
-                        }
-                    }, t);
-                  })
-                )),
-                function (t) {
-                  return B.apply(this, arguments);
-                })),
-              (d.getAddressCacheBalance = function (t) {
-                return (
-                  (t && z.$8.getAddressBalance(t)) || {
-                    confirm_amount: 0,
-                    pending_amount: "0",
-                    amount: 0,
-                    usd_value: "0",
-                  }
-                );
-              }),
-              (d.getAddressHistory =
-                ((R = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
-                    var r;
-                    return (0, j.Z)().wrap(function (t) {
-                      for (;;)
-                        switch ((t.prev = t.next)) {
-                          case 0:
-                            return (
-                              (t.next = 2), z.hs.getAddressRecentHistory(e)
-                            );
-                          case 2:
-                            return (
-                              (r = t.sent),
-                              z.$8.updateAddressHistory(e, r),
+                              F.$8.updateAddressBalance(e, r),
                               t.abrupt("return", r)
                             );
                           case 5:
@@ -1622,16 +1561,75 @@
                 function (t) {
                   return R.apply(this, arguments);
                 })),
-              (d.getAddressInscriptions =
-                ((M = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r, n) {
-                    var i;
-                    return (0, j.Z)().wrap(function (t) {
+              (d.getMultiAddressAssets =
+                ((M = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
+                    return (0, L.Z)().wrap(function (t) {
+                      for (;;)
+                        switch ((t.prev = t.next)) {
+                          case 0:
+                            return t.abrupt(
+                              "return",
+                              F.hs.getMultiAddressAssets(e)
+                            );
+                          case 1:
+                          case "end":
+                            return t.stop();
+                        }
+                    }, t);
+                  })
+                )),
+                function (t) {
+                  return M.apply(this, arguments);
+                })),
+              (d.getAddressCacheBalance = function (t) {
+                return (
+                  (t && F.$8.getAddressBalance(t)) || {
+                    confirm_amount: 0,
+                    pending_amount: "0",
+                    amount: 0,
+                    usd_value: "0",
+                    value_sent: "",
+                  }
+                );
+              }),
+              (d.getAddressHistory =
+                ((T = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
+                    var r;
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              (t.next = 2), z.hs.getAddressInscriptions(e, r, n)
+                              (t.next = 2), F.hs.getAddressRecentHistory(e)
+                            );
+                          case 2:
+                            return (
+                              (r = t.sent),
+                              F.$8.updateAddressHistory(e, r),
+                              t.abrupt("return", r)
+                            );
+                          case 5:
+                          case "end":
+                            return t.stop();
+                        }
+                    }, t);
+                  })
+                )),
+                function (t) {
+                  return T.apply(this, arguments);
+                })),
+              (d.getAddressInscriptions =
+                ((P = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r, n) {
+                    var i;
+                    return (0, L.Z)().wrap(function (t) {
+                      for (;;)
+                        switch ((t.prev = t.next)) {
+                          case 0:
+                            return (
+                              (t.next = 2), F.hs.getAddressInscriptions(e, r, n)
                             );
                           case 2:
                             return (i = t.sent), t.abrupt("return", i);
@@ -1643,37 +1641,37 @@
                   })
                 )),
                 function (t, e, r) {
-                  return M.apply(this, arguments);
+                  return P.apply(this, arguments);
                 })),
               (d.getAddressCacheHistory = function (t) {
-                return t ? z.$8.getAddressHistory(t) : [];
+                return t ? F.$8.getAddressHistory(t) : [];
               }),
               (d.getExternalLinkAck = function () {
-                z.$8.getExternalLinkAck();
+                F.$8.getExternalLinkAck();
               }),
               (d.setExternalLinkAck = function (t) {
-                z.$8.setExternalLinkAck(t);
+                F.$8.setExternalLinkAck(t);
               }),
               (d.getLocale = function () {
-                return z.$8.getLocale();
+                return F.$8.getLocale();
               }),
               (d.setLocale = function (t) {
-                z.$8.setLocale(t);
+                F.$8.setLocale(t);
               }),
               (d.getCurrency = function () {
-                return z.$8.getCurrency();
+                return F.$8.getCurrency();
               }),
               (d.setCurrency = function (t) {
-                z.$8.setCurrency(t);
+                F.$8.setCurrency(t);
               }),
               (d.clearKeyrings = function () {
-                return z.fh.clearKeyrings();
+                return F.fh.clearKeyrings();
               }),
               (d.getPrivateKey =
-                ((T = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r) {
+                ((x = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r) {
                     var n, i, o, s, a;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
@@ -1685,7 +1683,7 @@
                             );
                           case 3:
                             return (
-                              (t.next = 5), z.fh.getKeyringForAccount(n, i)
+                              (t.next = 5), F.fh.getKeyringForAccount(n, i)
                             );
                           case 5:
                             if ((o = t.sent)) {
@@ -1699,10 +1697,10 @@
                             return (
                               (s = t.sent),
                               (a = d.getNetworkType()),
-                              (a = (0, Y.Jh)(a)),
+                              (a = (0, V.Jh)(a)),
                               t.abrupt(
                                 "return",
-                                $.fromPrivateKey(X.from(s, "hex"), {
+                                Y.fromPrivateKey(W.from(s, "hex"), {
                                   network: a,
                                 }).toWIF()
                               )
@@ -1715,13 +1713,13 @@
                   })
                 )),
                 function (t, e) {
-                  return T.apply(this, arguments);
+                  return x.apply(this, arguments);
                 })),
               (d.getPrivateKeys =
-                ((P = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((O = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r, n, i, o;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
@@ -1729,7 +1727,7 @@
                               (r = e.pubkey),
                               (i = e.type),
                               (t.next = 3),
-                              z.fh.getKeyringForAccount(r, i)
+                              F.fh.getKeyringForAccount(r, i)
                             );
                           case 3:
                             if ((n = t.sent)) {
@@ -1743,10 +1741,10 @@
                             return (
                               (i = t.sent),
                               (o = d.getNetworkType()),
-                              (o = (0, Y.Jh)(o)),
+                              (o = (0, V.Jh)(o)),
                               t.abrupt(
                                 "return",
-                                $.fromPrivateKey(X.from(i, "hex"), {
+                                Y.fromPrivateKey(W.from(i, "hex"), {
                                   network: o,
                                 }).toWIF()
                               )
@@ -1759,13 +1757,53 @@
                   })
                 )),
                 function (t) {
-                  return P.apply(this, arguments);
+                  return O.apply(this, arguments);
+                })),
+              (d.getMnemonics_ =
+                ((A = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r) {
+                    var n;
+                    return (0, L.Z)().wrap(function (t) {
+                      for (;;)
+                        switch ((t.prev = t.next)) {
+                          case 0:
+                            return (t.next = 2), d.verifyPassword(e);
+                          case 2:
+                            if (r) {
+                              t.next = 4;
+                              break;
+                            }
+                            throw new Error("no current keyring");
+                          case 4:
+                            return (
+                              (n = F.fh.keyrings[r.index]),
+                              (t.next = 7),
+                              n.serialize()
+                            );
+                          case 7:
+                            return (
+                              (n = t.sent),
+                              t.abrupt("return", {
+                                mnemonic: n.mnemonic,
+                                hdPath: n.hdPath,
+                                passphrase: n.passphrase,
+                              })
+                            );
+                          case 9:
+                          case "end":
+                            return t.stop();
+                        }
+                    }, t);
+                  })
+                )),
+                function (t, e) {
+                  return A.apply(this, arguments);
                 })),
               (d.getMnemonics =
-                ((O = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((I = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r, n;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
@@ -1780,7 +1818,7 @@
                             throw new Error("no current keyring");
                           case 7:
                             return (
-                              (n = z.fh.keyrings[r.index]),
+                              (n = F.fh.keyrings[r.index]),
                               (t.next = 10),
                               n.serialize()
                             );
@@ -1801,22 +1839,22 @@
                   })
                 )),
                 function (t) {
-                  return O.apply(this, arguments);
+                  return I.apply(this, arguments);
                 })),
               (d.createKeyringWithPrivateKey =
-                ((x = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r, n) {
+                ((E = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r, n) {
                     var i, o, s;
-                    return (0, j.Z)().wrap(
+                    return (0, L.Z)().wrap(
                       function (t) {
                         for (;;)
                           switch ((t.prev = t.next)) {
                             case 0:
                               return (
-                                new Error(Z.ZP.t("The private key is invalid")),
+                                new Error(K.ZP.t("The private key is invalid")),
                                 (t.prev = 1),
                                 (t.next = 4),
-                                z.fh.importPrivateKey(e, r)
+                                F.fh.importPrivateKey(e, r)
                               );
                             case 4:
                               (i = t.sent), (t.next = 11);
@@ -1835,17 +1873,17 @@
                                 (o = t.sent),
                                 n && d.updateAlianName(o[0], n),
                                 (t.next = 17),
-                                z.fh.displayForKeyring(
+                                F.fh.displayForKeyring(
                                   i,
                                   r,
-                                  z.fh.keyrings.length - 1
+                                  F.fh.keyrings.length - 1
                                 )
                               );
                             case 17:
                               (o = t.sent),
                                 (s = d.displayedKeyringToWalletKeyring(
                                   o,
-                                  z.fh.keyrings.length - 1
+                                  F.fh.keyrings.length - 1
                                 )),
                                 d.changeKeyring(s);
                             case 20:
@@ -1860,45 +1898,45 @@
                   })
                 )),
                 function (t, e, r) {
-                  return x.apply(this, arguments);
+                  return E.apply(this, arguments);
                 })),
               (d.getPreMnemonics = function () {
-                return z.fh.getPreMnemonics();
+                return F.fh.getPreMnemonics();
               }),
               (d.generatePreMnemonic = function () {
-                return z.fh.generatePreMnemonic();
+                return F.fh.generatePreMnemonic();
               }),
               (d.removePreMnemonics = function () {
-                return z.fh.removePreMnemonics();
+                return F.fh.removePreMnemonics();
               }),
               (d.createKeyringWithMnemonics =
-                ((A = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r, n, i) {
+                ((k = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r, n, i) {
                     var o, s;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
                               (t.next = 2),
-                              z.fh.createKeyringWithMnemonics(e, r, n, i)
+                              F.fh.createKeyringWithMnemonics(e, r, n, i)
                             );
                           case 2:
                             return (
                               (o = t.sent),
-                              z.fh.removePreMnemonics(),
+                              F.fh.removePreMnemonics(),
                               (t.next = 6),
-                              z.fh.displayForKeyring(
+                              F.fh.displayForKeyring(
                                 o,
                                 i,
-                                z.fh.keyrings.length - 1
+                                F.fh.keyrings.length - 1
                               )
                             );
                           case 6:
                             (o = t.sent),
                               (s = d.displayedKeyringToWalletKeyring(
                                 o,
-                                z.fh.keyrings.length - 1
+                                F.fh.keyrings.length - 1
                               )),
                               d.changeKeyring(s);
                           case 9:
@@ -1909,25 +1947,25 @@
                   })
                 )),
                 function (t, e, r, n) {
-                  return A.apply(this, arguments);
+                  return k.apply(this, arguments);
                 })),
               (d.createTmpKeyringWithMnemonics =
-                ((I = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r, n, i) {
+                ((S = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r, n, i) {
                     var o;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              (o = z.fh.createTmpKeyring("HD Key Tree", {
+                              (o = F.fh.createTmpKeyring("HD Key Tree", {
                                 mnemonic: e,
                                 activeIndexes: [0],
                                 hdPath: r,
                                 passphrase: n,
                               })),
                               (t.next = 3),
-                              z.fh.displayForKeyring(o, i, -1)
+                              F.fh.displayForKeyring(o, i, -1)
                             );
                           case 3:
                             return (
@@ -1945,22 +1983,22 @@
                   })
                 )),
                 function (t, e, r, n) {
-                  return I.apply(this, arguments);
+                  return S.apply(this, arguments);
                 })),
               (d.createTmpKeyringWithPrivateKey =
-                ((E = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r) {
+                ((_ = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r) {
                     var n;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              (n = z.fh.createTmpKeyring(q.pY.SimpleKeyring, [
+                              (n = F.fh.createTmpKeyring(z.pY.SimpleKeyring, [
                                 e,
                               ])),
                               (t.next = 3),
-                              z.fh.displayForKeyring(n, r, -1)
+                              F.fh.displayForKeyring(n, r, -1)
                             );
                           case 3:
                             return (
@@ -1978,17 +2016,17 @@
                   })
                 )),
                 function (t, e) {
-                  return E.apply(this, arguments);
+                  return _.apply(this, arguments);
                 })),
               (d.removeKeyring =
-                ((k = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((w = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            return (t.next = 2), z.fh.removeKeyring(e.index);
+                            return (t.next = 2), F.fh.removeKeyring(e.index);
                           case 2:
                             return (t.next = 4), d.getKeyrings();
                           case 4:
@@ -2005,23 +2043,23 @@
                   })
                 )),
                 function (t) {
-                  return k.apply(this, arguments);
+                  return w.apply(this, arguments);
                 })),
               (d.getKeyringByType = function (t) {
-                return z.fh.getKeyringByType(t);
+                return F.fh.getKeyringByType(t);
               }),
               (d.deriveNewAccountFromMnemonic =
-                ((S = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r) {
+                ((v = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r) {
                     var n, i;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              (n = z.fh.keyrings[e.index]),
+                              (n = F.fh.keyrings[e.index]),
                               (t.next = 3),
-                              z.fh.addNewAccount(n)
+                              F.fh.addNewAccount(n)
                             );
                           case 3:
                             return (
@@ -2049,16 +2087,16 @@
                   })
                 )),
                 function (t, e) {
-                  return S.apply(this, arguments);
+                  return v.apply(this, arguments);
                 })),
-              (d.getAccountsCount = (0, H.Z)(
-                (0, j.Z)().mark(function t() {
+              (d.getAccountsCount = (0, U.Z)(
+                (0, L.Z)().mark(function t() {
                   var e;
-                  return (0, j.Z)().wrap(function (t) {
+                  return (0, L.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
-                          return (t.next = 2), z.fh.getAccounts();
+                          return (t.next = 2), F.fh.getAccounts();
                         case 2:
                           return (
                             (e = t.sent),
@@ -2077,25 +2115,25 @@
                 })
               )),
               (d.changeAccount = function (t) {
-                z.$8.setCurrentAccount(t);
+                F.$8.setCurrentAccount(t);
               }),
               (d.changeKeyring = function (t) {
                 var e =
                   1 < arguments.length && void 0 !== arguments[1]
                     ? arguments[1]
                     : 0;
-                z.$8.setCurrentKeyringIndex(t.index),
-                  z.$8.setCurrentAccount(t.accounts[e]);
+                F.$8.setCurrentKeyringIndex(t.index),
+                  F.$8.setCurrentAccount(t.accounts[e]);
               }),
               (d.getAllAddresses = function (r, n) {
                 var i,
                   o = d.getNetworkType(),
                   s = [],
-                  a = z.fh.keyrings[r.index];
+                  a = F.fh.keyrings[r.index];
                 return (
-                  r.type === q.pY.HdKeyring
+                  r.type === z.pY.HdKeyring
                     ? ((i = {}),
-                      q._t
+                      z._t
                         .filter(function (t) {
                           return 0 <= t.displayIndex;
                         })
@@ -2105,26 +2143,26 @@
                               (!e &&
                                 a.getAccountByHdPath &&
                                 (e = a.getAccountByHdPath(t.hdPath, n)),
-                              (0, Y.y7)(e, t.value, o));
+                              (0, V.y7)(e, t.value, o));
                           s.push(e);
                         }))
-                    : q._t
+                    : z._t
                         .filter(function (t) {
                           return 0 <= t.displayIndex && !1 === t.isUnisatLegacy;
                         })
                         .forEach(function (t) {
                           var e = r.accounts[n].pubkey,
-                            e = (0, Y.y7)(e, t.value, o);
+                            e = (0, V.y7)(e, t.value, o);
                           s.push(e);
                         }),
                   s
                 );
               }),
               (d.changeAddressType =
-                ((_ = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((b = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r, n, i;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
@@ -2132,9 +2170,9 @@
                           case 2:
                             return (
                               (r = t.sent),
-                              (n = z.$8.getCurrentKeyringIndex()),
+                              (n = F.$8.getCurrentKeyringIndex()),
                               (t.next = 6),
-                              z.fh.changeAddressType(n, e)
+                              F.fh.changeAddressType(n, e)
                             );
                           case 6:
                             return (t.next = 8), d.getCurrentKeyring();
@@ -2154,23 +2192,23 @@
                   })
                 )),
                 function (t) {
-                  return _.apply(this, arguments);
+                  return b.apply(this, arguments);
                 })),
               (d.signTransaction =
-                ((w = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r, n, i) {
+                ((y = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r, n, i) {
                     var o;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              (t.next = 2), z.fh.getKeyringForAccount(r, e)
+                              (t.next = 2), F.fh.getKeyringForAccount(r, e)
                             );
                           case 2:
                             return (
                               (o = t.sent),
-                              t.abrupt("return", z.fh.signTransaction(o, n, i))
+                              t.abrupt("return", F.fh.signTransaction(o, n, i))
                             );
                           case 4:
                           case "end":
@@ -2180,13 +2218,13 @@
                   })
                 )),
                 function (t, e, r, n) {
-                  return w.apply(this, arguments);
+                  return y.apply(this, arguments);
                 })),
               (d.signPsbt =
-                ((v = (0, H.Z)(
-                  (0, j.Z)().mark(function t(i, e) {
+                ((m = (0, U.Z)(
+                  (0, L.Z)().mark(function t(i, e) {
                     var o, r, n, s, a, u;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
@@ -2207,9 +2245,9 @@
                             throw new Error("no current keyring");
                           case 10:
                             return (
-                              (n = z.fh.keyrings[r.index]),
+                              (n = F.fh.keyrings[r.index]),
                               (s = d.getNetworkType()),
-                              (a = (0, Y.Jh)(s)),
+                              (a = (0, V.Jh)(s)),
                               (u = []),
                               i.data.inputs.forEach(function (t, e) {
                                 var r = null,
@@ -2218,14 +2256,14 @@
                                       ? ((r = t.witnessUtxo.script),
                                         t.witnessUtxo.value)
                                       : t.nonWitnessUtxo &&
-                                        ((r = (n = K.Transaction.fromBuffer(
+                                        ((r = (n = D.Transaction.fromBuffer(
                                           t.nonWitnessUtxo
                                         ).outs[i.txInputs[e].index]).script),
                                         n.value),
                                     t.finalScriptSig || t.finalScriptWitness);
                                 r &&
                                   !n &&
-                                  ((n = K.address.fromOutputScript(r, a)),
+                                  ((n = D.address.fromOutputScript(r, a)),
                                   o.address === n) &&
                                   u.push({
                                     index: e,
@@ -2236,7 +2274,7 @@
                                   });
                               }),
                               (t.next = 17),
-                              z.fh.signTransaction(n, i, u)
+                              F.fh.signTransaction(n, i, u)
                             );
                           case 17:
                             return (
@@ -2255,17 +2293,17 @@
                   })
                 )),
                 function (t, e) {
-                  return v.apply(this, arguments);
+                  return m.apply(this, arguments);
                 })),
               (d.signMessage =
-                ((b = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((g = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            if ((r = z.$8.getCurrentAccount())) {
+                            if ((r = F.$8.getCurrentAccount())) {
                               t.next = 3;
                               break;
                             }
@@ -2273,7 +2311,7 @@
                           case 3:
                             return t.abrupt(
                               "return",
-                              z.fh.signMessage(r.pubkey, e)
+                              F.fh.signMessage(r.pubkey, e)
                             );
                           case 4:
                           case "end":
@@ -2283,17 +2321,17 @@
                   })
                 )),
                 function (t) {
-                  return b.apply(this, arguments);
+                  return g.apply(this, arguments);
                 })),
               (d.signBIP322Simple =
-                ((y = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((p = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r, n;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            if ((r = z.$8.getCurrentAccount())) {
+                            if ((r = F.$8.getCurrentAccount())) {
                               t.next = 3;
                               break;
                             }
@@ -2301,14 +2339,14 @@
                           case 3:
                             return (
                               (n = d.getNetworkType()),
-                              (n = (0, Y.Jh)(n)),
+                              (n = (0, V.Jh)(n)),
                               t.abrupt(
                                 "return",
-                                (0, G.t)({
+                                (0, q.t)({
                                   message: e,
                                   address: r.address,
                                   network: n,
-                                  wallet: (0, F.Z)(d),
+                                  wallet: (0, H.Z)(d),
                                 })
                               )
                             );
@@ -2320,16 +2358,16 @@
                   })
                 )),
                 function (t) {
-                  return y.apply(this, arguments);
+                  return p.apply(this, arguments);
                 })),
               (d.requestKeyring = function (e, t, r) {
                 var n;
-                if (null != r) n = J[r];
+                if (null != r) n = G[r];
                 else
                   try {
                     n = d._getKeyringByType(e);
                   } catch (t) {
-                    n = new (z.fh.getKeyringClassForType(e))();
+                    n = new (F.fh.getKeyringClassForType(e))();
                   }
                 if (n[t]) {
                   for (
@@ -2344,15 +2382,15 @@
                 }
               }),
               (d.getTransactionHistory =
-                ((m = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((l = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              (t.next = 2), z.hs.getAddressRecentHistory(e)
+                              (t.next = 2), F.hs.getAddressRecentHistory(e)
                             );
                           case 2:
                             return (r = t.sent), t.abrupt("return", r);
@@ -2364,27 +2402,27 @@
                   })
                 )),
                 function (t) {
-                  return m.apply(this, arguments);
+                  return l.apply(this, arguments);
                 })),
               (d._getKeyringByType = function (t) {
-                var e = z.fh.getKeyringsByType(t)[0];
+                var e = F.fh.getKeyringsByType(t)[0];
                 if (e) return e;
                 throw new Error("No ".concat(t, " keyring found"));
               }),
               (d.addContact = function (t) {
-                z.b3.addContact(t);
+                F.b3.addContact(t);
               }),
               (d.updateContact = function (t) {
-                z.b3.updateContact(t);
+                F.b3.updateContact(t);
               }),
               (d.removeContact = function (t) {
-                z.b3.removeContact(t);
+                F.b3.removeContact(t);
               }),
               (d.listContact = function () {
                 var t =
                     !(0 < arguments.length && void 0 !== arguments[0]) ||
                     arguments[0],
-                  e = z.b3.listContacts();
+                  e = F.b3.listContacts();
                 return t
                   ? e
                   : e.filter(function (t) {
@@ -2392,62 +2430,62 @@
                     });
               }),
               (d.getContactsByMap = function () {
-                return z.b3.getContactsByMap();
+                return F.b3.getContactsByMap();
               }),
               (d.getContactByAddress = function (t) {
-                return z.b3.getContactByAddress(t);
+                return F.b3.getContactByAddress(t);
               }),
               (d._generateAlianName = function (t, e) {
-                return "".concat(q.zp[t], " ").concat(e);
+                return "".concat(z.zp[t], " ").concat(e);
               }),
               (d.getNextAlianName = function (t) {
                 return d._generateAlianName(t.type, t.accounts.length + 1);
               }),
               (d.getHighlightWalletList = function () {
-                return z.$8.getWalletSavedList();
+                return F.$8.getWalletSavedList();
               }),
               (d.updateHighlightWalletList = function (t) {
-                return z.$8.updateWalletSavedList(t);
+                return F.$8.updateWalletSavedList(t);
               }),
               (d.getAlianName = function (t) {
-                return null == (t = z.b3.getContactByAddress(t))
+                return null == (t = F.b3.getContactByAddress(t))
                   ? void 0
                   : t.name;
               }),
               (d.updateAlianName = function (t, e) {
-                z.b3.updateAlias({ name: e, address: t });
+                F.b3.updateAlias({ name: e, address: t });
               }),
               (d.getAllAlianName = function () {
-                return z.b3.listAlias();
+                return F.b3.listAlias();
               }),
               (d.getInitAlianNameStatus = function () {
-                return z.$8.getInitAlianNameStatus();
+                return F.$8.getInitAlianNameStatus();
               }),
               (d.updateInitAlianNameStatus = function () {
-                z.$8.changeInitAlianNameStatus();
+                F.$8.changeInitAlianNameStatus();
               }),
               (d.getIsFirstOpen = function () {
-                return z.$8.getIsFirstOpen();
+                return F.$8.getIsFirstOpen();
               }),
               (d.updateIsFirstOpen = function () {
-                return z.$8.updateIsFirstOpen();
+                return F.$8.updateIsFirstOpen();
               }),
               (d.listChainAssets =
-                ((g = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((h = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            return (t.next = 2), z.hs.getAddressBalance(e);
+                            return (t.next = 2), F.hs.getAddressBalance(e);
                           case 2:
                             return (
                               (r = t.sent),
                               (r = [
                                 {
-                                  name: q.lM,
-                                  symbol: q.T$,
+                                  name: z.lM,
+                                  symbol: z.T$,
                                   amount: r.amount,
                                   value: r.usd_value,
                                 },
@@ -2462,29 +2500,29 @@
                   })
                 )),
                 function (t) {
-                  return g.apply(this, arguments);
+                  return h.apply(this, arguments);
                 })),
               (d.reportErrors = function (t) {
                 console.error("report not implemented");
               }),
               (d.getNetworkType = function () {
-                return z.$8.getNetworkType();
+                return F.$8.getNetworkType();
               }),
               (d.setNetworkType =
-                ((p = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((f = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r, n, i;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             return (
-                              z.$8.setNetworkType(e),
-                              e === V.td.MAINNET
-                                ? d.openapi.setHost(q.a)
-                                : d.openapi.setHost(q.ZG),
+                              F.$8.setNetworkType(e),
+                              e === Z.td.MAINNET
+                                ? d.openapi.setHost(z.a)
+                                : d.openapi.setHost(z.ZG),
                               (r = d.getNetworkName()),
-                              z.Fc.broadcastEvent("networkChanged", {
+                              F.Fc.broadcastEvent("networkChanged", {
                                 network: r,
                               }),
                               (t.next = 6),
@@ -2510,261 +2548,17 @@
                   })
                 )),
                 function (t) {
-                  return p.apply(this, arguments);
-                })),
-              (d.getNetworkName = function () {
-                var t = z.$8.getNetworkType();
-                return q.kW[t].name;
-              }),
-              (d.sendBTC =
-                ((l = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
-                    var r, n, i, o, s, a, u;
-                    return (0, j.Z)().wrap(function (t) {
-                      for (;;)
-                        switch ((t.prev = t.next)) {
-                          case 0:
-                            if (
-                              ((r = e.to),
-                              (n = e.amount),
-                              (i = e.utxos),
-                              (o = e.receiverToPayFee),
-                              (s = e.feeRate),
-                              (a = z.$8.getCurrentAccount()))
-                            ) {
-                              t.next = 4;
-                              break;
-                            }
-                            throw new Error("no current account");
-                          case 4:
-                            return (
-                              (u = d.getNetworkType()),
-                              (u = (0, Y.Jh)(u)),
-                              (t.next = 8),
-                              (0, W.IN)({
-                                utxos: i.map(function (t) {
-                                  return {
-                                    txId: t.txId,
-                                    outputIndex: t.outputIndex,
-                                    satoshis: t.satoshis,
-                                    scriptPk: t.scriptPk,
-                                    addressType: t.addressType,
-                                    address: a.address,
-                                    ords: t.inscriptions,
-                                    tx_hex: t.tx_hex,
-                                  };
-                                }),
-                                toAddress: r,
-                                toAmount: n,
-                                wallet: (0, F.Z)(d),
-                                network: u,
-                                changeAddress: a.address,
-                                receiverToPayFee: o,
-                                pubkey: a.pubkey,
-                                feeRate: s,
-                              })
-                            );
-                          case 8:
-                            return (
-                              ((u = t.sent).__CACHE.__UNSAFE_SIGN_NONSEGWIT =
-                                !1),
-                              t.abrupt("return", u.toHex())
-                            );
-                          case 11:
-                          case "end":
-                            return t.stop();
-                        }
-                    }, t);
-                  })
-                )),
-                function (t) {
-                  return l.apply(this, arguments);
-                })),
-              (d.sendInscription =
-                ((h = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
-                    var r, n, i, o, s, a, u, c;
-                    return (0, j.Z)().wrap(function (t) {
-                      for (;;)
-                        switch ((t.prev = t.next)) {
-                          case 0:
-                            return (
-                              (r = e.to),
-                              (n = e.inscriptionId),
-                              (i = e.feeRate),
-                              (o = e.outputValue),
-                              (t.next = 3),
-                              z.$8.getCurrentAccount()
-                            );
-                          case 3:
-                            if ((s = t.sent)) {
-                              t.next = 6;
-                              break;
-                            }
-                            throw new Error("no current account");
-                          case 6:
-                            return (
-                              (a = z.$8.getNetworkType()),
-                              (a = (0, Y.Jh)(a)),
-                              (t.next = 10),
-                              z.hs.getInscriptionUtxo(n)
-                            );
-                          case 10:
-                            if ((u = t.sent)) {
-                              t.next = 13;
-                              break;
-                            }
-                            throw new Error("UTXO not found.");
-                          case 13:
-                            if (1 < u.inscriptions.length)
-                              throw new Error(
-                                "Multiple inscriptions are mixed together. Please split them first."
-                              );
-                            t.next = 15;
-                            break;
-                          case 15:
-                            return (
-                              (t.next = 17), z.hs.getAddressUtxo(s.address)
-                            );
-                          case 17:
-                            return (
-                              (c = t.sent),
-                              (c = [u].concat(c)),
-                              (t.next = 21),
-                              (0, W.oj)({
-                                utxos: c.map(function (t) {
-                                  return {
-                                    txId: t.txId,
-                                    outputIndex: t.outputIndex,
-                                    satoshis: t.satoshis,
-                                    scriptPk: t.scriptPk,
-                                    addressType: t.addressType,
-                                    address: s.address,
-                                    ords: t.inscriptions,
-                                  };
-                                }),
-                                toAddress: r,
-                                toOrdId: n,
-                                wallet: (0, F.Z)(d),
-                                network: a,
-                                changeAddress: s.address,
-                                pubkey: s.pubkey,
-                                feeRate: i,
-                                outputValue: o,
-                              })
-                            );
-                          case 21:
-                            return (
-                              ((c = t.sent).__CACHE.__UNSAFE_SIGN_NONSEGWIT =
-                                !1),
-                              t.abrupt("return", c.toHex())
-                            );
-                          case 24:
-                          case "end":
-                            return t.stop();
-                        }
-                    }, t);
-                  })
-                )),
-                function (t) {
-                  return h.apply(this, arguments);
-                })),
-              (d.sendInscriptions =
-                ((f = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
-                    var r, n, i, o, s, a, u;
-                    return (0, j.Z)().wrap(function (t) {
-                      for (;;)
-                        switch ((t.prev = t.next)) {
-                          case 0:
-                            return (
-                              (r = e.to),
-                              (n = e.inscriptionIds),
-                              (i = e.feeRate),
-                              (t.next = 3),
-                              z.$8.getCurrentAccount()
-                            );
-                          case 3:
-                            if ((o = t.sent)) {
-                              t.next = 6;
-                              break;
-                            }
-                            throw new Error("no current account");
-                          case 6:
-                            return (
-                              (s = z.$8.getNetworkType()),
-                              (s = (0, Y.Jh)(s)),
-                              (t.next = 10),
-                              z.hs.getInscriptionUtxos(n)
-                            );
-                          case 10:
-                            if ((a = t.sent)) {
-                              t.next = 13;
-                              break;
-                            }
-                            throw new Error("UTXO not found.");
-                          case 13:
-                            if (
-                              a.find(function (t) {
-                                return 1 < t.inscriptions.length;
-                              })
-                            )
-                              throw new Error(
-                                "Multiple inscriptions are mixed together. Please split them first."
-                              );
-                            t.next = 15;
-                            break;
-                          case 15:
-                            return (
-                              (t.next = 17), z.hs.getAddressUtxo(o.address)
-                            );
-                          case 17:
-                            return (
-                              (u = t.sent),
-                              (u = a.concat(u)),
-                              (t.next = 21),
-                              (0, W.e0)({
-                                utxos: u.map(function (t) {
-                                  return {
-                                    txId: t.txId,
-                                    outputIndex: t.outputIndex,
-                                    satoshis: t.satoshis,
-                                    scriptPk: t.scriptPk,
-                                    addressType: t.addressType,
-                                    address: o.address,
-                                    ords: t.inscriptions,
-                                  };
-                                }),
-                                toAddress: r,
-                                toOrdIds: n,
-                                wallet: (0, F.Z)(d),
-                                network: s,
-                                changeAddress: o.address,
-                                pubkey: o.pubkey,
-                                feeRate: i,
-                              })
-                            );
-                          case 21:
-                            return (
-                              ((u = t.sent).__CACHE.__UNSAFE_SIGN_NONSEGWIT =
-                                !1),
-                              t.abrupt("return", u.toHex())
-                            );
-                          case 24:
-                          case "end":
-                            return t.stop();
-                        }
-                    }, t);
-                  })
-                )),
-                function (t) {
                   return f.apply(this, arguments);
                 })),
+              (d.getNetworkName = function () {
+                var t = F.$8.getNetworkType();
+                return z.kW[t].name;
+              }),
               (d.pushTx =
-                ((c = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((c = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
@@ -2781,10 +2575,10 @@
                 function (t) {
                   return c.apply(this, arguments);
                 })),
-              (d.getAccounts = (0, H.Z)(
-                (0, j.Z)().mark(function t() {
+              (d.getAccounts = (0, U.Z)(
+                (0, L.Z)().mark(function t() {
                   var e;
-                  return (0, j.Z)().wrap(function (t) {
+                  return (0, L.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
@@ -2809,7 +2603,7 @@
                   var r =
                       !(2 < arguments.length && void 0 !== arguments[2]) ||
                       arguments[2],
-                    n = z.$8.getNetworkType(),
+                    n = F.$8.getNetworkType(),
                     i = t.addressType,
                     o = "keyring_" + e,
                     s = t.type,
@@ -2819,10 +2613,10 @@
                   u++
                 ) {
                   var c = t.accounts[u].pubkey,
-                    f = (0, Y.y7)(c, i, n),
+                    f = (0, V.y7)(c, i, n),
                     h = o + "#" + u,
                     l = d.getAlianName(c) || d._generateAlianName(s, u + 1),
-                    l = z.$8.getAccountAlianName(h, l);
+                    l = F.$8.getAccountAlianName(h, l);
                   a.push({
                     type: s,
                     pubkey: c,
@@ -2832,31 +2626,31 @@
                     key: h,
                   });
                 }
-                var p = s === q.pY.HdKeyring ? t.keyring.hdPath : "";
+                var p = s === z.pY.HdKeyring ? t.keyring.hdPath : "";
                 return {
                   index: e,
                   key: o,
                   type: s,
                   addressType: i,
                   accounts: a,
-                  alianName: z.$8.getKeyringAlianName(
+                  alianName: F.$8.getKeyringAlianName(
                     o,
-                    r ? "".concat(q.BY[s].alianName, " #").concat(e + 1) : ""
+                    r ? "".concat(z.BY[s].alianName, " #").concat(e + 1) : ""
                   ),
                   hdPath: p,
                 };
               }),
-              (d.getKeyrings = (0, H.Z)(
-                (0, j.Z)().mark(function t() {
+              (d.getKeyrings = (0, U.Z)(
+                (0, L.Z)().mark(function t() {
                   var e, r, n, i;
-                  return (0, j.Z)().wrap(function (t) {
+                  return (0, L.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
-                          return (t.next = 2), z.fh.getAllDisplayedKeyrings();
+                          return (t.next = 2), F.fh.getAllDisplayedKeyrings();
                         case 2:
                           for (e = t.sent, r = [], n = 0; n < e.length; n++)
-                            (i = e[n]).type !== q.pY.Empty &&
+                            (i = e[n]).type !== z.pY.Empty &&
                               ((i = d.displayedKeyringToWalletKeyring(
                                 i,
                                 i.index
@@ -2870,32 +2664,33 @@
                   }, t);
                 })
               )),
-              (d.getCurrentKeyring = (0, H.Z)(
-                (0, j.Z)().mark(function t() {
+              (d.getCurrentKeyring = (0, U.Z)(
+                (0, L.Z)().mark(function t() {
                   var e, r, n, i, o, s;
-                  return (0, j.Z)().wrap(function (t) {
+                  return (0, L.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
                           return (
-                            (e = z.$8.getCurrentKeyringIndex()),
-                            (t.next = 3),
-                            z.fh.getAllDisplayedKeyrings()
+                            (e = F.$8.getCurrentKeyringIndex()),
+                            console.log(e, "currentKeyringIndex====="),
+                            (t.next = 4),
+                            F.fh.getAllDisplayedKeyrings()
                           );
-                        case 3:
+                        case 4:
                           if (((r = t.sent), void 0 !== e)) {
-                            t.next = 18;
+                            t.next = 19;
                             break;
                           }
-                          (n = z.$8.getCurrentAccount()), (i = 0);
-                        case 7:
+                          (n = F.$8.getCurrentAccount()), (i = 0);
+                        case 8:
                           if (i < r.length) {
                             if (r[i].type !== (null == n ? void 0 : n.type))
-                              return t.abrupt("continue", 14);
-                            t.next = 10;
-                          } else t.next = 17;
+                              return t.abrupt("continue", 15);
+                            t.next = 11;
+                          } else t.next = 18;
                           break;
-                        case 10:
+                        case 11:
                           if (
                             r[i].accounts.find(function (t) {
                               return (
@@ -2903,56 +2698,56 @@
                               );
                             })
                           )
-                            return (e = i), t.abrupt("break", 17);
-                          t.next = 14;
+                            return (e = i), t.abrupt("break", 18);
+                          t.next = 15;
                           break;
-                        case 14:
-                          i++, (t.next = 7);
+                        case 15:
+                          i++, (t.next = 8);
                           break;
-                        case 17:
-                          void 0 === e && (e = 0);
                         case 18:
-                          if (r[e] && r[e].type !== q.pY.Empty) {
-                            t.next = 28;
+                          void 0 === e && (e = 0);
+                        case 19:
+                          if (r[e] && r[e].type !== z.pY.Empty) {
+                            t.next = 29;
                             break;
                           }
                           o = 0;
-                        case 20:
+                        case 21:
                           if (o < r.length) {
-                            if (r[o].type !== q.pY.Empty)
+                            if (r[o].type !== z.pY.Empty)
                               return (
                                 (e = o),
-                                z.$8.setCurrentKeyringIndex(e),
-                                t.abrupt("break", 28)
+                                F.$8.setCurrentKeyringIndex(e),
+                                t.abrupt("break", 29)
                               );
-                            t.next = 25;
-                          } else t.next = 28;
+                            t.next = 26;
+                          } else t.next = 29;
                           break;
-                        case 25:
-                          o++, (t.next = 20);
+                        case 26:
+                          o++, (t.next = 21);
                           break;
-                        case 28:
+                        case 29:
                           if ((s = r[e])) {
-                            t.next = 31;
+                            t.next = 32;
                             break;
                           }
                           return t.abrupt("return", null);
-                        case 31:
+                        case 32:
                           return t.abrupt(
                             "return",
                             d.displayedKeyringToWalletKeyring(s, e)
                           );
-                        case 32:
+                        case 33:
                         case "end":
                           return t.stop();
                       }
                   }, t);
                 })
               )),
-              (d.getCurrentAccount = (0, H.Z)(
-                (0, j.Z)().mark(function t() {
+              (d.getCurrentAccount = (0, U.Z)(
+                (0, L.Z)().mark(function t() {
                   var e, r, n;
-                  return (0, j.Z)().wrap(function (t) {
+                  return (0, L.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
@@ -2965,7 +2760,7 @@
                           return t.abrupt("return", null);
                         case 5:
                           return (
-                            (r = z.$8.getCurrentAccount()),
+                            (r = F.$8.getCurrentAccount()),
                             (n = void 0),
                             e.accounts.forEach(function (t) {
                               t.pubkey === (null == r ? void 0 : r.pubkey) &&
@@ -2981,17 +2776,17 @@
                   }, t);
                 })
               )),
-              (d.getEditingKeyring = (0, H.Z)(
-                (0, j.Z)().mark(function t() {
+              (d.getEditingKeyring = (0, U.Z)(
+                (0, L.Z)().mark(function t() {
                   var e, r;
-                  return (0, j.Z)().wrap(function (t) {
+                  return (0, L.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
                           return (
-                            (e = z.$8.getEditingKeyringIndex()),
+                            (e = F.$8.getEditingKeyringIndex()),
                             (t.next = 3),
-                            z.fh.getAllDisplayedKeyrings()
+                            F.fh.getAllDisplayedKeyrings()
                           );
                         case 3:
                           return (
@@ -3010,13 +2805,13 @@
                 })
               )),
               (d.setEditingKeyring =
-                ((u = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
-                    return (0, j.Z)().wrap(function (t) {
+                ((u = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            z.$8.setEditingKeyringIndex(e);
+                            F.$8.setEditingKeyringIndex(e);
                           case 1:
                           case "end":
                             return t.stop();
@@ -3027,15 +2822,15 @@
                 function (t) {
                   return u.apply(this, arguments);
                 })),
-              (d.getEditingAccount = (0, H.Z)(
-                (0, j.Z)().mark(function t() {
+              (d.getEditingAccount = (0, U.Z)(
+                (0, L.Z)().mark(function t() {
                   var e;
-                  return (0, j.Z)().wrap(function (t) {
+                  return (0, L.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
                           return (
-                            (e = z.$8.getEditingAccount()),
+                            (e = F.$8.getEditingAccount()),
                             t.abrupt("return", e)
                           );
                         case 2:
@@ -3046,13 +2841,13 @@
                 })
               )),
               (d.setEditingAccount =
-                ((a = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
-                    return (0, j.Z)().wrap(function (t) {
+                ((a = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            z.$8.setEditingAccount(e);
+                            F.$8.setEditingAccount(e);
                           case 1:
                           case "end":
                             return t.stop();
@@ -3064,14 +2859,14 @@
                   return a.apply(this, arguments);
                 })),
               (d.queryDomainInfo =
-                ((e = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e) {
+                ((e = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e) {
                     var r;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            return (t.next = 2), z.hs.getDomainInfo(e);
+                            return (t.next = 2), F.hs.getDomainInfo(e);
                           case 2:
                             return (r = t.sent), t.abrupt("return", r);
                           case 4:
@@ -3085,14 +2880,14 @@
                   return e.apply(this, arguments);
                 })),
               (d.getAddressUtxo =
-                ((s = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r) {
+                ((s = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r) {
                     var n;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            return (t.next = 2), z.hs.getAddressUtxo(e, r);
+                            return (t.next = 2), F.hs.getAddressUtxo(e, r);
                           case 2:
                             return (n = t.sent), t.abrupt("return", n);
                           case 4:
@@ -3105,26 +2900,26 @@
                 function (t, e) {
                   return s.apply(this, arguments);
                 })),
-              (d.getConnectedSite = z.Pv.getConnectedSite),
-              (d.getSite = z.Pv.getSite),
-              (d.getConnectedSites = z.Pv.getConnectedSites),
+              (d.getConnectedSite = F.Pv.getConnectedSite),
+              (d.getSite = F.Pv.getSite),
+              (d.getConnectedSites = F.Pv.getConnectedSites),
               (d.setRecentConnectedSites = function (t) {
-                z.Pv.setRecentConnectedSites(t);
+                F.Pv.setRecentConnectedSites(t);
               }),
               (d.getRecentConnectedSites = function () {
-                return z.Pv.getRecentConnectedSites();
+                return F.Pv.getRecentConnectedSites();
               }),
               (d.getCurrentSite = function (t) {
-                var t = z.Fc.getSession(t) || {},
+                var t = F.Fc.getSession(t) || {},
                   e = t.origin,
                   r = t.name,
                   t = t.icon;
                 return e
-                  ? z.Pv.getSite(e) || {
+                  ? F.Pv.getSite(e) || {
                       origin: e,
                       name: r,
                       icon: t,
-                      chain: q.h.BTC,
+                      chain: z.h.DOGE,
                       isConnected: !1,
                       isSigned: !1,
                       isTop: !1,
@@ -3132,27 +2927,27 @@
                   : null;
               }),
               (d.getCurrentConnectedSite = function (t) {
-                t = (z.Fc.getSession(t) || {}).origin;
-                return z.Pv.getWithoutUpdate(t);
+                t = (F.Fc.getSession(t) || {}).origin;
+                return F.Pv.getWithoutUpdate(t);
               }),
               (d.setSite = function (t) {
                 var e;
-                z.Pv.setSite(t),
+                F.Pv.setSite(t),
                   t.isConnected &&
                     ((e = d.getNetworkName()),
-                    z.Fc.broadcastEvent(
+                    F.Fc.broadcastEvent(
                       "networkChanged",
                       { network: e },
                       t.origin
                     ));
               }),
               (d.updateConnectSite = function (t, e) {
-                z.Pv.updateConnectSite(t, e);
+                F.Pv.updateConnectSite(t, e);
                 t = d.getNetworkName();
-                z.Fc.broadcastEvent("networkChanged", { network: t }, e.origin);
+                F.Fc.broadcastEvent("networkChanged", { network: t }, e.origin);
               }),
               (d.removeAllRecentConnectedSites = function () {
-                z.Pv.getRecentConnectedSites()
+                F.Pv.getRecentConnectedSites()
                   .filter(function (t) {
                     return !t.isTop;
                   })
@@ -3161,23 +2956,23 @@
                   });
               }),
               (d.removeConnectedSite = function (t) {
-                z.Fc.broadcastEvent("accountsChanged", [], t),
-                  z.Pv.removeConnectedSite(t);
+                F.Fc.broadcastEvent("accountsChanged", [], t),
+                  F.Pv.removeConnectedSite(t);
               }),
               (d.setKeyringAlianName = function (t, e) {
-                return z.$8.setKeyringAlianName(t.key, e), (t.alianName = e), t;
+                return F.$8.setKeyringAlianName(t.key, e), (t.alianName = e), t;
               }),
               (d.setAccountAlianName = function (t, e) {
-                return z.$8.setAccountAlianName(t.key, e), (t.alianName = e), t;
+                return F.$8.setAccountAlianName(t.key, e), (t.alianName = e), t;
               }),
-              (d.getFeeSummary = (0, H.Z)(
-                (0, j.Z)().mark(function t() {
+              (d.getFeeSummary = (0, U.Z)(
+                (0, L.Z)().mark(function t() {
                   var e;
-                  return (0, j.Z)().wrap(function (t) {
+                  return (0, L.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
-                          return (t.next = 2), z.hs.getFeeSummary();
+                          return (t.next = 2), F.hs.getFeeSummary();
                         case 2:
                           return (e = t.sent), t.abrupt("return", e);
                         case 4:
@@ -3188,29 +2983,29 @@
                 })
               )),
               (d.inscribeBRC20Transfer = function (t, e, r, n) {
-                return z.hs.inscribeBRC20Transfer(t, e, r, n);
+                return F.hs.inscribeBRC20Transfer(t, e, r, n);
               }),
               (d.getInscribeResult = function (t) {
-                return z.hs.getInscribeResult(t);
+                return F.hs.getInscribeResult(t);
               }),
               (d.decodePsbt = function (t) {
-                return z.hs.decodePsbt(t);
+                return F.hs.decodePsbt(t);
               }),
               (d.getBRC20List =
-                ((o = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r, n) {
+                ((o = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r, n) {
                     var i;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            if ((i = z.$8.getUICachedData(e)).brc20List[r])
+                            if ((i = F.$8.getUICachedData(e)).brc20List[r])
                               return t.abrupt("return", i.brc20List[r]);
                             t.next = 5;
                             break;
                           case 5:
                             return (
-                              (t.next = 7), z.hs.getAddressTokenBalances(e)
+                              (t.next = 7), F.hs.getAddressTokenBalances(e)
                             );
                           case 7:
                             return (
@@ -3232,17 +3027,17 @@
                   return o.apply(this, arguments);
                 })),
               (d.getAllInscriptionList =
-                ((n = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r, n) {
+                ((n = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r, n) {
                     var i, o, s, a, u;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             if (
                               ((i = (r - 1) * n),
                               (o = n),
-                              (s = z.$8.getUICachedData(e)).allInscriptionList[
+                              (s = F.$8.getUICachedData(e)).allInscriptionList[
                                 r
                               ])
                             )
@@ -3254,7 +3049,7 @@
                             break;
                           case 5:
                             return (
-                              (t.next = 7), z.hs.getAddressInscriptions(e, i, o)
+                              (t.next = 7), F.hs.getAddressInscriptions(e, i, o)
                             );
                           case 7:
                             return (
@@ -3285,20 +3080,20 @@
                   return n.apply(this, arguments);
                 })),
               (d.getBRC20Summary =
-                ((r = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r) {
+                ((r = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r) {
                     var n, i;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
-                            if ((n = z.$8.getUICachedData(e)).brc20Summary[r])
+                            if ((n = F.$8.getUICachedData(e)).brc20Summary[r])
                               return t.abrupt("return", n.brc20Summary[r]);
                             t.next = 3;
                             break;
                           case 3:
                             return (
-                              (t.next = 5), z.hs.getAddressTokenSummary(e, r)
+                              (t.next = 5), F.hs.getAddressTokenSummary(e, r)
                             );
                           case 5:
                             return (
@@ -3317,17 +3112,17 @@
                   return r.apply(this, arguments);
                 })),
               (d.getBRC20TransferableList =
-                ((i = (0, H.Z)(
-                  (0, j.Z)().mark(function t(e, r, n, i) {
+                ((i = (0, U.Z)(
+                  (0, L.Z)().mark(function t(e, r, n, i) {
                     var o, s, a, u, c;
-                    return (0, j.Z)().wrap(function (t) {
+                    return (0, L.Z)().wrap(function (t) {
                       for (;;)
                         switch ((t.prev = t.next)) {
                           case 0:
                             if (
                               ((o = (n - 1) * i),
                               (s = i),
-                              (a = z.$8.getUICachedData(e))
+                              (a = F.$8.getUICachedData(e))
                                 .brc20TransferableList[r] &&
                                 a.brc20TransferableList[r][n])
                             )
@@ -3342,7 +3137,7 @@
                               a.brc20TransferableList[r] ||
                                 (a.brc20TransferableList[r] = []),
                               (t.next = 8),
-                              z.hs.getTokenTransferableList(e, r, o, s)
+                              F.hs.getTokenTransferableList(e, r, o, s)
                             );
                           case 8:
                             return (
@@ -3373,12 +3168,12 @@
                   return i.apply(this, arguments);
                 })),
               (d.expireUICachedData = function (t) {
-                return z.$8.expireUICachedData(t);
+                return F.$8.expireUICachedData(t);
               }),
               d
             );
           }
-          var f, tt;
+          var f, J;
         });
       },
       13690: function (t, e, y) {
@@ -4546,16 +4341,16 @@
                                 "Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format."
                               );
                           var A = [],
-                            x = this.languageUtils.getFallbackCodes(
+                            O = this.languageUtils.getFallbackCodes(
                               this.options.fallbackLng,
                               n.lng || this.language
                             );
                           if (
                             "fallback" === this.options.saveMissingTo &&
-                            x &&
-                            x[0]
+                            O &&
+                            O[0]
                           )
-                            for (var O = 0; O < x.length; O++) A.push(x[O]);
+                            for (var x = 0; x < O.length; x++) A.push(O[x]);
                           else
                             "all" === this.options.saveMissingTo
                               ? (A = this.languageUtils.toResolveHierarchy(
@@ -5822,7 +5617,7 @@
             n
           );
         }
-        function x(e) {
+        function O(e) {
           for (var t = 1; t < arguments.length; t++) {
             var r = null != arguments[t] ? arguments[t] : {};
             t % 2
@@ -5841,7 +5636,7 @@
           }
           return e;
         }
-        function O(o) {
+        function x(o) {
           var s = {};
           return function (t, e, r) {
             var n = e + JSON.stringify(r),
@@ -5871,7 +5666,7 @@
           {
             key: "addCached",
             value: function (t, e) {
-              this.formats[t.toLowerCase().trim()] = O(e);
+              this.formats[t.toLowerCase().trim()] = x(e);
             },
           },
           {
@@ -5920,7 +5715,7 @@
                           u.formatParams[u.interpolationkey]) ||
                         {},
                       s = o.locale || o.lng || u.locale || u.lng || a,
-                      i = c.formats[n](t, s, x(x(x({}, e), u), o));
+                      i = c.formats[n](t, s, O(O(O({}, e), u), o));
                   } catch (t) {
                     c.logger.warn(t);
                   }
@@ -5942,35 +5737,35 @@
             (this.logger = p.create("formatter")),
             (this.options = t),
             (this.formats = {
-              number: O(function (t, e) {
+              number: x(function (t, e) {
                 var r = new Intl.NumberFormat(t, e);
                 return function (t) {
                   return r.format(t);
                 };
               }),
-              currency: O(function (t, e) {
+              currency: x(function (t, e) {
                 var r = new Intl.NumberFormat(
                   t,
-                  x(x({}, e), {}, { style: "currency" })
+                  O(O({}, e), {}, { style: "currency" })
                 );
                 return function (t) {
                   return r.format(t);
                 };
               }),
-              datetime: O(function (t, e) {
-                var r = new Intl.DateTimeFormat(t, x({}, e));
+              datetime: x(function (t, e) {
+                var r = new Intl.DateTimeFormat(t, O({}, e));
                 return function (t) {
                   return r.format(t);
                 };
               }),
-              relativetime: O(function (t, e) {
-                var r = new Intl.RelativeTimeFormat(t, x({}, e));
+              relativetime: x(function (t, e) {
+                var r = new Intl.RelativeTimeFormat(t, O({}, e));
                 return function (t) {
                   return r.format(t, e.range || "day");
                 };
               }),
-              list: O(function (t, e) {
-                var r = new Intl.ListFormat(t, x({}, e));
+              list: x(function (t, e) {
+                var r = new Intl.ListFormat(t, O({}, e));
                 return function (t) {
                   return r.format(t);
                 };
@@ -7448,8 +7243,8 @@
               r = w(60136),
               n = w(29388),
               A = w(74165),
-              x = w(15861),
-              O = w(15671),
+              O = w(15861),
+              x = w(15671),
               i = w(43144),
               o = w(88347),
               P = w.n(o),
@@ -7476,7 +7271,7 @@
                   {
                     key: "addAccounts",
                     value:
-                      ((y = (0, x.Z)(
+                      ((y = (0, O.Z)(
                         (0, A.Z)().mark(function t(e) {
                           return (0, A.Z)().wrap(function (t) {
                             for (;;)
@@ -7497,7 +7292,7 @@
                   {
                     key: "getAccounts",
                     value:
-                      ((m = (0, x.Z)(
+                      ((m = (0, O.Z)(
                         (0, A.Z)().mark(function t() {
                           return (0, A.Z)().wrap(function (t) {
                             for (;;)
@@ -7548,7 +7343,7 @@
                   {
                     key: "serialize",
                     value:
-                      ((g = (0, x.Z)(
+                      ((g = (0, O.Z)(
                         (0, A.Z)().mark(function t() {
                           return (0, A.Z)().wrap(function (t) {
                             for (;;)
@@ -7569,7 +7364,7 @@
                   {
                     key: "deserialize",
                     value:
-                      ((d = (0, x.Z)(
+                      ((d = (0, O.Z)(
                         (0, A.Z)().mark(function t(e) {
                           return (0, A.Z)().wrap(function (t) {
                             for (;;)
@@ -7623,7 +7418,7 @@
               S,
               k;
             return (
-              (0, O.Z)(this, H),
+              (0, x.Z)(this, H),
               ((u = D.call(this)).keyringTypes = void 0),
               (u.store = void 0),
               (u.memStore = void 0),
@@ -7635,7 +7430,7 @@
                 u.store = new B.ObservableStore(t);
               }),
               (u.boot =
-                ((k = (0, x.Z)(
+                ((k = (0, O.Z)(
                   (0, A.Z)().mark(function t(e) {
                     var r;
                     return (0, A.Z)().wrap(function (t) {
@@ -7673,7 +7468,7 @@
                 );
               }),
               (u.importPrivateKey =
-                ((S = (0, x.Z)(
+                ((S = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r) {
                     var n;
                     return (0, A.Z)().wrap(function (t) {
@@ -7709,7 +7504,7 @@
               (u.generateMnemonic = function () {
                 return new (P())().toString();
               }),
-              (u.generatePreMnemonic = (0, x.Z)(
+              (u.generatePreMnemonic = (0, O.Z)(
                 (0, A.Z)().mark(function t() {
                   var e, r;
                   return (0, A.Z)().wrap(function (t) {
@@ -7750,7 +7545,7 @@
               (u.removePreMnemonics = function () {
                 u.memStore.updateState({ preMnemonics: "" });
               }),
-              (u.getPreMnemonics = (0, x.Z)(
+              (u.getPreMnemonics = (0, O.Z)(
                 (0, A.Z)().mark(function t() {
                   return (0, A.Z)().wrap(function (t) {
                     for (;;)
@@ -7787,7 +7582,7 @@
                 })
               )),
               (u.createKeyringWithMnemonics =
-                ((_ = (0, x.Z)(
+                ((_ = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r, n, i) {
                     var o;
                     return (0, A.Z)().wrap(function (t) {
@@ -7848,7 +7643,7 @@
                   return _.apply(this, arguments);
                 })),
               (u.addKeyring =
-                ((w = (0, x.Z)(
+                ((w = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r) {
                     var n;
                     return (0, A.Z)().wrap(function (t) {
@@ -7886,7 +7681,7 @@
                   return w.apply(this, arguments);
                 })),
               (u.changeAddressType =
-                ((v = (0, x.Z)(
+                ((v = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r) {
                     var n, i;
                     return (0, A.Z)().wrap(function (t) {
@@ -7918,7 +7713,7 @@
                 function (t, e) {
                   return v.apply(this, arguments);
                 })),
-              (u.setLocked = (0, x.Z)(
+              (u.setLocked = (0, O.Z)(
                 (0, A.Z)().mark(function t() {
                   return (0, A.Z)().wrap(function (t) {
                     for (;;)
@@ -7943,7 +7738,7 @@
                 })
               )),
               (u.submitPassword =
-                ((b = (0, x.Z)(
+                ((b = (0, O.Z)(
                   (0, A.Z)().mark(function t(e) {
                     return (0, A.Z)().wrap(
                       function (t) {
@@ -7984,7 +7779,7 @@
                   return b.apply(this, arguments);
                 })),
               (u.changePassword =
-                ((y = (0, x.Z)(
+                ((y = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r) {
                     var n, i;
                     return (0, A.Z)().wrap(function (t) {
@@ -8041,7 +7836,7 @@
                   return y.apply(this, arguments);
                 })),
               (u.verifyPassword =
-                ((m = (0, x.Z)(
+                ((m = (0, O.Z)(
                   (0, A.Z)().mark(function t(e) {
                     var r;
                     return (0, A.Z)().wrap(function (t) {
@@ -8068,7 +7863,7 @@
                   return m.apply(this, arguments);
                 })),
               (u.addNewKeyring =
-                ((g = (0, x.Z)(
+                ((g = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r, n) {
                     var i;
                     return (0, A.Z)().wrap(function (t) {
@@ -8097,7 +7892,7 @@
                 return new (u.getKeyringClassForType(t))(e);
               }),
               (u.checkForDuplicate =
-                ((d = (0, x.Z)(
+                ((d = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r) {
                     var n, i, o;
                     return (0, A.Z)().wrap(function (t) {
@@ -8144,7 +7939,7 @@
                   return d.apply(this, arguments);
                 })),
               (u.addNewAccount =
-                ((p = (0, x.Z)(
+                ((p = (0, O.Z)(
                   (0, A.Z)().mark(function t(e) {
                     var r;
                     return (0, A.Z)().wrap(function (t) {
@@ -8177,7 +7972,7 @@
                   return p.apply(this, arguments);
                 })),
               (u.exportAccount =
-                ((l = (0, x.Z)(
+                ((l = (0, O.Z)(
                   (0, A.Z)().mark(function t(e) {
                     var r;
                     return (0, A.Z)().wrap(function (t) {
@@ -8202,7 +7997,7 @@
                   return l.apply(this, arguments);
                 })),
               (u.removeAccount =
-                ((h = (0, x.Z)(
+                ((h = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r, n) {
                     var i;
                     return (0, A.Z)().wrap(function (t) {
@@ -8242,7 +8037,7 @@
                   return h.apply(this, arguments);
                 })),
               (u.removeKeyring =
-                ((f = (0, x.Z)(
+                ((f = (0, O.Z)(
                   (0, A.Z)().mark(function t(e) {
                     return (0, A.Z)().wrap(function (t) {
                       for (;;)
@@ -8272,7 +8067,7 @@
                 return t.signTransaction(e, r);
               }),
               (u.signMessage =
-                ((c = (0, x.Z)(
+                ((c = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r) {
                     var n;
                     return (0, A.Z)().wrap(function (t) {
@@ -8297,7 +8092,7 @@
                   return c.apply(this, arguments);
                 })),
               (u.verifyMessage =
-                ((a = (0, x.Z)(
+                ((a = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r, n) {
                     var i;
                     return (0, A.Z)().wrap(function (t) {
@@ -8349,7 +8144,7 @@
                     );
               }),
               (u.unlockKeyrings =
-                ((s = (0, x.Z)(
+                ((s = (0, O.Z)(
                   (0, A.Z)().mark(function t(e) {
                     var r, n;
                     return (0, A.Z)().wrap(function (t) {
@@ -8392,7 +8187,7 @@
                   return s.apply(this, arguments);
                 })),
               (u.restoreKeyring =
-                ((o = (0, x.Z)(
+                ((o = (0, O.Z)(
                   (0, A.Z)().mark(function t(e) {
                     var r;
                     return (0, A.Z)().wrap(function (t) {
@@ -8419,7 +8214,7 @@
                   return o.apply(this, arguments);
                 })),
               (u._restoreKeyring =
-                ((r = (0, x.Z)(
+                ((r = (0, O.Z)(
                   (0, A.Z)().mark(function t(e) {
                     var r, n, i, o, s;
                     return (0, A.Z)().wrap(function (t) {
@@ -8479,7 +8274,7 @@
                   return t.type === e;
                 });
               }),
-              (u.getAccounts = (0, x.Z)(
+              (u.getAccounts = (0, O.Z)(
                 (0, A.Z)().mark(function t() {
                   var e, r, n, i;
                   return (0, A.Z)().wrap(function (t) {
@@ -8507,7 +8302,7 @@
                 })
               )),
               (u.getKeyringForAccount =
-                ((i = (0, x.Z)(
+                ((i = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r, n, i) {
                     var o, s, a;
                     return (0, A.Z)().wrap(function (t) {
@@ -8553,7 +8348,7 @@
                   return i.apply(this, arguments);
                 })),
               (u.displayForKeyring =
-                ((n = (0, x.Z)(
+                ((n = (0, O.Z)(
                   (0, A.Z)().mark(function t(e, r, n) {
                     var i, o, s, a;
                     return (0, A.Z)().wrap(function (t) {
@@ -8589,7 +8384,7 @@
                   })
                 );
               }),
-              (u.getAllVisibleAccountsArray = (0, x.Z)(
+              (u.getAllVisibleAccountsArray = (0, O.Z)(
                 (0, A.Z)().mark(function t() {
                   var e, r;
                   return (0, A.Z)().wrap(function (t) {
@@ -8624,7 +8419,7 @@
                   }, t);
                 })
               )),
-              (u.getAllPubkeys = (0, x.Z)(
+              (u.getAllPubkeys = (0, O.Z)(
                 (0, A.Z)().mark(function t() {
                   var e, r;
                   return (0, A.Z)().wrap(function (t) {
@@ -8660,7 +8455,7 @@
                 })
               )),
               (u.hasPubkey =
-                ((e = (0, x.Z)(
+                ((e = (0, O.Z)(
                   (0, A.Z)().mark(function t(e) {
                     var r;
                     return (0, A.Z)().wrap(function (t) {
@@ -8688,7 +8483,7 @@
                 function (t) {
                   return e.apply(this, arguments);
                 })),
-              (u.clearKeyrings = (0, x.Z)(
+              (u.clearKeyrings = (0, O.Z)(
                 (0, A.Z)().mark(function t() {
                   return (0, A.Z)().wrap(function (t) {
                     for (;;)
@@ -8703,7 +8498,7 @@
                   }, t);
                 })
               )),
-              (u._updateMemStoreKeyrings = (0, x.Z)(
+              (u._updateMemStoreKeyrings = (0, O.Z)(
                 (0, A.Z)().mark(function t() {
                   var e;
                   return (0, A.Z)().wrap(function (t) {
@@ -8757,7 +8552,7 @@
           }
           var p, D, d, g, m, y;
           function b() {
-            (0, O.Z)(this, b), (this.type = R.pY.Empty);
+            (0, x.Z)(this, b), (this.type = R.pY.Empty);
           }
         });
       },
@@ -8917,13 +8712,13 @@
         }
         e.Z = new l();
       },
-      43685: function (t, e, r) {
+      43685: function (t, e, a) {
         "use strict";
         var s,
-          n,
+          r,
           i,
+          n,
           o,
-          a,
           u,
           c,
           f,
@@ -8937,25 +8732,27 @@
           b,
           v,
           w,
-          _ = r(89062),
-          S = r(37762),
-          k = r(74165),
-          E = r(15861),
-          I = r(15671),
-          A = r(43144),
-          x = r(73186),
-          O = r(49601),
-          r =
-            (((r = s = s || {}).FAILED = "0"),
-            (r.SUCCESS = "1"),
-            (0, A.Z)(P, [
+          _ = a(89062),
+          S = a(74165),
+          k = a(15861),
+          E = a(15671),
+          I = a(43144),
+          A = a(73186),
+          O = a(49601),
+          x = a(46756),
+          P = a(56878),
+          T = a.n(P),
+          P =
+            (((P = s = s || {}).FAILED = "0"),
+            (P.SUCCESS = "1"),
+            (0, I.Z)(M, [
               {
                 key: "getWalletConfig",
                 value:
-                  ((w = (0, E.Z)(
-                    (0, k.Z)().mark(function t() {
+                  ((w = (0, k.Z)(
+                    (0, S.Z)().mark(function t() {
                       var e;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -8988,60 +8785,63 @@
               {
                 key: "getAddressBalance",
                 value:
-                  ((v = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e) {
-                      var r, n, i;
-                      return (0, k.Z)().wrap(
+                  ((v = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e) {
+                      var r, n, i, o, s;
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
                               case 0:
                                 return (
                                   (t.prev = 0),
-                                  (t.next = 3),
+                                  (r = a(12495)),
+                                  (t.next = 4),
                                   fetch(
-                                    "https://chain.so/api/v3/balance/DOGE/".concat(
+                                    "https://api.tatum.io/v3/dogecoin/address/balance/".concat(
                                       e
                                     ),
                                     {
+                                      method: "GET",
                                       headers: {
-                                        "API-KEY":
-                                          "SjcbvNaYzlzTEhSwXrh1SYOrbVFCnbHv",
+                                        "x-api-key":
+                                          "8771bb57-601f-416f-8149-7f9e73a69ba6_100",
                                       },
                                     }
                                   )
                                 );
-                              case 3:
-                                return (r = t.sent), (t.next = 6), r.json();
-                              case 6:
+                              case 4:
+                                return (n = t.sent), (t.next = 7), n.json();
+                              case 7:
                                 return (
-                                  (r = t.sent),
-                                  console.log(r, "getAddressBalance======"),
-                                  (i = r.data),
-                                  (n = i.confirmed),
-                                  (i = i.unconfirmed),
+                                  (n = t.sent),
+                                  console.log(n, "data===balance"),
+                                  (s = n.incoming),
+                                  (i = n.outgoing),
+                                  (o = n.incomingPending),
+                                  (s = new r(s).minus(i)),
                                   t.abrupt("return", {
-                                    amount: n,
-                                    confirm_amount: n,
-                                    pending_amount: i,
+                                    amount: s,
+                                    confirm_amount: s,
+                                    pending_amount: o,
                                     usd_value: "0",
                                   })
                                 );
-                              case 13:
+                              case 14:
                                 throw (
-                                  ((t.prev = 13),
+                                  ((t.prev = 14),
                                   (t.t0 = t.catch(0)),
                                   console.error("Error fetching data:", t.t0),
                                   t.t0)
                                 );
-                              case 17:
+                              case 18:
                               case "end":
                                 return t.stop();
                             }
                         },
                         t,
                         null,
-                        [[0, 13]]
+                        [[0, 14]]
                       );
                     })
                   )),
@@ -9052,10 +8852,10 @@
               {
                 key: "getMultiAddressAssets",
                 value:
-                  ((b = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e) {
+                  ((b = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e) {
                       var r;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -9090,118 +8890,76 @@
               {
                 key: "getAddressUtxo",
                 value:
-                  ((y = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e, r) {
-                      var n, i, o, s, a, u, c, f, h;
-                      return (0, k.Z)().wrap(
+                  ((y = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e, r) {
+                      var n, i, o;
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
                               case 0:
-                                (t.prev = 0),
-                                  (n = 1),
-                                  (i = []),
-                                  (s = !(o = 0)),
-                                  (a = []);
-                              case 6:
-                                if (s)
-                                  return (
-                                    (t.next = 9),
-                                    fetch(
-                                      "https://chain.so/api/v3/unspent_outputs/DOGE/"
-                                        .concat(e, "/")
-                                        .concat(n),
-                                      {
-                                        headers: {
-                                          "API-KEY":
-                                            "SjcbvNaYzlzTEhSwXrh1SYOrbVFCnbHv",
-                                        },
-                                      }
-                                    )
-                                  );
-                                t.next = 43;
-                                break;
-                              case 9:
-                                return (u = t.sent), (t.next = 12), u.json();
-                              case 12:
-                                (u = t.sent),
-                                  (c = u.data.outputs),
-                                  console.log(
-                                    u,
-                                    "jsonData=======unspent_outputs"
-                                  ),
-                                  (f = (0, S.Z)(c)),
-                                  (t.prev = 16),
-                                  f.s();
-                              case 18:
-                                if ((h = f.n()).done) t.next = 30;
-                                else {
-                                  if (
-                                    ((h = h.value),
-                                    (o += Number(h.value)),
-                                    console.log(
-                                      o,
-                                      "totalValue======",
-                                      r,
-                                      +r <= o
+                                return (
+                                  (t.prev = 0),
+                                  (n = new URLSearchParams({
+                                    chain: "doge",
+                                    address: e,
+                                    totalValue: (0, x.KE)(r).toString(),
+                                  }).toString()),
+                                  (t.next = 5),
+                                  fetch(
+                                    "https://api.tatum.io/v3/data/utxos?".concat(
+                                      n
                                     ),
-                                    i.push(h),
-                                    +r / 1e8 <= o)
+                                    {
+                                      method: "GET",
+                                      headers: {
+                                        "x-api-key":
+                                          "8771bb57-601f-416f-8149-7f9e73a69ba6_100",
+                                      },
+                                    }
                                   )
-                                    return (
-                                      (s = !1),
-                                      (a = i.map(function (t) {
-                                        return {
-                                          address: t.address,
-                                          tx_hex: t.tx_hex,
-                                          addressType: 1,
-                                          inscriptions: [],
-                                          outputIndex: t.index,
-                                          script: t.script,
-                                          txId: t.hash,
-                                          satoshis: t.value,
-                                        };
-                                      })),
-                                      console.log(a, "modifiedData====>>>>"),
-                                      t.abrupt("return", a)
-                                    );
-                                  t.next = 28;
-                                }
-                                break;
-                              case 28:
-                                t.next = 18;
-                                break;
-                              case 30:
-                                t.next = 35;
-                                break;
-                              case 32:
-                                (t.prev = 32), (t.t0 = t.catch(16)), f.e(t.t0);
-                              case 35:
-                                return (t.prev = 35), f.f(), t.finish(35);
-                              case 38:
-                                if (c.length < 10) return t.abrupt("break", 43);
-                                t.next = 40;
-                                break;
-                              case 40:
-                                n++, (t.next = 6);
-                                break;
-                              case 43:
-                                return t.abrupt("return", i);
-                              case 46:
-                                (t.prev = 46),
-                                  (t.t1 = t.catch(0)),
-                                  console.error("Error fetching data:", t.t1);
-                              case 49:
+                                );
+                              case 5:
+                                return (n = t.sent), (t.next = 8), n.json();
+                              case 8:
+                                return (
+                                  (i = t.sent),
+                                  console.log(
+                                    i,
+                                    "jsonData==========33333",
+                                    T().Script.fromAddress(e).toHex()
+                                  ),
+                                  (o = i.map(function (t) {
+                                    return {
+                                      address: t.address,
+                                      tx_hex: t.txHash,
+                                      addressType: 1,
+                                      inscriptions: [],
+                                      outputIndex: t.index,
+                                      script: T().Script.fromAddress(e).toHex(),
+                                      txId: t.txHash,
+                                      satoshis: t.value,
+                                    };
+                                  })),
+                                  console.log(
+                                    i,
+                                    "jsonData=======unspent_outputs",
+                                    o
+                                  ),
+                                  t.abrupt("return", o)
+                                );
+                              case 15:
+                                (t.prev = 15),
+                                  (t.t0 = t.catch(0)),
+                                  console.error("Error fetching data:", t.t0);
+                              case 18:
                               case "end":
                                 return t.stop();
                             }
                         },
                         t,
                         null,
-                        [
-                          [0, 46],
-                          [16, 32, 35, 38],
-                        ]
+                        [[0, 15]]
                       );
                     })
                   )),
@@ -9212,10 +8970,10 @@
               {
                 key: "getInscriptionUtxo",
                 value:
-                  ((m = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e) {
+                  ((m = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e) {
                       var r;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -9250,10 +9008,10 @@
               {
                 key: "getInscriptionUtxos",
                 value:
-                  ((g = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e) {
+                  ((g = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e) {
                       var r;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -9288,10 +9046,10 @@
               {
                 key: "getAddressInscriptions",
                 value:
-                  ((d = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e, r, n) {
+                  ((d = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e, r, n) {
                       var i;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -9338,38 +9096,62 @@
               {
                 key: "getAddressRecentHistory",
                 value:
-                  ((p = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e) {
-                      var r;
-                      return (0, k.Z)().wrap(function (t) {
+                  ((p = (0, k.Z)(
+                    (0, S.Z)().mark(function t(i) {
+                      var e, r, o;
+                      return (0, S.Z)().wrap(function (t) {
                         for (;;)
                           switch ((t.prev = t.next)) {
                             case 0:
                               return (
-                                (t.next = 2),
+                                (e = new URLSearchParams({
+                                  pageSize: "10",
+                                }).toString()),
+                                (t.next = 3),
                                 fetch(
-                                  "https://chain.so/api/v3/transactions/DOGE/".concat(
-                                    e,
-                                    "/1"
-                                  ),
+                                  "https://api.tatum.io/v3/dogecoin/transaction/address/"
+                                    .concat(i, "?")
+                                    .concat(e),
                                   {
+                                    method: "GET",
                                     headers: {
-                                      "API-KEY":
-                                        "SjcbvNaYzlzTEhSwXrh1SYOrbVFCnbHv",
+                                      "x-api-key":
+                                        "8771bb57-601f-416f-8149-7f9e73a69ba6_100",
                                     },
                                   }
                                 )
                               );
-                            case 2:
-                              return (r = t.sent), (t.next = 5), r.json();
-                            case 5:
-                              if ("success" === (r = t.sent).status)
-                                return t.abrupt("return", r.data.transactions);
-                              t.next = 8;
-                              break;
-                            case 8:
-                              return t.abrupt("return", []);
-                            case 9:
+                            case 3:
+                              return (e = t.sent), (t.next = 6), e.json();
+                            case 6:
+                              return (
+                                (r = t.sent),
+                                console.log(r, "history======"),
+                                (o = []),
+                                r.forEach(function (t) {
+                                  var e = 0,
+                                    r = 0,
+                                    n =
+                                      (t.inputs.forEach(function (t) {
+                                        t.coin &&
+                                          t.coin.address === i &&
+                                          (e = parseFloat(t.coin.value));
+                                      }),
+                                      t.outputs.forEach(function (t) {
+                                        t.address === i &&
+                                          (r = parseFloat(t.value));
+                                      }),
+                                      r - e);
+                                  o.push({
+                                    hash: t.hash,
+                                    amount: n.toFixed(8),
+                                    time: t.time,
+                                  });
+                                }),
+                                console.log(o, "result======="),
+                                t.abrupt("return", o)
+                              );
+                            case 12:
                             case "end":
                               return t.stop();
                           }
@@ -9383,10 +9165,10 @@
               {
                 key: "pushTx",
                 value:
-                  ((l = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e) {
+                  ((l = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e) {
                       var r;
-                      return (0, k.Z)().wrap(function (t) {
+                      return (0, S.Z)().wrap(function (t) {
                         for (;;)
                           switch ((t.prev = t.next)) {
                             case 0:
@@ -9399,7 +9181,7 @@
                                     headers: {
                                       "Content-Type": "application/json",
                                       "x-api-key":
-                                        "7bf935ee-d039-4b24-8f52-3247e4a1cf66",
+                                        "8771bb57-601f-416f-8149-7f9e73a69ba6_100",
                                     },
                                     body: JSON.stringify({ txData: e }),
                                   }
@@ -9423,10 +9205,10 @@
               {
                 key: "getFeeSummary",
                 value:
-                  ((h = (0, E.Z)(
-                    (0, k.Z)().mark(function t() {
+                  ((h = (0, k.Z)(
+                    (0, S.Z)().mark(function t() {
                       var e;
-                      return (0, k.Z)().wrap(function (t) {
+                      return (0, S.Z)().wrap(function (t) {
                         for (;;)
                           switch ((t.prev = t.next)) {
                             case 0:
@@ -9457,10 +9239,10 @@
               {
                 key: "getDomainInfo",
                 value:
-                  ((f = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e) {
+                  ((f = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e) {
                       var r;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -9495,10 +9277,10 @@
               {
                 key: "inscribeBRC20Transfer",
                 value:
-                  ((c = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e, r, n, i) {
+                  ((c = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e, r, n, i) {
                       var o;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -9536,10 +9318,10 @@
               {
                 key: "getInscribeResult",
                 value:
-                  ((u = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e) {
+                  ((u = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e) {
                       var r;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -9574,10 +9356,10 @@
               {
                 key: "getAddressTokenBalances",
                 value:
-                  ((a = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e) {
+                  ((o = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e) {
                       var r;
-                      return (0, k.Z)().wrap(function (t) {
+                      return (0, S.Z)().wrap(function (t) {
                         for (;;)
                           switch ((t.prev = t.next)) {
                             case 0:
@@ -9619,16 +9401,16 @@
                     })
                   )),
                   function (t) {
-                    return a.apply(this, arguments);
+                    return o.apply(this, arguments);
                   }),
               },
               {
                 key: "getAddressTokenSummary",
                 value:
-                  ((o = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e, r) {
+                  ((n = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e, r) {
                       var n;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -9658,16 +9440,16 @@
                     })
                   )),
                   function (t, e) {
-                    return o.apply(this, arguments);
+                    return n.apply(this, arguments);
                   }),
               },
               {
                 key: "getTokenTransferableList",
                 value:
-                  ((i = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e, r, n, i) {
+                  ((i = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e, r, n, i) {
                       var o;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -9705,10 +9487,10 @@
               {
                 key: "decodePsbt",
                 value:
-                  ((n = (0, E.Z)(
-                    (0, k.Z)().mark(function t(e) {
+                  ((r = (0, k.Z)(
+                    (0, S.Z)().mark(function t(e) {
                       var r;
-                      return (0, k.Z)().wrap(
+                      return (0, S.Z)().wrap(
                         function (t) {
                           for (;;)
                             switch ((t.prev = t.next)) {
@@ -9735,24 +9517,24 @@
                     })
                   )),
                   function (t) {
-                    return n.apply(this, arguments);
+                    return r.apply(this, arguments);
                   }),
               },
             ]),
-            P);
-        function P() {
+            M);
+        function M() {
           var r,
             n,
             e,
             u = this;
-          (0, I.Z)(this, P),
+          (0, E.Z)(this, M),
             (this.store = void 0),
             (this.unspentInfo = []),
             (this.page = void 0),
             (this.setHost =
-              ((e = (0, E.Z)(
-                (0, k.Z)().mark(function t(e) {
-                  return (0, k.Z)().wrap(function (t) {
+              ((e = (0, k.Z)(
+                (0, S.Z)().mark(function t(e) {
+                  return (0, S.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
@@ -9770,9 +9552,9 @@
             (this.getHost = function () {
               return u.store.host;
             }),
-            (this.init = (0, E.Z)(
-              (0, k.Z)().mark(function t() {
-                return (0, k.Z)().wrap(function (t) {
+            (this.init = (0, k.Z)(
+              (0, S.Z)().mark(function t() {
+                return (0, S.Z)().wrap(function (t) {
                   for (;;)
                     switch ((t.prev = t.next)) {
                       case 0:
@@ -9780,7 +9562,7 @@
                           (u.unspentInfo = []),
                           (u.page = 1),
                           (t.next = 4),
-                          (0, x.D0)({
+                          (0, A.D0)({
                             name: "openapi",
                             template: { host: O.a },
                           })
@@ -9797,10 +9579,10 @@
               })
             )),
             (this.httpGet =
-              ((n = (0, E.Z)(
-                (0, k.Z)().mark(function t(e, r) {
+              ((n = (0, k.Z)(
+                (0, S.Z)().mark(function t(e, r) {
                   var n, i, o, s, a;
-                  return (0, k.Z)().wrap(function (t) {
+                  return (0, S.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
@@ -9813,7 +9595,7 @@
                               "X-Client",
                               "UniSat Wallet"
                             ),
-                            s.append("X-Version", "1.0.0"),
+                            s.append("X-Version", "1.0.1"),
                             (t.next = 8),
                             fetch(new Request(n), {
                               method: "GET",
@@ -9837,10 +9619,10 @@
                 return n.apply(this, arguments);
               })),
             (this.httpPost =
-              ((r = (0, E.Z)(
-                (0, k.Z)().mark(function t(e, r) {
+              ((r = (0, k.Z)(
+                (0, S.Z)().mark(function t(e, r) {
                   var n, i;
-                  return (0, k.Z)().wrap(function (t) {
+                  return (0, S.Z)().wrap(function (t) {
                     for (;;)
                       switch ((t.prev = t.next)) {
                         case 0:
@@ -9850,7 +9632,7 @@
                               "X-Client",
                               "UniSat Wallet"
                             ),
-                            i.append("X-Version", "1.0.0"),
+                            i.append("X-Version", "1.0.1"),
                             i.append(
                               "Content-Type",
                               "application/json;charset=utf-8"
@@ -9879,7 +9661,7 @@
                 return r.apply(this, arguments);
               }));
         }
-        e.Z = new r();
+        e.Z = new P();
       },
       75566: function (t, e, r) {
         "use strict";
@@ -10286,8 +10068,8 @@
                   (this.getIsFirstOpen = function () {
                     return (
                       (n.store.currentVersion &&
-                        !(0, u.ZP)("1.0.0", n.store.currentVersion)) ||
-                        ((n.store.currentVersion = "1.0.0"),
+                        !(0, u.ZP)("1.0.1", n.store.currentVersion)) ||
+                        ((n.store.currentVersion = "1.0.1"),
                         (n.store.firstOpen = !0)),
                       n.store.firstOpen
                     );
@@ -10675,21 +10457,18 @@
                   wif: 158,
                 });
             function c(t) {
-              return t === o.td.MAINNET ? u : i.networks.testnet;
+              return o.td.MAINNET, u;
             }
             function f(t, e, r) {
-              var n,
-                r = c(r);
+              var n = c();
               return t
                 ? ((t = s.from(t, "hex")),
                   e === o.DL.P2PKH
-                    ? i.payments.p2pkh({ pubkey: t, network: r }).address || ""
-                    : e === o.DL.P2SH
-                    ? ((n = i.payments.p2wpkh({ pubkey: t, network: r })),
-                      (n = i.payments.p2sh({ redeem: n })),
-                      i.payments.p2sh({ redeem: n, network: r }).address || "")
-                    : (e === o.DL.P2WPKH &&
-                        i.payments.p2wpkh({ pubkey: t, network: r }).address) ||
+                    ? i.payments.p2pkh({ pubkey: t, network: n }).address || ""
+                    : (e === o.DL.P2SH &&
+                        ((e = i.payments.p2wpkh({ pubkey: t, network: n })),
+                        (t = i.payments.p2sh({ redeem: e })),
+                        i.payments.p2sh({ redeem: t, network: n }).address)) ||
                       "")
                 : "";
             }
@@ -11020,10 +10799,10 @@
           e = r(4942),
           r = r(65307),
           o =
-            (((n = n || {}).BTC = "BTC"),
-            (0, e.Z)({}, n.BTC, {
-              name: "BTC",
-              enum: n.BTC,
+            (((n = n || {}).DOGE = "DOGE"),
+            (0, e.Z)({}, n.DOGE, {
+              name: "DOGE",
+              enum: n.DOGE,
               logo: "",
               network: "mainnet",
             })),
@@ -11065,19 +10844,11 @@
         var h = /windows/i.test(navigator.userAgent),
           l = [
             {
-              value: r.DL.P2WPKH,
-              label: "P2WPKH",
-              name: "Native Segwit (P2WPKH)",
-              hdPath: "m/84'/3'/0'/0",
-              displayIndex: 0,
-              isUnisatLegacy: !0,
-            },
-            {
               value: r.DL.P2PKH,
               label: "P2PKH",
               name: "Legacy (P2PKH)",
               hdPath: "m/44'/3'/0'/0",
-              displayIndex: 1,
+              displayIndex: 0,
               isUnisatLegacy: !1,
             },
             {
@@ -11085,13 +10856,12 @@
               label: "P2SH",
               name: "Pay-to-Script-Hash (P2SH)",
               hdPath: "m/44'/3'/0'/0",
-              displayIndex: 2,
+              displayIndex: 1,
               isUnisatLegacy: !1,
             },
           ],
           p =
             (r.DH.UNISAT,
-            r.DL.P2WPKH,
             r.DL.P2PKH,
             r.DL.P2SH,
             [
@@ -11100,12 +10870,6 @@
                 label: "LIVENET",
                 name: "livenet",
                 validNames: [0, "livenet", "mainnet"],
-              },
-              {
-                value: r.td.TESTNET,
-                label: "TESTNET",
-                name: "testnet",
-                validNames: ["testnet"],
               },
             ]),
           d = "https://unielon.com/",
@@ -11126,7 +10890,7 @@
             (0, e.Z)(i, s.SimpleKeyring, 2),
             (0, e.Z)(i, s.WalletConnectKeyring, 4),
             (0, e.Z)(i, s.WatchAddressKeyring, 5),
-            (0, e.Z)({}, n.BTC, [0, 1e4]),
+            (0, e.Z)({}, n.DOGE, [0, 1e4]),
             "DOGE"),
           v = "DOGE";
       },
@@ -11183,9 +10947,8 @@
             return i;
           },
         }),
-          ((r = n = n || {})[(r.P2WPKH = 0)] = "P2WPKH"),
-          (r[(r.P2PKH = 1)] = "P2PKH"),
-          (r[(r.P2SH = 2)] = "P2SH"),
+          ((r = n = n || {})[(r.P2PKH = 0)] = "P2PKH"),
+          (r[(r.P2SH = 1)] = "P2SH"),
           ((e = i = i || {})[(e.MAINNET = 0)] = "MAINNET"),
           (e[(e.TESTNET = 1)] = "TESTNET"),
           ((r = o = o || {})[(r.UNISAT = 0)] = "UNISAT"),
@@ -11505,866 +11268,6 @@
               return n.apply(this, arguments);
             });
       },
-      66770: function (t, _, S) {
-        "use strict";
-        S.a(t, async function (t, e) {
-          try {
-            S.d(_, {
-              t2: function () {
-                return p;
-              },
-            });
-            var r,
-              a = S(74165),
-              n = S(15861),
-              i = S(15671),
-              o = S(43144),
-              s = S(33676),
-              u = S(85893),
-              c = S(28004),
-              f = S(62250),
-              h = S(5647).Buffer,
-              l = t([c]);
-            (c = (l.then ? (await l)() : l)[0]),
-              s.initEccLib(c),
-              (0, u.ZP)(c),
-              ((w = r = r || {})[(w.P2WPKH = 0)] = "P2WPKH"),
-              (w[(w.P2PKH = 1)] = "P2PKH"),
-              (w[(w.P2SH = 2)] = "P2SH");
-            (0, o.Z)(d, [
-              {
-                key: "setChangeAddress",
-                value: function (t) {
-                  this.changedAddress = t;
-                },
-              },
-              {
-                key: "addInput",
-                value: function (t) {
-                  var e;
-                  this.inputs.push(
-                    ((t = t),
-                    (e = h.from(this.pubkey, "hex")),
-                    t.addressType === r.P2WPKH || t.addressType === r.P2PKH
-                      ? {
-                          data: {
-                            hash: t.txId,
-                            index: t.outputIndex,
-                            witnessUtxo: {
-                              value: t.satoshis,
-                              script: h.from(t.scriptPk, "hex"),
-                            },
-                          },
-                          utxo: t,
-                        }
-                      : t.addressType === r.P2SH
-                      ? ((e = s.payments.p2wpkh({ pubkey: e })),
-                        {
-                          data: {
-                            hash: t.txId,
-                            index: t.outputIndex,
-                            witnessUtxo: {
-                              value: t.satoshis,
-                              script: h.from(t.scriptPk, "hex"),
-                            },
-                            redeemScript: e.output,
-                          },
-                          utxo: t,
-                        })
-                      : void 0)
-                  );
-                },
-              },
-              {
-                key: "getTotalInput",
-                value: function () {
-                  return this.inputs.reduce(function (t, e) {
-                    return t + e.data.witnessUtxo.value;
-                  }, 0);
-                },
-              },
-              {
-                key: "getTotalOutput",
-                value: function () {
-                  return this.outputs.reduce(function (t, e) {
-                    return t + e.value;
-                  }, 0);
-                },
-              },
-              {
-                key: "getUnspent",
-                value: function () {
-                  return this.getTotalInput() - this.getTotalOutput();
-                },
-              },
-              {
-                key: "isEnoughFee",
-                value:
-                  ((v = (0, n.Z)(
-                    (0, a.Z)().mark(function t() {
-                      return (0, a.Z)().wrap(
-                        function (t) {
-                          for (;;)
-                            switch ((t.prev = t.next)) {
-                              case 0:
-                                return (t.next = 2), this.createSignedPsbt();
-                              case 2:
-                                if (t.sent.getFeeRate() >= this.feeRate)
-                                  return t.abrupt("return", !0);
-                                t.next = 7;
-                                break;
-                              case 7:
-                                return t.abrupt("return", !1);
-                              case 8:
-                              case "end":
-                                return t.stop();
-                            }
-                        },
-                        t,
-                        this
-                      );
-                    })
-                  )),
-                  function () {
-                    return v.apply(this, arguments);
-                  }),
-              },
-              {
-                key: "calNetworkFee",
-                value:
-                  ((b = (0, n.Z)(
-                    (0, a.Z)().mark(function t() {
-                      var e, r, n, i;
-                      return (0, a.Z)().wrap(
-                        function (t) {
-                          for (;;)
-                            switch ((t.prev = t.next)) {
-                              case 0:
-                                return (t.next = 2), this.createSignedPsbt();
-                              case 2:
-                                (e = t.sent), (r = 0);
-                              case 4:
-                                if (r < e.inputCount)
-                                  return (
-                                    (t.prev = 5),
-                                    (t.next = 8),
-                                    e.finalizeInput(r)
-                                  );
-                                t.next = 16;
-                                break;
-                              case 8:
-                                t.next = 13;
-                                break;
-                              case 10:
-                                (t.prev = 10),
-                                  (t.t0 = t.catch(5)),
-                                  console.error(
-                                    "Error finalizing input #".concat(r, ":"),
-                                    t.t0
-                                  );
-                              case 13:
-                                r++, (t.next = 4);
-                                break;
-                              case 16:
-                                return (
-                                  (n = e
-                                    .extractTransaction(!0)
-                                    .toBuffer().length),
-                                  e.data.inputs.forEach(function (t) {
-                                    t.finalScriptWitness &&
-                                      (n -= 0.75 * t.finalScriptWitness.length);
-                                  }),
-                                  (i = Math.ceil(n * this.feeRate)),
-                                  t.abrupt("return", i)
-                                );
-                              case 20:
-                              case "end":
-                                return t.stop();
-                            }
-                        },
-                        t,
-                        this,
-                        [[5, 10]]
-                      );
-                    })
-                  )),
-                  function () {
-                    return b.apply(this, arguments);
-                  }),
-              },
-              {
-                key: "addOutput",
-                value: function (t, e) {
-                  this.outputs.push({ address: t, value: e });
-                },
-              },
-              {
-                key: "getOutput",
-                value: function (t) {
-                  return this.outputs[t];
-                },
-              },
-              {
-                key: "addChangeOutput",
-                value: function (t) {
-                  this.outputs.push({ address: this.changedAddress, value: t }),
-                    (this.changeOutputIndex = this.outputs.length - 1);
-                },
-              },
-              {
-                key: "getChangeOutput",
-                value: function () {
-                  return this.outputs[this.changeOutputIndex];
-                },
-              },
-              {
-                key: "getChangeAmount",
-                value: function () {
-                  var t = this.getChangeOutput();
-                  return t ? t.value : 0;
-                },
-              },
-              {
-                key: "removeChangeOutput",
-                value: function () {
-                  this.outputs.splice(this.changeOutputIndex, 1),
-                    (this.changeOutputIndex = -1);
-                },
-              },
-              {
-                key: "removeRecentOutputs",
-                value: function (t) {
-                  this.outputs.splice(-t);
-                },
-              },
-              {
-                key: "createSignedPsbt",
-                value:
-                  ((y = (0, n.Z)(
-                    (0, a.Z)().mark(function t() {
-                      var r;
-                      return (0, a.Z)().wrap(
-                        function (t) {
-                          for (;;)
-                            switch ((t.prev = t.next)) {
-                              case 0:
-                                return (
-                                  (r = new s.Psbt({ network: this.network })),
-                                  this.inputs.forEach(function (t, e) {
-                                    r.addInput(t.data),
-                                      r.setInputSequence(e, 4294967293);
-                                  }),
-                                  this.outputs.forEach(function (t) {
-                                    r.addOutput(t);
-                                  }),
-                                  (t.next = 5),
-                                  this.wallet.signPsbt(r)
-                                );
-                              case 5:
-                                return t.abrupt("return", r);
-                              case 6:
-                              case "end":
-                                return t.stop();
-                            }
-                        },
-                        t,
-                        this
-                      );
-                    })
-                  )),
-                  function () {
-                    return y.apply(this, arguments);
-                  }),
-              },
-              {
-                key: "generate",
-                value:
-                  ((m = (0, n.Z)(
-                    (0, a.Z)().mark(function t(e) {
-                      var r, n, i, o, s;
-                      return (0, a.Z)().wrap(
-                        function (t) {
-                          for (;;)
-                            switch ((t.prev = t.next)) {
-                              case 0:
-                                return (
-                                  (r = this.getUnspent()),
-                                  this.addChangeOutput(Math.max(r, 0)),
-                                  (t.next = 4),
-                                  this.createSignedPsbt()
-                                );
-                              case 4:
-                                return (
-                                  (n = t.sent),
-                                  this.removeChangeOutput(),
-                                  (n = n
-                                    .extractTransaction()
-                                    .toBuffer().length),
-                                  (n = n * this.feeRate) < r
-                                    ? (i = r - n) > f.E &&
-                                      this.addChangeOutput(i)
-                                    : e && (this.outputs[0].value -= n - r),
-                                  (t.next = 11),
-                                  this.createSignedPsbt()
-                                );
-                              case 11:
-                                return (
-                                  (i = t.sent),
-                                  (o = i.extractTransaction()),
-                                  (o = o.toHex()),
-                                  (s = this.outputs[0].value),
-                                  t.abrupt("return", {
-                                    fee: i.getFee(),
-                                    rawtx: o,
-                                    toSatoshis: s,
-                                    estimateFee: n,
-                                  })
-                                );
-                              case 16:
-                              case "end":
-                                return t.stop();
-                            }
-                        },
-                        t,
-                        this
-                      );
-                    })
-                  )),
-                  function (t) {
-                    return m.apply(this, arguments);
-                  }),
-              },
-              {
-                key: "dumpTx",
-                value:
-                  ((g = (0, n.Z)(
-                    (0, a.Z)().mark(function t(e) {
-                      var r, n, i;
-                      return (0, a.Z)().wrap(
-                        function (t) {
-                          for (;;)
-                            switch ((t.prev = t.next)) {
-                              case 0:
-                                (r = e.extractTransaction()),
-                                  (i = r.toBuffer().length),
-                                  (n = e.getFee()),
-                                  (i = (n / i).toFixed(4)),
-                                  console.log(
-                                    "\n=============================================================================================\nSummary\n  txid:     "
-                                      .concat(r.getId(), "\n  Size:     ")
-                                      .concat(r.byteLength(), "\n  Fee Paid: ")
-                                      .concat(e.getFee(), "\n  Fee Rate: ")
-                                      .concat(i, " sat/B\n  Detail:   ")
-                                      .concat(e.txInputs.length, " Inputs, ")
-                                      .concat(
-                                        e.txOutputs.length,
-                                        " Outputs\n----------------------------------------------------------------------------------------------\nInputs\n  "
-                                      )
-                                      .concat(
-                                        this.inputs
-                                          .map(function (t, e) {
-                                            return "\n=>"
-                                              .concat(e, " ")
-                                              .concat(
-                                                t.data.witnessUtxo.value,
-                                                " Sats\n        lock-size: "
-                                              )
-                                              .concat(
-                                                t.data.witnessUtxo.script
-                                                  .length,
-                                                "\n        via "
-                                              )
-                                              .concat(t.data.hash, " [")
-                                              .concat(t.data.index, "]\n  ");
-                                          })
-                                          .join(""),
-                                        "\ntotal: "
-                                      )
-                                      .concat(
-                                        this.getTotalInput(),
-                                        " Sats\n----------------------------------------------------------------------------------------------\n  Outputs\n  "
-                                      )
-                                      .concat(
-                                        this.outputs
-                                          .map(function (t, e) {
-                                            return "\n  =>"
-                                              .concat(e, " ")
-                                              .concat(t.address, " ")
-                                              .concat(t.value, " Sats");
-                                          })
-                                          .join(""),
-                                        "\n\ntotal: "
-                                      )
-                                      .concat(
-                                        this.getTotalOutput() - n,
-                                        " Sats\n=============================================================================================\n    "
-                                      )
-                                  );
-                              case 5:
-                              case "end":
-                                return t.stop();
-                            }
-                        },
-                        t,
-                        this
-                      );
-                    })
-                  )),
-                  function (t) {
-                    return g.apply(this, arguments);
-                  }),
-              },
-            ]);
-            var p = d;
-            e();
-          } catch (t) {
-            e(t);
-          }
-          function d(t, e, r, n) {
-            (0, i.Z)(this, d),
-              (this.inputs = []),
-              (this.outputs = []),
-              (this.changeOutputIndex = -1),
-              (this.wallet = void 0),
-              (this.changedAddress = void 0),
-              (this.network = s.networks.bitcoin),
-              (this.feeRate = void 0),
-              (this.pubkey = void 0),
-              (this.wallet = t),
-              (this.network = e),
-              (this.pubkey = r),
-              (this.feeRate = n || 5);
-          }
-          var g, m, y, b, v, w;
-        });
-      },
-      62250: function (t, e, r) {
-        "use strict";
-        r.d(e, {
-          E: function () {
-            return n;
-          },
-        });
-        var n = 546;
-      },
-      97346: function (t, f, h) {
-        "use strict";
-        h.a(t, async function (t, e) {
-          try {
-            h.d(f, {
-              IN: function () {
-                return i;
-              },
-              e0: function () {
-                return u;
-              },
-              oj: function () {
-                return s;
-              },
-            });
-            var _ = h(74165),
-              r = h(15861),
-              S = h(66770),
-              k = h(62250),
-              E = h(87310),
-              n = t([S]);
-            function i(t) {
-              return o.apply(this, arguments);
-            }
-            function o() {
-              return (o = (0, r.Z)(
-                (0, _.Z)().mark(function t(e) {
-                  var r, n, i, o, s, a, u, c, f, h, l, p, d, g, m, y, b;
-                  return (0, _.Z)().wrap(function (t) {
-                    for (;;)
-                      switch ((t.prev = t.next)) {
-                        case 0:
-                          (y = e.utxos),
-                            (r = e.toAddress),
-                            (b = e.toAmount),
-                            (o = e.wallet),
-                            (u = e.network),
-                            (l = e.changeAddress),
-                            (n = e.receiverToPayFee),
-                            (f = e.feeRate),
-                            (c = e.pubkey),
-                            (i = e.dump),
-                            (o = new S.t2(o, u, c, f)).setChangeAddress(l),
-                            (s = []),
-                            (a = []),
-                            y.forEach(function (t) {
-                              (0 < +t.ords ? a : s).push(t);
-                            }),
-                            o.addOutput(r, b),
-                            (u = o.getTotalOutput()),
-                            (c = o.getTotalInput()),
-                            (f = 0);
-                        case 10:
-                          if (f < s.length) {
-                            if (((h = s[f]), c < u))
-                              return (
-                                o.addInput(h),
-                                (c += h.satoshis),
-                                t.abrupt("continue", 23)
-                              );
-                            t.next = 16;
-                          } else t.next = 26;
-                          break;
-                        case 16:
-                          c < u + 5
-                            ? (o.addInput(h), (c += h.satoshis), (t.next = 23))
-                            : (t.next = 22);
-                          break;
-                        case 22:
-                          return t.abrupt("break", 26);
-                        case 23:
-                          f++, (t.next = 10);
-                          break;
-                        case 26:
-                          if (0 === s.length)
-                            throw new Error("Balance not enough");
-                          t.next = 28;
-                          break;
-                        case 28:
-                          if (n) {
-                            if (
-                              ((l = o.getUnspent()) >= k.E &&
-                                o.addChangeOutput(l),
-                              (p = 5),
-                              (d = o.outputs.find(function (t) {
-                                return t.address === r;
-                              })) && d.value < p)
-                            )
-                              throw new Error(
-                                "Balance not enough. Need ".concat(
-                                  (0, E.g)(p),
-                                  " DOGE as network fee"
-                                )
-                              );
-                            t.next = 35;
-                          } else t.next = 38;
-                          break;
-                        case 35:
-                          d && (d.value -= p), (t.next = 47);
-                          break;
-                        case 38:
-                          if (0 === (g = o.getUnspent()))
-                            throw new Error(
-                              "Balance not enough to pay network fee."
-                            );
-                          t.next = 41;
-                          break;
-                        case 41:
-                          if ((o.addChangeOutput(1), g < (m = 5)))
-                            throw new Error(
-                              "Balance not enough. Need "
-                                .concat(
-                                  (0, E.g)(m),
-                                  " DOGE as network fee, but only "
-                                )
-                                .concat((0, E.g)(g), " DOGE.")
-                            );
-                          t.next = 45;
-                          break;
-                        case 45:
-                          (y = g - m) >= k.E
-                            ? (o.getChangeOutput().value = y)
-                            : o.removeChangeOutput();
-                        case 47:
-                          return (t.next = 49), o.createSignedPsbt();
-                        case 49:
-                          return (
-                            (b = t.sent),
-                            i && o.dumpTx(b),
-                            t.abrupt("return", b)
-                          );
-                        case 52:
-                        case "end":
-                          return t.stop();
-                      }
-                  }, t);
-                })
-              )).apply(this, arguments);
-            }
-            function s(t) {
-              return a.apply(this, arguments);
-            }
-            function a() {
-              return (a = (0, r.Z)(
-                (0, _.Z)().mark(function t(e) {
-                  var r, n, i, o, s, a, u, c, f, h, l, p, d, g, m, y, b, v, w;
-                  return (0, _.Z)().wrap(function (t) {
-                    for (;;)
-                      switch ((t.prev = t.next)) {
-                        case 0:
-                          (w = e.utxos),
-                            (r = e.toAddress),
-                            (n = e.toOrdId),
-                            (s = e.wallet),
-                            (c = e.network),
-                            (v = e.changeAddress),
-                            (f = e.pubkey),
-                            (m = e.feeRate),
-                            (i = e.outputValue),
-                            (o = e.dump),
-                            (s = new S.t2(s, c, f, m)).setChangeAddress(v),
-                            (a = []),
-                            (u = []),
-                            w.forEach(function (t) {
-                              (0 < t.ords.length ? u : a).push(t);
-                            }),
-                            (c = !1),
-                            (f = 0);
-                        case 8:
-                          if (f < u.length)
-                            if (
-                              (h = u[f]).ords.find(function (t) {
-                                return t.id == n;
-                              })
-                            ) {
-                              if (1 < h.ords.length)
-                                throw new Error(
-                                  "Multiple inscriptions! Please split them first."
-                                );
-                              t.next = 13;
-                            } else t.next = 17;
-                          else t.next = 20;
-                          break;
-                        case 13:
-                          return (
-                            s.addInput(h),
-                            s.addOutput(r, h.satoshis),
-                            (c = !0),
-                            t.abrupt("break", 20)
-                          );
-                        case 17:
-                          f++, (t.next = 8);
-                          break;
-                        case 20:
-                          if (c) {
-                            t.next = 22;
-                            break;
-                          }
-                          throw new Error("inscription not found.");
-                        case 22:
-                          (s.outputs[0].value = i),
-                            (l = s.getTotalOutput()),
-                            (p = s.getTotalInput()),
-                            (d = 0);
-                        case 26:
-                          if (d < a.length) {
-                            if (((g = a[d]), p < l))
-                              return (
-                                s.addInput(g),
-                                (p += g.satoshis),
-                                t.abrupt("continue", 41)
-                              );
-                            t.next = 32;
-                          } else t.next = 44;
-                          break;
-                        case 32:
-                          return (t.next = 34), s.calNetworkFee();
-                        case 34:
-                          ((m = t.sent), p < l + m)
-                            ? (s.addInput(g), (p += g.satoshis), (t.next = 41))
-                            : (t.next = 40);
-                          break;
-                        case 40:
-                          return t.abrupt("break", 44);
-                        case 41:
-                          d++, (t.next = 26);
-                          break;
-                        case 44:
-                          if (0 == (y = s.getUnspent()))
-                            throw new Error(
-                              "Balance not enough to pay network fee."
-                            );
-                          t.next = 47;
-                          break;
-                        case 47:
-                          return (
-                            s.addChangeOutput(1),
-                            (t.next = 50),
-                            s.calNetworkFee()
-                          );
-                        case 50:
-                          if (((b = t.sent), y < b))
-                            throw new Error(
-                              "Balance not enough. Need "
-                                .concat(
-                                  (0, E.g)(b),
-                                  " BTC as network fee, but only "
-                                )
-                                .concat((0, E.g)(y), " BTC.")
-                            );
-                          t.next = 53;
-                          break;
-                        case 53:
-                          return (
-                            (v = y - b) >= k.E
-                              ? (s.getChangeOutput().value = v)
-                              : s.removeChangeOutput(),
-                            (t.next = 57),
-                            s.createSignedPsbt()
-                          );
-                        case 57:
-                          return (
-                            (w = t.sent),
-                            o && s.dumpTx(w),
-                            t.abrupt("return", w)
-                          );
-                        case 60:
-                        case "end":
-                          return t.stop();
-                      }
-                  }, t);
-                })
-              )).apply(this, arguments);
-            }
-            function u(t) {
-              return c.apply(this, arguments);
-            }
-            function c() {
-              return (c = (0, r.Z)(
-                (0, _.Z)().mark(function t(e) {
-                  var r, n, i, o, s, a, u, c, f, h, l, p, d, g, m, y, b, v;
-                  return (0, _.Z)().wrap(function (t) {
-                    for (;;)
-                      switch ((t.prev = t.next)) {
-                        case 0:
-                          (v = e.utxos),
-                            (r = e.toAddress),
-                            (n = e.toOrdIds),
-                            (o = e.wallet),
-                            (u = e.network),
-                            (b = e.changeAddress),
-                            (c = e.pubkey),
-                            (g = e.feeRate),
-                            (i = e.dump),
-                            (o = new S.t2(o, u, c, g)).setChangeAddress(b),
-                            (s = []),
-                            (a = []),
-                            v.forEach(function (t) {
-                              (0 < t.ords.length ? a : s).push(t);
-                            }),
-                            (c = u = 0);
-                        case 8:
-                          if (c < a.length)
-                            if (
-                              (f = a[c]).ords.find(function (t) {
-                                return n.includes(t.id);
-                              })
-                            ) {
-                              if (1 < f.ords.length)
-                                throw new Error(
-                                  "Multiple inscriptions in one UTXO! Please split them first."
-                                );
-                              t.next = 13;
-                            } else t.next = 16;
-                          else t.next = 19;
-                          break;
-                        case 13:
-                          o.addInput(f), o.addOutput(r, f.satoshis), u++;
-                        case 16:
-                          c++, (t.next = 8);
-                          break;
-                        case 19:
-                          if (u != n.length)
-                            throw new Error("inscription not found.");
-                          t.next = 21;
-                          break;
-                        case 21:
-                          (h = o.getTotalOutput()),
-                            (l = o.getTotalInput()),
-                            (p = 0);
-                        case 24:
-                          if (p < s.length) {
-                            if (((d = s[p]), l < h))
-                              return (
-                                o.addInput(d),
-                                (l += d.satoshis),
-                                t.abrupt("continue", 39)
-                              );
-                            t.next = 30;
-                          } else t.next = 42;
-                          break;
-                        case 30:
-                          return (t.next = 32), o.calNetworkFee();
-                        case 32:
-                          ((g = t.sent), l < h + g)
-                            ? (o.addInput(d), (l += d.satoshis), (t.next = 39))
-                            : (t.next = 38);
-                          break;
-                        case 38:
-                          return t.abrupt("break", 42);
-                        case 39:
-                          p++, (t.next = 24);
-                          break;
-                        case 42:
-                          if (0 == (m = o.getUnspent()))
-                            throw new Error(
-                              "Balance not enough to pay network fee."
-                            );
-                          t.next = 45;
-                          break;
-                        case 45:
-                          return (
-                            o.addChangeOutput(1),
-                            (t.next = 48),
-                            o.calNetworkFee()
-                          );
-                        case 48:
-                          if (((y = t.sent), m < y))
-                            throw new Error(
-                              "Balance not enough. Need "
-                                .concat(
-                                  (0, E.g)(y),
-                                  " BTC as network fee, but only "
-                                )
-                                .concat((0, E.g)(m), " BTC.")
-                            );
-                          t.next = 51;
-                          break;
-                        case 51:
-                          return (
-                            (b = m - y) >= k.E
-                              ? (o.getChangeOutput().value = b)
-                              : o.removeChangeOutput(),
-                            (t.next = 55),
-                            o.createSignedPsbt()
-                          );
-                        case 55:
-                          return (
-                            (v = t.sent),
-                            i && o.dumpTx(v),
-                            t.abrupt("return", v)
-                          );
-                        case 58:
-                        case "end":
-                          return t.stop();
-                      }
-                  }, t);
-                })
-              )).apply(this, arguments);
-            }
-            (S = (n.then ? (await n)() : n)[0]), e();
-          } catch (t) {
-            e(t);
-          }
-        });
-      },
-      87310: function (t, e, r) {
-        "use strict";
-        r.d(e, {
-          g: function () {
-            return i;
-          },
-        });
-        var n = r(11075);
-        function i(t) {
-          return new n.Z(t).dividedBy(1e8).toFixed(8);
-        }
-      },
       58662: function (t, e, r) {
         "use strict";
         r(68963), r(75859);
@@ -12377,14 +11280,22 @@
         "use strict";
         r.d(e, {
           FU: function () {
+            return o;
+          },
+          KE: function () {
             return i;
           },
         });
-        var n = r(11075);
-        function i(t) {
+        var n = r(11075),
+          i =
+            (r(48270),
+            r(58662),
+            function (t) {
+              return t / 1e8;
+            });
+        function o(t) {
           return new n.Z(t).multipliedBy(1e8).toNumber();
         }
-        r(48270), r(58662);
       },
       98894: function (t, e, r) {
         "use strict";
@@ -12731,25 +11642,25 @@
         }
         e.default = o;
       },
-      26987: function (t, A, x) {
+      26987: function (t, A, O) {
         "use strict";
-        x.a(t, async function (t, e) {
+        O.a(t, async function (t, e) {
           try {
-            x.d(A, {
+            O.d(A, {
               K: function () {
                 return b;
               },
             });
-            var r = x(15861),
-              n = x(94578),
-              i = x(64687),
-              a = x.n(i),
-              o = x(52522),
-              s = x(33676),
-              u = x(85893),
-              c = x(28004),
-              f = x(88347),
-              h = x.n(f),
+            var r = O(15861),
+              n = O(94578),
+              i = O(64687),
+              a = O.n(i),
+              o = O(52522),
+              s = O(33676),
+              u = O(85893),
+              c = O(28004),
+              f = O(88347),
+              h = O.n(f),
               l = t([o, c]);
             function p(t, e) {
               var r,
@@ -13097,7 +12008,7 @@
             (w = f.EventEmitter),
               (0, n.Z)(v, w),
               ((P = v.prototype).serialize =
-                ((O = (0, r.Z)(
+                ((x = (0, r.Z)(
                   a().mark(function t() {
                     return a().wrap(
                       function (t) {
@@ -13121,10 +12032,10 @@
                   })
                 )),
                 function () {
-                  return O.apply(this, arguments);
+                  return x.apply(this, arguments);
                 })),
               (P.deserialize =
-                ((x = (0, r.Z)(
+                ((O = (0, r.Z)(
                   a().mark(function t(e) {
                     var r;
                     return a().wrap(
@@ -13151,7 +12062,7 @@
                   })
                 )),
                 function (t) {
-                  return x.apply(this, arguments);
+                  return O.apply(this, arguments);
                 })),
               (P.addAccounts =
                 ((A = (0, r.Z)(
@@ -13413,7 +12324,7 @@
               e
             );
           }
-          var w, _, S, k, E, I, A, x, O, P;
+          var w, _, S, k, E, I, A, O, x, P;
         });
       },
       5834: function (t, e, r) {
@@ -15007,7 +13918,7 @@
           }
           return w;
         }
-        function x(t) {
+        function O(t) {
           return (
             g(t) ||
             (null !== t &&
@@ -15016,14 +13927,14 @@
               "function" == typeof t.catch)
           );
         }
-        function O(e) {
+        function x(e) {
           return Promise.resolve().then(function () {
             var t;
             if ("function" == typeof e) {
-              if (!x((t = e())))
+              if (!O((t = e())))
                 throw new a("instance of Promise", "promiseFn", t);
             } else {
-              if (!x(e)) throw new p("promiseFn", ["Function", "Promise"], e);
+              if (!O(e)) throw new p("promiseFn", ["Function", "Promise"], e);
               t = e;
             }
             return Promise.resolve()
@@ -15122,7 +14033,7 @@
               i++
             )
               n[i - 1] = arguments[i];
-            return O(t).then(function (t) {
+            return x(t).then(function (t) {
               return P.apply(void 0, [e, t].concat(n));
             });
           }),
@@ -15142,7 +14053,7 @@
               i++
             )
               n[i - 1] = arguments[i];
-            return O(t).then(function (t) {
+            return x(t).then(function (t) {
               return T.apply(void 0, [e, t].concat(n));
             });
           }),
@@ -15287,13 +14198,13 @@
         }
         var a = r(19447).inspect,
           g = r(35805).codes.ERR_INVALID_ARG_TYPE;
-        function x(t, e, r) {
+        function O(t, e, r) {
           return (
             (void 0 === r || r > t.length) && (r = t.length),
             t.substring(r - e.length, r) === e
           );
         }
-        var O = "",
+        var x = "",
           P = "",
           T = "",
           M = "",
@@ -15359,8 +14270,8 @@
                   I.stderr &&
                   I.stderr.getColorDepth &&
                   1 !== I.stderr.getColorDepth()
-                    ? ((O = "[34m"), (P = "[32m"), (M = "[39m"), "[31m")
-                    : (M = P = O = "")),
+                    ? ((x = "[34m"), (P = "[32m"), (M = "[39m"), "[31m")
+                    : (M = P = x = "")),
               "object" === A(o) &&
                 null !== o &&
                 "object" === A(t) &&
@@ -15451,7 +14362,7 @@
                       var y = u.split("\n");
                       if (30 < y.length)
                         for (
-                          y[26] = "".concat(O, "...").concat(M);
+                          y[26] = "".concat(x, "...").concat(M);
                           27 < y.length;
 
                         )
@@ -15461,7 +14372,7 @@
                         .concat(y.join("\n"), "\n");
                     }
                     3 < h &&
-                      ((s = "\n".concat(O, "...").concat(M).concat(s)),
+                      ((s = "\n".concat(x, "...").concat(M).concat(s)),
                       (a = !0)),
                       "" !== n && ((s = "\n  ".concat(n).concat(s)), (n = ""));
                     for (
@@ -15473,7 +14384,7 @@
                             .concat(M, " ")
                             .concat(T, "- expected")
                             .concat(M),
-                        w = " ".concat(O, "...").concat(M, " Lines skipped"),
+                        w = " ".concat(x, "...").concat(M, " Lines skipped"),
                         h = 0;
                       h < m;
                       h++
@@ -15487,7 +14398,7 @@
                           ? (1 < E &&
                               2 < h &&
                               (4 < E
-                                ? ((i += "\n".concat(O, "...").concat(M)),
+                                ? ((i += "\n".concat(x, "...").concat(M)),
                                   (a = !0))
                                 : 3 < E &&
                                   ((i += "\n  ".concat(f[h - 2])), b++),
@@ -15503,7 +14414,7 @@
                           ? (1 < E &&
                               2 < h &&
                               (4 < E
-                                ? ((i += "\n".concat(O, "...").concat(M)),
+                                ? ((i += "\n".concat(x, "...").concat(M)),
                                   (a = !0))
                                 : 3 < E &&
                                   ((i += "\n  ".concat(c[h - 2])), b++),
@@ -15518,15 +14429,15 @@
                           : ((_ = f[h]),
                             (k =
                               (S = c[h]) !== _ &&
-                              (!x(S, ",") || S.slice(0, -1) !== _)) &&
-                              x(_, ",") &&
+                              (!O(S, ",") || S.slice(0, -1) !== _)) &&
+                              O(_, ",") &&
                               _.slice(0, -1) === S &&
                               ((k = !1), (S += ",")),
                             k
                               ? (1 < E &&
                                   2 < h &&
                                   (4 < E
-                                    ? ((i += "\n".concat(O, "...").concat(M)),
+                                    ? ((i += "\n".concat(x, "...").concat(M)),
                                       (a = !0))
                                     : 3 < E &&
                                       ((i += "\n  ".concat(c[h - 2])), b++),
@@ -15553,9 +14464,9 @@
                             .concat(v)
                             .concat(w, "\n")
                             .concat(i, "\n")
-                            .concat(O, "...")
+                            .concat(x, "...")
                             .concat(M)
-                            .concat(n, "\n") + "".concat(O, "...").concat(M)
+                            .concat(n, "\n") + "".concat(x, "...").concat(M)
                         );
                     }
                     return ""
@@ -15578,7 +14489,7 @@
                   (a = R.notStrictEqualObject),
                 30 < u.length)
               )
-                for (u[26] = "".concat(O, "...").concat(M); 27 < u.length; )
+                for (u[26] = "".concat(x, "...").concat(M); 27 < u.length; )
                   u.pop();
               e =
                 1 === u.length
@@ -15992,7 +14903,7 @@
           E = e.isNumberObject,
           I = e.isStringObject,
           A = e.isBooleanObject,
-          x = e.isBigIntObject,
+          O = e.isBigIntObject,
           K = e.isSymbolObject,
           z = e.isFloat32Array,
           Z = e.isFloat64Array;
@@ -16004,7 +14915,7 @@
           }
           return 10 === t.length && t >= Math.pow(2, 32);
         }
-        function O(t) {
+        function x(t) {
           return Object.keys(t)
             .filter(i)
             .concat(p(t).filter(Object.prototype.propertyIsEnumerable.bind(t)));
@@ -16044,7 +14955,7 @@
           if (Array.isArray(t))
             return (
               t.length === e.length &&
-              ((i = O(t)), (s = O(e)), i.length === s.length) &&
+              ((i = x(t)), (s = x(e)), i.length === s.length) &&
               L(t, e, r, n, M, i)
             );
           if ("[object Object]" === o && ((!_(t) && _(e)) || (!k(t) && k(e))))
@@ -16092,8 +15003,8 @@
                 })(t, e)
               )
                 return !1;
-              var o = O(t),
-                s = O(e);
+              var o = x(t),
+                s = x(e);
               return o.length === s.length && L(t, e, r, n, T, o);
             }
             if (k(t)) return !(!k(e) || t.size !== e.size) && L(t, e, r, n, R);
@@ -16121,8 +15032,8 @@
                 ? A(o) &&
                   Boolean.prototype.valueOf.call(s) ===
                     Boolean.prototype.valueOf.call(o)
-                : x(s)
-                ? x(o) &&
+                : O(s)
+                ? O(o) &&
                   BigInt.prototype.valueOf.call(s) ===
                     BigInt.prototype.valueOf.call(o)
                 : K(o) &&
@@ -19040,12 +17951,12 @@
       45069: function (t, e, r) {
         "use strict";
         var n = r(5647).Buffer,
-          O = r(74704).default,
+          x = r(74704).default,
           A = (Object.defineProperty(e, "__esModule", { value: !0 }), r(73750)),
           P = r(80293),
           T = r(30178),
           M = r(62396);
-        function x(t, e, r) {
+        function O(t, e, r) {
           if (!e.equals(n.from([r])))
             throw new Error(
               "Format Error: Invalid "
@@ -19060,13 +17971,13 @@
             o = e.outputKeyVals,
             s = { unsignedTx: t },
             a = 0,
-            u = O(n);
+            u = x(n);
           try {
             for (u.s(); !(r = u.n()).done; ) {
               var c = r.value;
               switch (c.key[0]) {
                 case M.GlobalTypes.UNSIGNED_TX:
-                  if ((x("global", c.key, M.GlobalTypes.UNSIGNED_TX), 0 < a))
+                  if ((O("global", c.key, M.GlobalTypes.UNSIGNED_TX), 0 < a))
                     throw new Error(
                       "Format Error: GlobalMap has multiple UNSIGNED_TX"
                     );
@@ -19091,20 +18002,20 @@
             n = o.length,
             h = [],
             l = [],
-            p = O(P.range(e));
+            p = x(P.range(e));
           try {
             for (p.s(); !(f = p.n()).done; ) {
               var d,
                 g = f.value,
                 m = {},
-                y = O(i[g]);
+                y = x(i[g]);
               try {
                 for (y.s(); !(d = y.n()).done; ) {
                   var b = d.value;
                   switch ((A.inputs.checkPubkey(b), b.key[0])) {
                     case M.InputTypes.NON_WITNESS_UTXO:
                       if (
-                        (x("input", b.key, M.InputTypes.NON_WITNESS_UTXO),
+                        (O("input", b.key, M.InputTypes.NON_WITNESS_UTXO),
                         void 0 !== m.nonWitnessUtxo)
                       )
                         throw new Error(
@@ -19114,7 +18025,7 @@
                       break;
                     case M.InputTypes.WITNESS_UTXO:
                       if (
-                        (x("input", b.key, M.InputTypes.WITNESS_UTXO),
+                        (O("input", b.key, M.InputTypes.WITNESS_UTXO),
                         void 0 !== m.witnessUtxo)
                       )
                         throw new Error(
@@ -19128,7 +18039,7 @@
                       break;
                     case M.InputTypes.SIGHASH_TYPE:
                       if (
-                        (x("input", b.key, M.InputTypes.SIGHASH_TYPE),
+                        (O("input", b.key, M.InputTypes.SIGHASH_TYPE),
                         void 0 !== m.sighashType)
                       )
                         throw new Error(
@@ -19138,7 +18049,7 @@
                       break;
                     case M.InputTypes.REDEEM_SCRIPT:
                       if (
-                        (x("input", b.key, M.InputTypes.REDEEM_SCRIPT),
+                        (O("input", b.key, M.InputTypes.REDEEM_SCRIPT),
                         void 0 !== m.redeemScript)
                       )
                         throw new Error(
@@ -19148,7 +18059,7 @@
                       break;
                     case M.InputTypes.WITNESS_SCRIPT:
                       if (
-                        (x("input", b.key, M.InputTypes.WITNESS_SCRIPT),
+                        (O("input", b.key, M.InputTypes.WITNESS_SCRIPT),
                         void 0 !== m.witnessScript)
                       )
                         throw new Error(
@@ -19163,20 +18074,20 @@
                         );
                       break;
                     case M.InputTypes.FINAL_SCRIPTSIG:
-                      x("input", b.key, M.InputTypes.FINAL_SCRIPTSIG),
+                      O("input", b.key, M.InputTypes.FINAL_SCRIPTSIG),
                         (m.finalScriptSig = A.inputs.finalScriptSig.decode(b));
                       break;
                     case M.InputTypes.FINAL_SCRIPTWITNESS:
-                      x("input", b.key, M.InputTypes.FINAL_SCRIPTWITNESS),
+                      O("input", b.key, M.InputTypes.FINAL_SCRIPTWITNESS),
                         (m.finalScriptWitness =
                           A.inputs.finalScriptWitness.decode(b));
                       break;
                     case M.InputTypes.POR_COMMITMENT:
-                      x("input", b.key, M.InputTypes.POR_COMMITMENT),
+                      O("input", b.key, M.InputTypes.POR_COMMITMENT),
                         (m.porCommitment = A.inputs.porCommitment.decode(b));
                       break;
                     case M.InputTypes.TAP_KEY_SIG:
-                      x("input", b.key, M.InputTypes.TAP_KEY_SIG),
+                      O("input", b.key, M.InputTypes.TAP_KEY_SIG),
                         (m.tapKeySig = A.inputs.tapKeySig.decode(b));
                       break;
                     case M.InputTypes.TAP_SCRIPT_SIG:
@@ -19195,11 +18106,11 @@
                         );
                       break;
                     case M.InputTypes.TAP_INTERNAL_KEY:
-                      x("input", b.key, M.InputTypes.TAP_INTERNAL_KEY),
+                      O("input", b.key, M.InputTypes.TAP_INTERNAL_KEY),
                         (m.tapInternalKey = A.inputs.tapInternalKey.decode(b));
                       break;
                     case M.InputTypes.TAP_MERKLE_ROOT:
-                      x("input", b.key, M.InputTypes.TAP_MERKLE_ROOT),
+                      O("input", b.key, M.InputTypes.TAP_MERKLE_ROOT),
                         (m.tapMerkleRoot = A.inputs.tapMerkleRoot.decode(b));
                       break;
                     default:
@@ -19220,20 +18131,20 @@
             p.f();
           }
           var v,
-            w = O(P.range(n));
+            w = x(P.range(n));
           try {
             for (w.s(); !(v = w.n()).done; ) {
               var _,
                 S = v.value,
                 k = {},
-                E = O(o[S]);
+                E = x(o[S]);
               try {
                 for (E.s(); !(_ = E.n()).done; ) {
                   var I = _.value;
                   switch ((A.outputs.checkPubkey(I), I.key[0])) {
                     case M.OutputTypes.REDEEM_SCRIPT:
                       if (
-                        (x("output", I.key, M.OutputTypes.REDEEM_SCRIPT),
+                        (O("output", I.key, M.OutputTypes.REDEEM_SCRIPT),
                         void 0 !== k.redeemScript)
                       )
                         throw new Error(
@@ -19243,7 +18154,7 @@
                       break;
                     case M.OutputTypes.WITNESS_SCRIPT:
                       if (
-                        (x("output", I.key, M.OutputTypes.WITNESS_SCRIPT),
+                        (O("output", I.key, M.OutputTypes.WITNESS_SCRIPT),
                         void 0 !== k.witnessScript)
                       )
                         throw new Error(
@@ -19258,11 +18169,11 @@
                         );
                       break;
                     case M.OutputTypes.TAP_INTERNAL_KEY:
-                      x("output", I.key, M.OutputTypes.TAP_INTERNAL_KEY),
+                      O("output", I.key, M.OutputTypes.TAP_INTERNAL_KEY),
                         (k.tapInternalKey = A.outputs.tapInternalKey.decode(I));
                       break;
                     case M.OutputTypes.TAP_TREE:
-                      x("output", I.key, M.OutputTypes.TAP_TREE),
+                      O("output", I.key, M.OutputTypes.TAP_TREE),
                         (k.tapTree = A.outputs.tapTree.decode(I));
                       break;
                     case M.OutputTypes.TAP_BIP32_DERIVATION:
@@ -19334,7 +18245,7 @@
             f = f.outputCount,
             p = [],
             d = [],
-            g = O(P.range(l));
+            g = x(P.range(l));
           try {
             for (g.s(); !(h = g.n()).done; ) {
               for (var m = h.value, y = {}, b = []; !o(); ) {
@@ -19357,20 +18268,20 @@
             g.f();
           }
           var _,
-            S = O(P.range(f));
+            S = x(P.range(f));
           try {
             for (S.s(); !(_ = S.n()).done; ) {
               for (var k = _.value, E = {}, I = []; !o(); ) {
                 var A = i(),
-                  x = A.key.toString("hex");
-                if (E[x])
+                  O = A.key.toString("hex");
+                if (E[O])
                   throw new Error(
                     "Format Error: Keys must be unique for each output: output index " +
                       k +
                       " key " +
-                      x
+                      O
                   );
-                (E[x] = 1), I.push(A);
+                (E[O] = 1), I.push(A);
               }
               d.push(I);
             }
@@ -19385,7 +18296,7 @@
             outputKeyVals: d,
           });
         }),
-          (e.checkKeyBuffer = x),
+          (e.checkKeyBuffer = O),
           (e.psbtFromKeyVals = R);
       },
       60556: function (t, r, e) {
@@ -22466,7 +21377,7 @@
                 {
                   key: "setVersion",
                   value: function (t) {
-                    A(t), x(this.data.inputs, "setVersion");
+                    A(t), O(this.data.inputs, "setVersion");
                     var e = this.__CACHE;
                     return (
                       (e.__TX.version = t), (e.__EXTRACTED_TX = void 0), this
@@ -22476,7 +21387,7 @@
                 {
                   key: "setLocktime",
                   value: function (t) {
-                    A(t), x(this.data.inputs, "setLocktime");
+                    A(t), O(this.data.inputs, "setLocktime");
                     var e = this.__CACHE;
                     return (
                       (e.__TX.locktime = t), (e.__EXTRACTED_TX = void 0), this
@@ -22486,7 +21397,7 @@
                 {
                   key: "setInputSequence",
                   value: function (t, e) {
-                    A(e), x(this.data.inputs, "setInputSequence");
+                    A(e), O(this.data.inputs, "setInputSequence");
                     var r = this.__CACHE;
                     if (r.__TX.ins.length <= t)
                       throw new Error("Input index too high");
@@ -22522,7 +21433,7 @@
                         "Invalid arguments for Psbt.addInput. Requires single object with at least [hash] and [index]"
                       );
                     (0, b.checkTaprootInputFields)(t, t, "addInput"),
-                      x(this.data.inputs, "addInput"),
+                      O(this.data.inputs, "addInput"),
                       t.witnessScript && N(t.witnessScript);
                     var e = this.__CACHE,
                       t =
@@ -22563,7 +21474,7 @@
                       throw new Error(
                         "Invalid arguments for Psbt.addOutput. Requires single object with at least [script or address] and [value]"
                       );
-                    x(this.data.inputs, "addOutput");
+                    O(this.data.inputs, "addOutput");
                     var e = t.address,
                       r =
                         ("string" == typeof e &&
@@ -22917,7 +21828,7 @@
                           p = c.hashType,
                           d = h,
                           g = l;
-                        O(u.pubkey, l, "verify"),
+                        x(u.pubkey, l, "verify"),
                           s.push(e(u.pubkey, h, c.signature));
                       }
                     } catch (t) {
@@ -23718,7 +22629,7 @@
           )
             throw new Error("Invalid 32 bit integer");
         }
-        function x(t, e) {
+        function O(t, e) {
           t.forEach(function (t) {
             if (
               ((0, b.isTaprootInput)(t)
@@ -23728,7 +22639,7 @@
               throw new Error("Can not modify transaction, signatures exist.");
           });
         }
-        function O(t, e, r) {
+        function x(t, e, r) {
           if (!(0, d.pubkeyInScript)(t, e))
             throw new Error(
               "Can not "
@@ -23857,7 +22768,7 @@
           (t = Y(e, (0, u.checkForInput)(t, e), n, !1, i)),
             (e = t.hash),
             (n = t.sighashType);
-          return O(r, t.script, "sign"), { hash: e, sighashType: n };
+          return x(r, t.script, "sign"), { hash: e, sighashType: n };
         }
         function Y(t, e, r, n, i) {
           var o = r.__TX,
@@ -30333,25 +29244,25 @@
                   if (this.stack.length < (k += E))
                     return !(this.errstr =
                       "SCRIPT_ERR_INVALID_STACK_OPERATION");
-                  var x = C.fromScriptNumBuffer(
+                  var O = C.fromScriptNumBuffer(
                     this.stack[this.stack.length - k],
                     s
                   ).toNumber();
-                  if (x < 0 || E < x)
+                  if (O < 0 || E < O)
                     return !(this.errstr = "SCRIPT_ERR_SIG_COUNT");
-                  var O = ++k;
-                  if (this.stack.length < (k += x))
+                  var x = ++k;
+                  if (this.stack.length < (k += O))
                     return !(this.errstr =
                       "SCRIPT_ERR_INVALID_STACK_OPERATION");
                   S = new B().set({
                     chunks: this.script.chunks.slice(this.pbegincodehash),
                   });
-                  for (var P, T = 0; T < x; T++)
-                    (e = this.stack[this.stack.length - O - T]),
+                  for (var P, T = 0; T < O; T++)
+                    (e = this.stack[this.stack.length - x - T]),
                       S.findAndDelete(new B().add(e));
-                  for (o = !0; o && 0 < x; ) {
+                  for (o = !0; o && 0 < O; ) {
                     if (
-                      ((e = this.stack[this.stack.length - O]),
+                      ((e = this.stack[this.stack.length - x]),
                       (r = this.stack[this.stack.length - I]),
                       !this.checkSignatureEncoding(e) ||
                         !this.checkPubkeyEncoding(r))
@@ -30371,7 +29282,7 @@
                     } catch (_) {
                       P = !1;
                     }
-                    P && (O++, x--), I++, x > --E && (o = !1);
+                    P && (x++, O--), I++, O > --E && (o = !1);
                   }
                   for (; 1 < k--; ) {
                     if (
@@ -32387,8 +31298,8 @@
           E = _.MultiSigScriptHash,
           I = _.MultiSig,
           A = r(39720),
-          x = r(91741),
-          O = r(19154),
+          O = r(91741),
+          x = r(19154),
           P = r(36021);
         function T(t, e) {
           if (!(this instanceof T)) return new T(t);
@@ -32643,7 +31554,7 @@
               c.each(e.inputs, function (t) {
                 if (t.output && t.output.script) {
                   var e,
-                    r = new x(t.output.script);
+                    r = new O(t.output.script);
                   if (
                     (r.isScriptHashOut() || r.isWitnessScriptHashOut()) &&
                     t.publicKeys &&
@@ -32676,7 +31587,7 @@
                 i.addOutput(new A(t));
               }),
               e.changeIndex && (this._changeIndex = e.changeIndex),
-              e.changeScript && (this._changeScript = new x(e.changeScript)),
+              e.changeScript && (this._changeScript = new O(e.changeScript)),
               e.fee && (this._fee = e.fee),
               (this.nLockTime = e.nLockTime),
               (this.version = e.version),
@@ -32814,7 +31725,7 @@
                 prevTxId: t.txId,
                 outputIndex: t.outputIndex,
                 sequenceNumber: t.sequenceNumber,
-                script: x.empty(),
+                script: O.empty(),
               };
             return o(i, [t].concat(e && r ? [e, r, !1, n] : []));
           }),
@@ -32839,7 +31750,7 @@
                 t.output ||
                   !e ||
                   c.isUndefined(r) ||
-                  ((e = e instanceof x ? e : new x(e)),
+                  ((e = e instanceof O ? e : new O(e)),
                   l.checkArgumentType(r, "number", "satoshis"),
                   (t.output = new A({ script: e, satoshis: r }))),
                 this.uncheckedAddInput(t)
@@ -32891,7 +31802,7 @@
           (T.prototype.change = function (t) {
             return (
               l.checkArgument(t, "address is required"),
-              (this._changeScript = x.fromAddress(t)),
+              (this._changeScript = O.fromAddress(t)),
               this._updateChangeOutput(),
               this
             );
@@ -32913,13 +31824,13 @@
                     h.isNaturalNumber(e),
                     "Amount is expected to be a positive integer"
                   ),
-                  this.addOutput(new A({ script: x(new v(t)), satoshis: e }))),
+                  this.addOutput(new A({ script: O(new v(t)), satoshis: e }))),
               this
             );
           }),
           (T.prototype.addData = function (t) {
             return (
-              this.addOutput(new A({ script: x.buildDataOut(t), satoshis: 0 })),
+              this.addOutput(new A({ script: O.buildDataOut(t), satoshis: 0 })),
               this
             );
           }),
@@ -33125,7 +32036,7 @@
             );
           }),
           (T.prototype.getSignatures = function (r, n, i) {
-            (r = new O(r)), (n = n || m.SIGHASH_ALL);
+            (r = new x(r)), (n = n || m.SIGHASH_ALL);
             var o = this,
               s = [],
               a = g.sha256ripemd160(r.publicKey.toBuffer());
@@ -34256,11 +33167,11 @@
               I = 8191 & E,
               E = E >>> 13,
               A = 0 | n[2],
-              x = 8191 & A,
+              O = 8191 & A,
               A = A >>> 13,
-              O = 0 | n[3],
-              H = 8191 & O,
-              O = O >>> 13,
+              x = 0 | n[3],
+              H = 8191 & x,
+              x = x >>> 13,
               P = 0 | n[4],
               D = 8191 & P,
               P = P >>> 13,
@@ -34309,10 +33220,10 @@
                 (t = (t + Math.imul(u, I)) | 0),
                 (e = (((e + Math.imul(u, E)) | 0) + Math.imul(a, I)) | 0),
                 (C = (C + Math.imul(a, E)) | 0),
-                (((N + (t = (t + Math.imul(s, x)) | 0)) | 0) +
+                (((N + (t = (t + Math.imul(s, O)) | 0)) | 0) +
                   ((8191 &
                     (e =
-                      (((e + Math.imul(s, A)) | 0) + Math.imul(o, x)) | 0)) <<
+                      (((e + Math.imul(s, A)) | 0) + Math.imul(o, O)) | 0)) <<
                     13)) |
                   0),
               Y =
@@ -34327,18 +33238,18 @@
                 (t = (t + Math.imul(f, I)) | 0),
                 (e = (((e + Math.imul(f, E)) | 0) + Math.imul(c, I)) | 0),
                 (C = (C + Math.imul(c, E)) | 0),
-                (t = (t + Math.imul(u, x)) | 0),
-                (e = (((e + Math.imul(u, A)) | 0) + Math.imul(a, x)) | 0),
+                (t = (t + Math.imul(u, O)) | 0),
+                (e = (((e + Math.imul(u, A)) | 0) + Math.imul(a, O)) | 0),
                 (C = (C + Math.imul(a, A)) | 0),
                 (((N + (t = (t + Math.imul(s, H)) | 0)) | 0) +
                   ((8191 &
                     (e =
-                      (((e + Math.imul(s, O)) | 0) + Math.imul(o, H)) | 0)) <<
+                      (((e + Math.imul(s, x)) | 0) + Math.imul(o, H)) | 0)) <<
                     13)) |
                   0),
               X =
                 ((N =
-                  (((((C + Math.imul(o, O)) | 0) + (e >>> 13)) | 0) +
+                  (((((C + Math.imul(o, x)) | 0) + (e >>> 13)) | 0) +
                     (Y >>> 26)) |
                   0),
                 (Y &= 67108863),
@@ -34348,12 +33259,12 @@
                 (t = (t + Math.imul(l, I)) | 0),
                 (e = (((e + Math.imul(l, E)) | 0) + Math.imul(h, I)) | 0),
                 (C = (C + Math.imul(h, E)) | 0),
-                (t = (t + Math.imul(f, x)) | 0),
-                (e = (((e + Math.imul(f, A)) | 0) + Math.imul(c, x)) | 0),
+                (t = (t + Math.imul(f, O)) | 0),
+                (e = (((e + Math.imul(f, A)) | 0) + Math.imul(c, O)) | 0),
                 (C = (C + Math.imul(c, A)) | 0),
                 (t = (t + Math.imul(u, H)) | 0),
-                (e = (((e + Math.imul(u, O)) | 0) + Math.imul(a, H)) | 0),
-                (C = (C + Math.imul(a, O)) | 0),
+                (e = (((e + Math.imul(u, x)) | 0) + Math.imul(a, H)) | 0),
+                (C = (C + Math.imul(a, x)) | 0),
                 (((N + (t = (t + Math.imul(s, D)) | 0)) | 0) +
                   ((8191 &
                     (e =
@@ -34372,12 +33283,12 @@
                 (t = (t + Math.imul(d, I)) | 0),
                 (e = (((e + Math.imul(d, E)) | 0) + Math.imul(p, I)) | 0),
                 (C = (C + Math.imul(p, E)) | 0),
-                (t = (t + Math.imul(l, x)) | 0),
-                (e = (((e + Math.imul(l, A)) | 0) + Math.imul(h, x)) | 0),
+                (t = (t + Math.imul(l, O)) | 0),
+                (e = (((e + Math.imul(l, A)) | 0) + Math.imul(h, O)) | 0),
                 (C = (C + Math.imul(h, A)) | 0),
                 (t = (t + Math.imul(f, H)) | 0),
-                (e = (((e + Math.imul(f, O)) | 0) + Math.imul(c, H)) | 0),
-                (C = (C + Math.imul(c, O)) | 0),
+                (e = (((e + Math.imul(f, x)) | 0) + Math.imul(c, H)) | 0),
+                (C = (C + Math.imul(c, x)) | 0),
                 (t = (t + Math.imul(u, D)) | 0),
                 (e = (((e + Math.imul(u, P)) | 0) + Math.imul(a, D)) | 0),
                 (C = (C + Math.imul(a, P)) | 0),
@@ -34399,12 +33310,12 @@
                 (t = (t + Math.imul(m, I)) | 0),
                 (e = (((e + Math.imul(m, E)) | 0) + Math.imul(g, I)) | 0),
                 (C = (C + Math.imul(g, E)) | 0),
-                (t = (t + Math.imul(d, x)) | 0),
-                (e = (((e + Math.imul(d, A)) | 0) + Math.imul(p, x)) | 0),
+                (t = (t + Math.imul(d, O)) | 0),
+                (e = (((e + Math.imul(d, A)) | 0) + Math.imul(p, O)) | 0),
                 (C = (C + Math.imul(p, A)) | 0),
                 (t = (t + Math.imul(l, H)) | 0),
-                (e = (((e + Math.imul(l, O)) | 0) + Math.imul(h, H)) | 0),
-                (C = (C + Math.imul(h, O)) | 0),
+                (e = (((e + Math.imul(l, x)) | 0) + Math.imul(h, H)) | 0),
+                (C = (C + Math.imul(h, x)) | 0),
                 (t = (t + Math.imul(f, D)) | 0),
                 (e = (((e + Math.imul(f, P)) | 0) + Math.imul(c, D)) | 0),
                 (C = (C + Math.imul(c, P)) | 0),
@@ -34429,12 +33340,12 @@
                 (t = (t + Math.imul(b, I)) | 0),
                 (e = (((e + Math.imul(b, E)) | 0) + Math.imul(y, I)) | 0),
                 (C = (C + Math.imul(y, E)) | 0),
-                (t = (t + Math.imul(m, x)) | 0),
-                (e = (((e + Math.imul(m, A)) | 0) + Math.imul(g, x)) | 0),
+                (t = (t + Math.imul(m, O)) | 0),
+                (e = (((e + Math.imul(m, A)) | 0) + Math.imul(g, O)) | 0),
                 (C = (C + Math.imul(g, A)) | 0),
                 (t = (t + Math.imul(d, H)) | 0),
-                (e = (((e + Math.imul(d, O)) | 0) + Math.imul(p, H)) | 0),
-                (C = (C + Math.imul(p, O)) | 0),
+                (e = (((e + Math.imul(d, x)) | 0) + Math.imul(p, H)) | 0),
+                (C = (C + Math.imul(p, x)) | 0),
                 (t = (t + Math.imul(l, D)) | 0),
                 (e = (((e + Math.imul(l, P)) | 0) + Math.imul(h, D)) | 0),
                 (C = (C + Math.imul(h, P)) | 0),
@@ -34462,12 +33373,12 @@
                 (t = (t + Math.imul(w, I)) | 0),
                 (e = (((e + Math.imul(w, E)) | 0) + Math.imul(v, I)) | 0),
                 (C = (C + Math.imul(v, E)) | 0),
-                (t = (t + Math.imul(b, x)) | 0),
-                (e = (((e + Math.imul(b, A)) | 0) + Math.imul(y, x)) | 0),
+                (t = (t + Math.imul(b, O)) | 0),
+                (e = (((e + Math.imul(b, A)) | 0) + Math.imul(y, O)) | 0),
                 (C = (C + Math.imul(y, A)) | 0),
                 (t = (t + Math.imul(m, H)) | 0),
-                (e = (((e + Math.imul(m, O)) | 0) + Math.imul(g, H)) | 0),
-                (C = (C + Math.imul(g, O)) | 0),
+                (e = (((e + Math.imul(m, x)) | 0) + Math.imul(g, H)) | 0),
+                (C = (C + Math.imul(g, x)) | 0),
                 (t = (t + Math.imul(d, D)) | 0),
                 (e = (((e + Math.imul(d, P)) | 0) + Math.imul(p, D)) | 0),
                 (C = (C + Math.imul(p, P)) | 0),
@@ -34498,12 +33409,12 @@
                 (t = (t + Math.imul(U, I)) | 0),
                 (e = (((e + Math.imul(U, E)) | 0) + Math.imul(_, I)) | 0),
                 (C = (C + Math.imul(_, E)) | 0),
-                (t = (t + Math.imul(w, x)) | 0),
-                (e = (((e + Math.imul(w, A)) | 0) + Math.imul(v, x)) | 0),
+                (t = (t + Math.imul(w, O)) | 0),
+                (e = (((e + Math.imul(w, A)) | 0) + Math.imul(v, O)) | 0),
                 (C = (C + Math.imul(v, A)) | 0),
                 (t = (t + Math.imul(b, H)) | 0),
-                (e = (((e + Math.imul(b, O)) | 0) + Math.imul(y, H)) | 0),
-                (C = (C + Math.imul(y, O)) | 0),
+                (e = (((e + Math.imul(b, x)) | 0) + Math.imul(y, H)) | 0),
+                (C = (C + Math.imul(y, x)) | 0),
                 (t = (t + Math.imul(m, D)) | 0),
                 (e = (((e + Math.imul(m, P)) | 0) + Math.imul(g, D)) | 0),
                 (C = (C + Math.imul(g, P)) | 0),
@@ -34534,12 +33445,12 @@
                 (t = Math.imul(j, I)),
                 (e = (Math.imul(j, E) + Math.imul(r, I)) | 0),
                 (C = Math.imul(r, E)),
-                (t = (t + Math.imul(U, x)) | 0),
-                (e = (((e + Math.imul(U, A)) | 0) + Math.imul(_, x)) | 0),
+                (t = (t + Math.imul(U, O)) | 0),
+                (e = (((e + Math.imul(U, A)) | 0) + Math.imul(_, O)) | 0),
                 (C = (C + Math.imul(_, A)) | 0),
                 (t = (t + Math.imul(w, H)) | 0),
-                (e = (((e + Math.imul(w, O)) | 0) + Math.imul(v, H)) | 0),
-                (C = (C + Math.imul(v, O)) | 0),
+                (e = (((e + Math.imul(w, x)) | 0) + Math.imul(v, H)) | 0),
+                (C = (C + Math.imul(v, x)) | 0),
                 (t = (t + Math.imul(b, D)) | 0),
                 (e = (((e + Math.imul(b, P)) | 0) + Math.imul(y, D)) | 0),
                 (C = (C + Math.imul(y, P)) | 0),
@@ -34567,12 +33478,12 @@
                     (S >>> 26)) |
                   0),
                 (S &= 67108863),
-                (t = Math.imul(j, x)),
-                (e = (Math.imul(j, A) + Math.imul(r, x)) | 0),
+                (t = Math.imul(j, O)),
+                (e = (Math.imul(j, A) + Math.imul(r, O)) | 0),
                 (C = Math.imul(r, A)),
                 (t = (t + Math.imul(U, H)) | 0),
-                (e = (((e + Math.imul(U, O)) | 0) + Math.imul(_, H)) | 0),
-                (C = (C + Math.imul(_, O)) | 0),
+                (e = (((e + Math.imul(U, x)) | 0) + Math.imul(_, H)) | 0),
+                (C = (C + Math.imul(_, x)) | 0),
                 (t = (t + Math.imul(w, D)) | 0),
                 (e = (((e + Math.imul(w, P)) | 0) + Math.imul(v, D)) | 0),
                 (C = (C + Math.imul(v, P)) | 0),
@@ -34601,8 +33512,8 @@
                   0),
                 (s &= 67108863),
                 (t = Math.imul(j, H)),
-                (e = (Math.imul(j, O) + Math.imul(r, H)) | 0),
-                (C = Math.imul(r, O)),
+                (e = (Math.imul(j, x) + Math.imul(r, H)) | 0),
+                (C = Math.imul(r, x)),
                 (t = (t + Math.imul(U, D)) | 0),
                 (e = (((e + Math.imul(U, P)) | 0) + Math.imul(_, D)) | 0),
                 (C = (C + Math.imul(_, P)) | 0),
@@ -34714,7 +33625,7 @@
                       (((e + Math.imul(w, n)) | 0) + Math.imul(v, q)) | 0)) <<
                     13)) |
                   0),
-              x =
+              O =
                 ((N =
                   (((((C + Math.imul(v, n)) | 0) + (e >>> 13)) | 0) +
                     (a >>> 26)) |
@@ -34732,9 +33643,9 @@
               A =
                 ((N =
                   (((((C + Math.imul(_, n)) | 0) + (e >>> 13)) | 0) +
-                    (x >>> 26)) |
+                    (O >>> 26)) |
                   0),
-                (x &= 67108863),
+                (O &= 67108863),
                 (((N + (t = Math.imul(j, q))) | 0) +
                   ((8191 & (e = (Math.imul(j, n) + Math.imul(r, q)) | 0)) <<
                     13)) |
@@ -34759,7 +33670,7 @@
               (i[14] = E),
               (i[15] = u),
               (i[16] = a),
-              (i[17] = x),
+              (i[17] = O),
               (i[18] = A),
               0 != N && ((i[19] = N), L.length++),
               L
@@ -51137,11 +50048,11 @@
               I = 8191 & E,
               E = E >>> 13,
               A = 0 | n[2],
-              x = 8191 & A,
+              O = 8191 & A,
               A = A >>> 13,
-              O = 0 | n[3],
-              H = 8191 & O,
-              O = O >>> 13,
+              x = 0 | n[3],
+              H = 8191 & x,
+              x = x >>> 13,
               P = 0 | n[4],
               D = 8191 & P,
               P = P >>> 13,
@@ -51190,10 +50101,10 @@
                 (t = (t + Math.imul(u, I)) | 0),
                 (e = (((e + Math.imul(u, E)) | 0) + Math.imul(a, I)) | 0),
                 (C = (C + Math.imul(a, E)) | 0),
-                (((N + (t = (t + Math.imul(s, x)) | 0)) | 0) +
+                (((N + (t = (t + Math.imul(s, O)) | 0)) | 0) +
                   ((8191 &
                     (e =
-                      (((e + Math.imul(s, A)) | 0) + Math.imul(o, x)) | 0)) <<
+                      (((e + Math.imul(s, A)) | 0) + Math.imul(o, O)) | 0)) <<
                     13)) |
                   0),
               Y =
@@ -51208,18 +50119,18 @@
                 (t = (t + Math.imul(f, I)) | 0),
                 (e = (((e + Math.imul(f, E)) | 0) + Math.imul(c, I)) | 0),
                 (C = (C + Math.imul(c, E)) | 0),
-                (t = (t + Math.imul(u, x)) | 0),
-                (e = (((e + Math.imul(u, A)) | 0) + Math.imul(a, x)) | 0),
+                (t = (t + Math.imul(u, O)) | 0),
+                (e = (((e + Math.imul(u, A)) | 0) + Math.imul(a, O)) | 0),
                 (C = (C + Math.imul(a, A)) | 0),
                 (((N + (t = (t + Math.imul(s, H)) | 0)) | 0) +
                   ((8191 &
                     (e =
-                      (((e + Math.imul(s, O)) | 0) + Math.imul(o, H)) | 0)) <<
+                      (((e + Math.imul(s, x)) | 0) + Math.imul(o, H)) | 0)) <<
                     13)) |
                   0),
               X =
                 ((N =
-                  (((((C + Math.imul(o, O)) | 0) + (e >>> 13)) | 0) +
+                  (((((C + Math.imul(o, x)) | 0) + (e >>> 13)) | 0) +
                     (Y >>> 26)) |
                   0),
                 (Y &= 67108863),
@@ -51229,12 +50140,12 @@
                 (t = (t + Math.imul(l, I)) | 0),
                 (e = (((e + Math.imul(l, E)) | 0) + Math.imul(h, I)) | 0),
                 (C = (C + Math.imul(h, E)) | 0),
-                (t = (t + Math.imul(f, x)) | 0),
-                (e = (((e + Math.imul(f, A)) | 0) + Math.imul(c, x)) | 0),
+                (t = (t + Math.imul(f, O)) | 0),
+                (e = (((e + Math.imul(f, A)) | 0) + Math.imul(c, O)) | 0),
                 (C = (C + Math.imul(c, A)) | 0),
                 (t = (t + Math.imul(u, H)) | 0),
-                (e = (((e + Math.imul(u, O)) | 0) + Math.imul(a, H)) | 0),
-                (C = (C + Math.imul(a, O)) | 0),
+                (e = (((e + Math.imul(u, x)) | 0) + Math.imul(a, H)) | 0),
+                (C = (C + Math.imul(a, x)) | 0),
                 (((N + (t = (t + Math.imul(s, D)) | 0)) | 0) +
                   ((8191 &
                     (e =
@@ -51253,12 +50164,12 @@
                 (t = (t + Math.imul(d, I)) | 0),
                 (e = (((e + Math.imul(d, E)) | 0) + Math.imul(p, I)) | 0),
                 (C = (C + Math.imul(p, E)) | 0),
-                (t = (t + Math.imul(l, x)) | 0),
-                (e = (((e + Math.imul(l, A)) | 0) + Math.imul(h, x)) | 0),
+                (t = (t + Math.imul(l, O)) | 0),
+                (e = (((e + Math.imul(l, A)) | 0) + Math.imul(h, O)) | 0),
                 (C = (C + Math.imul(h, A)) | 0),
                 (t = (t + Math.imul(f, H)) | 0),
-                (e = (((e + Math.imul(f, O)) | 0) + Math.imul(c, H)) | 0),
-                (C = (C + Math.imul(c, O)) | 0),
+                (e = (((e + Math.imul(f, x)) | 0) + Math.imul(c, H)) | 0),
+                (C = (C + Math.imul(c, x)) | 0),
                 (t = (t + Math.imul(u, D)) | 0),
                 (e = (((e + Math.imul(u, P)) | 0) + Math.imul(a, D)) | 0),
                 (C = (C + Math.imul(a, P)) | 0),
@@ -51280,12 +50191,12 @@
                 (t = (t + Math.imul(m, I)) | 0),
                 (e = (((e + Math.imul(m, E)) | 0) + Math.imul(g, I)) | 0),
                 (C = (C + Math.imul(g, E)) | 0),
-                (t = (t + Math.imul(d, x)) | 0),
-                (e = (((e + Math.imul(d, A)) | 0) + Math.imul(p, x)) | 0),
+                (t = (t + Math.imul(d, O)) | 0),
+                (e = (((e + Math.imul(d, A)) | 0) + Math.imul(p, O)) | 0),
                 (C = (C + Math.imul(p, A)) | 0),
                 (t = (t + Math.imul(l, H)) | 0),
-                (e = (((e + Math.imul(l, O)) | 0) + Math.imul(h, H)) | 0),
-                (C = (C + Math.imul(h, O)) | 0),
+                (e = (((e + Math.imul(l, x)) | 0) + Math.imul(h, H)) | 0),
+                (C = (C + Math.imul(h, x)) | 0),
                 (t = (t + Math.imul(f, D)) | 0),
                 (e = (((e + Math.imul(f, P)) | 0) + Math.imul(c, D)) | 0),
                 (C = (C + Math.imul(c, P)) | 0),
@@ -51310,12 +50221,12 @@
                 (t = (t + Math.imul(b, I)) | 0),
                 (e = (((e + Math.imul(b, E)) | 0) + Math.imul(y, I)) | 0),
                 (C = (C + Math.imul(y, E)) | 0),
-                (t = (t + Math.imul(m, x)) | 0),
-                (e = (((e + Math.imul(m, A)) | 0) + Math.imul(g, x)) | 0),
+                (t = (t + Math.imul(m, O)) | 0),
+                (e = (((e + Math.imul(m, A)) | 0) + Math.imul(g, O)) | 0),
                 (C = (C + Math.imul(g, A)) | 0),
                 (t = (t + Math.imul(d, H)) | 0),
-                (e = (((e + Math.imul(d, O)) | 0) + Math.imul(p, H)) | 0),
-                (C = (C + Math.imul(p, O)) | 0),
+                (e = (((e + Math.imul(d, x)) | 0) + Math.imul(p, H)) | 0),
+                (C = (C + Math.imul(p, x)) | 0),
                 (t = (t + Math.imul(l, D)) | 0),
                 (e = (((e + Math.imul(l, P)) | 0) + Math.imul(h, D)) | 0),
                 (C = (C + Math.imul(h, P)) | 0),
@@ -51343,12 +50254,12 @@
                 (t = (t + Math.imul(w, I)) | 0),
                 (e = (((e + Math.imul(w, E)) | 0) + Math.imul(v, I)) | 0),
                 (C = (C + Math.imul(v, E)) | 0),
-                (t = (t + Math.imul(b, x)) | 0),
-                (e = (((e + Math.imul(b, A)) | 0) + Math.imul(y, x)) | 0),
+                (t = (t + Math.imul(b, O)) | 0),
+                (e = (((e + Math.imul(b, A)) | 0) + Math.imul(y, O)) | 0),
                 (C = (C + Math.imul(y, A)) | 0),
                 (t = (t + Math.imul(m, H)) | 0),
-                (e = (((e + Math.imul(m, O)) | 0) + Math.imul(g, H)) | 0),
-                (C = (C + Math.imul(g, O)) | 0),
+                (e = (((e + Math.imul(m, x)) | 0) + Math.imul(g, H)) | 0),
+                (C = (C + Math.imul(g, x)) | 0),
                 (t = (t + Math.imul(d, D)) | 0),
                 (e = (((e + Math.imul(d, P)) | 0) + Math.imul(p, D)) | 0),
                 (C = (C + Math.imul(p, P)) | 0),
@@ -51379,12 +50290,12 @@
                 (t = (t + Math.imul(U, I)) | 0),
                 (e = (((e + Math.imul(U, E)) | 0) + Math.imul(_, I)) | 0),
                 (C = (C + Math.imul(_, E)) | 0),
-                (t = (t + Math.imul(w, x)) | 0),
-                (e = (((e + Math.imul(w, A)) | 0) + Math.imul(v, x)) | 0),
+                (t = (t + Math.imul(w, O)) | 0),
+                (e = (((e + Math.imul(w, A)) | 0) + Math.imul(v, O)) | 0),
                 (C = (C + Math.imul(v, A)) | 0),
                 (t = (t + Math.imul(b, H)) | 0),
-                (e = (((e + Math.imul(b, O)) | 0) + Math.imul(y, H)) | 0),
-                (C = (C + Math.imul(y, O)) | 0),
+                (e = (((e + Math.imul(b, x)) | 0) + Math.imul(y, H)) | 0),
+                (C = (C + Math.imul(y, x)) | 0),
                 (t = (t + Math.imul(m, D)) | 0),
                 (e = (((e + Math.imul(m, P)) | 0) + Math.imul(g, D)) | 0),
                 (C = (C + Math.imul(g, P)) | 0),
@@ -51415,12 +50326,12 @@
                 (t = Math.imul(j, I)),
                 (e = (Math.imul(j, E) + Math.imul(r, I)) | 0),
                 (C = Math.imul(r, E)),
-                (t = (t + Math.imul(U, x)) | 0),
-                (e = (((e + Math.imul(U, A)) | 0) + Math.imul(_, x)) | 0),
+                (t = (t + Math.imul(U, O)) | 0),
+                (e = (((e + Math.imul(U, A)) | 0) + Math.imul(_, O)) | 0),
                 (C = (C + Math.imul(_, A)) | 0),
                 (t = (t + Math.imul(w, H)) | 0),
-                (e = (((e + Math.imul(w, O)) | 0) + Math.imul(v, H)) | 0),
-                (C = (C + Math.imul(v, O)) | 0),
+                (e = (((e + Math.imul(w, x)) | 0) + Math.imul(v, H)) | 0),
+                (C = (C + Math.imul(v, x)) | 0),
                 (t = (t + Math.imul(b, D)) | 0),
                 (e = (((e + Math.imul(b, P)) | 0) + Math.imul(y, D)) | 0),
                 (C = (C + Math.imul(y, P)) | 0),
@@ -51448,12 +50359,12 @@
                     (S >>> 26)) |
                   0),
                 (S &= 67108863),
-                (t = Math.imul(j, x)),
-                (e = (Math.imul(j, A) + Math.imul(r, x)) | 0),
+                (t = Math.imul(j, O)),
+                (e = (Math.imul(j, A) + Math.imul(r, O)) | 0),
                 (C = Math.imul(r, A)),
                 (t = (t + Math.imul(U, H)) | 0),
-                (e = (((e + Math.imul(U, O)) | 0) + Math.imul(_, H)) | 0),
-                (C = (C + Math.imul(_, O)) | 0),
+                (e = (((e + Math.imul(U, x)) | 0) + Math.imul(_, H)) | 0),
+                (C = (C + Math.imul(_, x)) | 0),
                 (t = (t + Math.imul(w, D)) | 0),
                 (e = (((e + Math.imul(w, P)) | 0) + Math.imul(v, D)) | 0),
                 (C = (C + Math.imul(v, P)) | 0),
@@ -51482,8 +50393,8 @@
                   0),
                 (s &= 67108863),
                 (t = Math.imul(j, H)),
-                (e = (Math.imul(j, O) + Math.imul(r, H)) | 0),
-                (C = Math.imul(r, O)),
+                (e = (Math.imul(j, x) + Math.imul(r, H)) | 0),
+                (C = Math.imul(r, x)),
                 (t = (t + Math.imul(U, D)) | 0),
                 (e = (((e + Math.imul(U, P)) | 0) + Math.imul(_, D)) | 0),
                 (C = (C + Math.imul(_, P)) | 0),
@@ -51595,7 +50506,7 @@
                       (((e + Math.imul(w, n)) | 0) + Math.imul(v, q)) | 0)) <<
                     13)) |
                   0),
-              x =
+              O =
                 ((N =
                   (((((C + Math.imul(v, n)) | 0) + (e >>> 13)) | 0) +
                     (a >>> 26)) |
@@ -51613,9 +50524,9 @@
               A =
                 ((N =
                   (((((C + Math.imul(_, n)) | 0) + (e >>> 13)) | 0) +
-                    (x >>> 26)) |
+                    (O >>> 26)) |
                   0),
-                (x &= 67108863),
+                (O &= 67108863),
                 (((N + (t = Math.imul(j, q))) | 0) +
                   ((8191 & (e = (Math.imul(j, n) + Math.imul(r, q)) | 0)) <<
                     13)) |
@@ -51640,7 +50551,7 @@
               (i[14] = E),
               (i[15] = u),
               (i[16] = a),
-              (i[17] = x),
+              (i[17] = O),
               (i[18] = A),
               0 != N && ((i[19] = N), L.length++),
               L
@@ -54499,11 +53410,11 @@
               I = 8191 & E,
               E = E >>> 13,
               A = 0 | n[2],
-              x = 8191 & A,
+              O = 8191 & A,
               A = A >>> 13,
-              O = 0 | n[3],
-              H = 8191 & O,
-              O = O >>> 13,
+              x = 0 | n[3],
+              H = 8191 & x,
+              x = x >>> 13,
               P = 0 | n[4],
               D = 8191 & P,
               P = P >>> 13,
@@ -54552,10 +53463,10 @@
                 (t = (t + Math.imul(u, I)) | 0),
                 (e = (((e + Math.imul(u, E)) | 0) + Math.imul(a, I)) | 0),
                 (C = (C + Math.imul(a, E)) | 0),
-                (((N + (t = (t + Math.imul(s, x)) | 0)) | 0) +
+                (((N + (t = (t + Math.imul(s, O)) | 0)) | 0) +
                   ((8191 &
                     (e =
-                      (((e + Math.imul(s, A)) | 0) + Math.imul(o, x)) | 0)) <<
+                      (((e + Math.imul(s, A)) | 0) + Math.imul(o, O)) | 0)) <<
                     13)) |
                   0),
               Y =
@@ -54570,18 +53481,18 @@
                 (t = (t + Math.imul(f, I)) | 0),
                 (e = (((e + Math.imul(f, E)) | 0) + Math.imul(c, I)) | 0),
                 (C = (C + Math.imul(c, E)) | 0),
-                (t = (t + Math.imul(u, x)) | 0),
-                (e = (((e + Math.imul(u, A)) | 0) + Math.imul(a, x)) | 0),
+                (t = (t + Math.imul(u, O)) | 0),
+                (e = (((e + Math.imul(u, A)) | 0) + Math.imul(a, O)) | 0),
                 (C = (C + Math.imul(a, A)) | 0),
                 (((N + (t = (t + Math.imul(s, H)) | 0)) | 0) +
                   ((8191 &
                     (e =
-                      (((e + Math.imul(s, O)) | 0) + Math.imul(o, H)) | 0)) <<
+                      (((e + Math.imul(s, x)) | 0) + Math.imul(o, H)) | 0)) <<
                     13)) |
                   0),
               X =
                 ((N =
-                  (((((C + Math.imul(o, O)) | 0) + (e >>> 13)) | 0) +
+                  (((((C + Math.imul(o, x)) | 0) + (e >>> 13)) | 0) +
                     (Y >>> 26)) |
                   0),
                 (Y &= 67108863),
@@ -54591,12 +53502,12 @@
                 (t = (t + Math.imul(l, I)) | 0),
                 (e = (((e + Math.imul(l, E)) | 0) + Math.imul(h, I)) | 0),
                 (C = (C + Math.imul(h, E)) | 0),
-                (t = (t + Math.imul(f, x)) | 0),
-                (e = (((e + Math.imul(f, A)) | 0) + Math.imul(c, x)) | 0),
+                (t = (t + Math.imul(f, O)) | 0),
+                (e = (((e + Math.imul(f, A)) | 0) + Math.imul(c, O)) | 0),
                 (C = (C + Math.imul(c, A)) | 0),
                 (t = (t + Math.imul(u, H)) | 0),
-                (e = (((e + Math.imul(u, O)) | 0) + Math.imul(a, H)) | 0),
-                (C = (C + Math.imul(a, O)) | 0),
+                (e = (((e + Math.imul(u, x)) | 0) + Math.imul(a, H)) | 0),
+                (C = (C + Math.imul(a, x)) | 0),
                 (((N + (t = (t + Math.imul(s, D)) | 0)) | 0) +
                   ((8191 &
                     (e =
@@ -54615,12 +53526,12 @@
                 (t = (t + Math.imul(d, I)) | 0),
                 (e = (((e + Math.imul(d, E)) | 0) + Math.imul(p, I)) | 0),
                 (C = (C + Math.imul(p, E)) | 0),
-                (t = (t + Math.imul(l, x)) | 0),
-                (e = (((e + Math.imul(l, A)) | 0) + Math.imul(h, x)) | 0),
+                (t = (t + Math.imul(l, O)) | 0),
+                (e = (((e + Math.imul(l, A)) | 0) + Math.imul(h, O)) | 0),
                 (C = (C + Math.imul(h, A)) | 0),
                 (t = (t + Math.imul(f, H)) | 0),
-                (e = (((e + Math.imul(f, O)) | 0) + Math.imul(c, H)) | 0),
-                (C = (C + Math.imul(c, O)) | 0),
+                (e = (((e + Math.imul(f, x)) | 0) + Math.imul(c, H)) | 0),
+                (C = (C + Math.imul(c, x)) | 0),
                 (t = (t + Math.imul(u, D)) | 0),
                 (e = (((e + Math.imul(u, P)) | 0) + Math.imul(a, D)) | 0),
                 (C = (C + Math.imul(a, P)) | 0),
@@ -54642,12 +53553,12 @@
                 (t = (t + Math.imul(m, I)) | 0),
                 (e = (((e + Math.imul(m, E)) | 0) + Math.imul(g, I)) | 0),
                 (C = (C + Math.imul(g, E)) | 0),
-                (t = (t + Math.imul(d, x)) | 0),
-                (e = (((e + Math.imul(d, A)) | 0) + Math.imul(p, x)) | 0),
+                (t = (t + Math.imul(d, O)) | 0),
+                (e = (((e + Math.imul(d, A)) | 0) + Math.imul(p, O)) | 0),
                 (C = (C + Math.imul(p, A)) | 0),
                 (t = (t + Math.imul(l, H)) | 0),
-                (e = (((e + Math.imul(l, O)) | 0) + Math.imul(h, H)) | 0),
-                (C = (C + Math.imul(h, O)) | 0),
+                (e = (((e + Math.imul(l, x)) | 0) + Math.imul(h, H)) | 0),
+                (C = (C + Math.imul(h, x)) | 0),
                 (t = (t + Math.imul(f, D)) | 0),
                 (e = (((e + Math.imul(f, P)) | 0) + Math.imul(c, D)) | 0),
                 (C = (C + Math.imul(c, P)) | 0),
@@ -54672,12 +53583,12 @@
                 (t = (t + Math.imul(b, I)) | 0),
                 (e = (((e + Math.imul(b, E)) | 0) + Math.imul(y, I)) | 0),
                 (C = (C + Math.imul(y, E)) | 0),
-                (t = (t + Math.imul(m, x)) | 0),
-                (e = (((e + Math.imul(m, A)) | 0) + Math.imul(g, x)) | 0),
+                (t = (t + Math.imul(m, O)) | 0),
+                (e = (((e + Math.imul(m, A)) | 0) + Math.imul(g, O)) | 0),
                 (C = (C + Math.imul(g, A)) | 0),
                 (t = (t + Math.imul(d, H)) | 0),
-                (e = (((e + Math.imul(d, O)) | 0) + Math.imul(p, H)) | 0),
-                (C = (C + Math.imul(p, O)) | 0),
+                (e = (((e + Math.imul(d, x)) | 0) + Math.imul(p, H)) | 0),
+                (C = (C + Math.imul(p, x)) | 0),
                 (t = (t + Math.imul(l, D)) | 0),
                 (e = (((e + Math.imul(l, P)) | 0) + Math.imul(h, D)) | 0),
                 (C = (C + Math.imul(h, P)) | 0),
@@ -54705,12 +53616,12 @@
                 (t = (t + Math.imul(w, I)) | 0),
                 (e = (((e + Math.imul(w, E)) | 0) + Math.imul(v, I)) | 0),
                 (C = (C + Math.imul(v, E)) | 0),
-                (t = (t + Math.imul(b, x)) | 0),
-                (e = (((e + Math.imul(b, A)) | 0) + Math.imul(y, x)) | 0),
+                (t = (t + Math.imul(b, O)) | 0),
+                (e = (((e + Math.imul(b, A)) | 0) + Math.imul(y, O)) | 0),
                 (C = (C + Math.imul(y, A)) | 0),
                 (t = (t + Math.imul(m, H)) | 0),
-                (e = (((e + Math.imul(m, O)) | 0) + Math.imul(g, H)) | 0),
-                (C = (C + Math.imul(g, O)) | 0),
+                (e = (((e + Math.imul(m, x)) | 0) + Math.imul(g, H)) | 0),
+                (C = (C + Math.imul(g, x)) | 0),
                 (t = (t + Math.imul(d, D)) | 0),
                 (e = (((e + Math.imul(d, P)) | 0) + Math.imul(p, D)) | 0),
                 (C = (C + Math.imul(p, P)) | 0),
@@ -54741,12 +53652,12 @@
                 (t = (t + Math.imul(U, I)) | 0),
                 (e = (((e + Math.imul(U, E)) | 0) + Math.imul(_, I)) | 0),
                 (C = (C + Math.imul(_, E)) | 0),
-                (t = (t + Math.imul(w, x)) | 0),
-                (e = (((e + Math.imul(w, A)) | 0) + Math.imul(v, x)) | 0),
+                (t = (t + Math.imul(w, O)) | 0),
+                (e = (((e + Math.imul(w, A)) | 0) + Math.imul(v, O)) | 0),
                 (C = (C + Math.imul(v, A)) | 0),
                 (t = (t + Math.imul(b, H)) | 0),
-                (e = (((e + Math.imul(b, O)) | 0) + Math.imul(y, H)) | 0),
-                (C = (C + Math.imul(y, O)) | 0),
+                (e = (((e + Math.imul(b, x)) | 0) + Math.imul(y, H)) | 0),
+                (C = (C + Math.imul(y, x)) | 0),
                 (t = (t + Math.imul(m, D)) | 0),
                 (e = (((e + Math.imul(m, P)) | 0) + Math.imul(g, D)) | 0),
                 (C = (C + Math.imul(g, P)) | 0),
@@ -54777,12 +53688,12 @@
                 (t = Math.imul(j, I)),
                 (e = (Math.imul(j, E) + Math.imul(r, I)) | 0),
                 (C = Math.imul(r, E)),
-                (t = (t + Math.imul(U, x)) | 0),
-                (e = (((e + Math.imul(U, A)) | 0) + Math.imul(_, x)) | 0),
+                (t = (t + Math.imul(U, O)) | 0),
+                (e = (((e + Math.imul(U, A)) | 0) + Math.imul(_, O)) | 0),
                 (C = (C + Math.imul(_, A)) | 0),
                 (t = (t + Math.imul(w, H)) | 0),
-                (e = (((e + Math.imul(w, O)) | 0) + Math.imul(v, H)) | 0),
-                (C = (C + Math.imul(v, O)) | 0),
+                (e = (((e + Math.imul(w, x)) | 0) + Math.imul(v, H)) | 0),
+                (C = (C + Math.imul(v, x)) | 0),
                 (t = (t + Math.imul(b, D)) | 0),
                 (e = (((e + Math.imul(b, P)) | 0) + Math.imul(y, D)) | 0),
                 (C = (C + Math.imul(y, P)) | 0),
@@ -54810,12 +53721,12 @@
                     (S >>> 26)) |
                   0),
                 (S &= 67108863),
-                (t = Math.imul(j, x)),
-                (e = (Math.imul(j, A) + Math.imul(r, x)) | 0),
+                (t = Math.imul(j, O)),
+                (e = (Math.imul(j, A) + Math.imul(r, O)) | 0),
                 (C = Math.imul(r, A)),
                 (t = (t + Math.imul(U, H)) | 0),
-                (e = (((e + Math.imul(U, O)) | 0) + Math.imul(_, H)) | 0),
-                (C = (C + Math.imul(_, O)) | 0),
+                (e = (((e + Math.imul(U, x)) | 0) + Math.imul(_, H)) | 0),
+                (C = (C + Math.imul(_, x)) | 0),
                 (t = (t + Math.imul(w, D)) | 0),
                 (e = (((e + Math.imul(w, P)) | 0) + Math.imul(v, D)) | 0),
                 (C = (C + Math.imul(v, P)) | 0),
@@ -54844,8 +53755,8 @@
                   0),
                 (s &= 67108863),
                 (t = Math.imul(j, H)),
-                (e = (Math.imul(j, O) + Math.imul(r, H)) | 0),
-                (C = Math.imul(r, O)),
+                (e = (Math.imul(j, x) + Math.imul(r, H)) | 0),
+                (C = Math.imul(r, x)),
                 (t = (t + Math.imul(U, D)) | 0),
                 (e = (((e + Math.imul(U, P)) | 0) + Math.imul(_, D)) | 0),
                 (C = (C + Math.imul(_, P)) | 0),
@@ -54957,7 +53868,7 @@
                       (((e + Math.imul(w, n)) | 0) + Math.imul(v, q)) | 0)) <<
                     13)) |
                   0),
-              x =
+              O =
                 ((N =
                   (((((C + Math.imul(v, n)) | 0) + (e >>> 13)) | 0) +
                     (a >>> 26)) |
@@ -54975,9 +53886,9 @@
               A =
                 ((N =
                   (((((C + Math.imul(_, n)) | 0) + (e >>> 13)) | 0) +
-                    (x >>> 26)) |
+                    (O >>> 26)) |
                   0),
-                (x &= 67108863),
+                (O &= 67108863),
                 (((N + (t = Math.imul(j, q))) | 0) +
                   ((8191 & (e = (Math.imul(j, n) + Math.imul(r, q)) | 0)) <<
                     13)) |
@@ -55002,7 +53913,7 @@
               (i[14] = E),
               (i[15] = u),
               (i[16] = a),
-              (i[17] = x),
+              (i[17] = O),
               (i[18] = A),
               0 != N && ((i[19] = N), L.length++),
               L
@@ -56108,8 +55019,8 @@
           s = r(21071),
           I = r(46652),
           A = r(81644).ec,
-          x = r(84457),
-          O = r(58947),
+          O = r(84457),
+          x = r(58947),
           P = r(1308);
         function T(t, e, r, n) {
           (t = E.from(t.toArray())).length < e.byteLength() &&
@@ -56144,7 +55055,7 @@
           };
         }
         function M(t, e) {
-          var r = new x(t),
+          var r = new O(t),
             t = (t.length << 3) - e.bitLength();
           return 0 < t && r.ishrn(t), r;
         }
@@ -56165,7 +55076,7 @@
           return i;
         }
         (t.exports = function (t, e, r, n, i) {
-          e = O(e);
+          e = x(e);
           if (e.curve) {
             if ("ecdsa" !== n && "ecdsa/rsa" !== n)
               throw new Error("wrong private key type");
@@ -56192,7 +55103,7 @@
                 d = e.params.p,
                 g = e.params.q,
                 m = e.params.g,
-                y = new x(0),
+                y = new O(0),
                 b = M(o, g).mod(g),
                 v = !1,
                 w = T(p, g, o, l);
@@ -56202,12 +55113,12 @@
               (c = m),
                 (f = u = R(g, w, l)),
                 (h = g),
-                (y = c.toRed(x.mont(d)).redPow(f).fromRed().mod(h)),
+                (y = c.toRed(O.mont(d)).redPow(f).fromRed().mod(h)),
                 0 ===
                   (v = u
                     .invm(g)
                     .imul(b.add(p.mul(y)))
-                    .mod(g)).cmpn(0) && ((v = !1), (y = new x(0)));
+                    .mod(g)).cmpn(0) && ((v = !1), (y = new O(0)));
             return (
               (o = v),
               (a = (a = y).toArray()),
@@ -56990,11 +55901,11 @@
               I = 8191 & E,
               E = E >>> 13,
               A = 0 | n[2],
-              x = 8191 & A,
+              O = 8191 & A,
               A = A >>> 13,
-              O = 0 | n[3],
-              H = 8191 & O,
-              O = O >>> 13,
+              x = 0 | n[3],
+              H = 8191 & x,
+              x = x >>> 13,
               P = 0 | n[4],
               D = 8191 & P,
               P = P >>> 13,
@@ -57043,10 +55954,10 @@
                 (t = (t + Math.imul(u, I)) | 0),
                 (e = (((e + Math.imul(u, E)) | 0) + Math.imul(a, I)) | 0),
                 (C = (C + Math.imul(a, E)) | 0),
-                (((N + (t = (t + Math.imul(s, x)) | 0)) | 0) +
+                (((N + (t = (t + Math.imul(s, O)) | 0)) | 0) +
                   ((8191 &
                     (e =
-                      (((e + Math.imul(s, A)) | 0) + Math.imul(o, x)) | 0)) <<
+                      (((e + Math.imul(s, A)) | 0) + Math.imul(o, O)) | 0)) <<
                     13)) |
                   0),
               Y =
@@ -57061,18 +55972,18 @@
                 (t = (t + Math.imul(f, I)) | 0),
                 (e = (((e + Math.imul(f, E)) | 0) + Math.imul(c, I)) | 0),
                 (C = (C + Math.imul(c, E)) | 0),
-                (t = (t + Math.imul(u, x)) | 0),
-                (e = (((e + Math.imul(u, A)) | 0) + Math.imul(a, x)) | 0),
+                (t = (t + Math.imul(u, O)) | 0),
+                (e = (((e + Math.imul(u, A)) | 0) + Math.imul(a, O)) | 0),
                 (C = (C + Math.imul(a, A)) | 0),
                 (((N + (t = (t + Math.imul(s, H)) | 0)) | 0) +
                   ((8191 &
                     (e =
-                      (((e + Math.imul(s, O)) | 0) + Math.imul(o, H)) | 0)) <<
+                      (((e + Math.imul(s, x)) | 0) + Math.imul(o, H)) | 0)) <<
                     13)) |
                   0),
               X =
                 ((N =
-                  (((((C + Math.imul(o, O)) | 0) + (e >>> 13)) | 0) +
+                  (((((C + Math.imul(o, x)) | 0) + (e >>> 13)) | 0) +
                     (Y >>> 26)) |
                   0),
                 (Y &= 67108863),
@@ -57082,12 +55993,12 @@
                 (t = (t + Math.imul(l, I)) | 0),
                 (e = (((e + Math.imul(l, E)) | 0) + Math.imul(h, I)) | 0),
                 (C = (C + Math.imul(h, E)) | 0),
-                (t = (t + Math.imul(f, x)) | 0),
-                (e = (((e + Math.imul(f, A)) | 0) + Math.imul(c, x)) | 0),
+                (t = (t + Math.imul(f, O)) | 0),
+                (e = (((e + Math.imul(f, A)) | 0) + Math.imul(c, O)) | 0),
                 (C = (C + Math.imul(c, A)) | 0),
                 (t = (t + Math.imul(u, H)) | 0),
-                (e = (((e + Math.imul(u, O)) | 0) + Math.imul(a, H)) | 0),
-                (C = (C + Math.imul(a, O)) | 0),
+                (e = (((e + Math.imul(u, x)) | 0) + Math.imul(a, H)) | 0),
+                (C = (C + Math.imul(a, x)) | 0),
                 (((N + (t = (t + Math.imul(s, D)) | 0)) | 0) +
                   ((8191 &
                     (e =
@@ -57106,12 +56017,12 @@
                 (t = (t + Math.imul(d, I)) | 0),
                 (e = (((e + Math.imul(d, E)) | 0) + Math.imul(p, I)) | 0),
                 (C = (C + Math.imul(p, E)) | 0),
-                (t = (t + Math.imul(l, x)) | 0),
-                (e = (((e + Math.imul(l, A)) | 0) + Math.imul(h, x)) | 0),
+                (t = (t + Math.imul(l, O)) | 0),
+                (e = (((e + Math.imul(l, A)) | 0) + Math.imul(h, O)) | 0),
                 (C = (C + Math.imul(h, A)) | 0),
                 (t = (t + Math.imul(f, H)) | 0),
-                (e = (((e + Math.imul(f, O)) | 0) + Math.imul(c, H)) | 0),
-                (C = (C + Math.imul(c, O)) | 0),
+                (e = (((e + Math.imul(f, x)) | 0) + Math.imul(c, H)) | 0),
+                (C = (C + Math.imul(c, x)) | 0),
                 (t = (t + Math.imul(u, D)) | 0),
                 (e = (((e + Math.imul(u, P)) | 0) + Math.imul(a, D)) | 0),
                 (C = (C + Math.imul(a, P)) | 0),
@@ -57133,12 +56044,12 @@
                 (t = (t + Math.imul(m, I)) | 0),
                 (e = (((e + Math.imul(m, E)) | 0) + Math.imul(g, I)) | 0),
                 (C = (C + Math.imul(g, E)) | 0),
-                (t = (t + Math.imul(d, x)) | 0),
-                (e = (((e + Math.imul(d, A)) | 0) + Math.imul(p, x)) | 0),
+                (t = (t + Math.imul(d, O)) | 0),
+                (e = (((e + Math.imul(d, A)) | 0) + Math.imul(p, O)) | 0),
                 (C = (C + Math.imul(p, A)) | 0),
                 (t = (t + Math.imul(l, H)) | 0),
-                (e = (((e + Math.imul(l, O)) | 0) + Math.imul(h, H)) | 0),
-                (C = (C + Math.imul(h, O)) | 0),
+                (e = (((e + Math.imul(l, x)) | 0) + Math.imul(h, H)) | 0),
+                (C = (C + Math.imul(h, x)) | 0),
                 (t = (t + Math.imul(f, D)) | 0),
                 (e = (((e + Math.imul(f, P)) | 0) + Math.imul(c, D)) | 0),
                 (C = (C + Math.imul(c, P)) | 0),
@@ -57163,12 +56074,12 @@
                 (t = (t + Math.imul(b, I)) | 0),
                 (e = (((e + Math.imul(b, E)) | 0) + Math.imul(y, I)) | 0),
                 (C = (C + Math.imul(y, E)) | 0),
-                (t = (t + Math.imul(m, x)) | 0),
-                (e = (((e + Math.imul(m, A)) | 0) + Math.imul(g, x)) | 0),
+                (t = (t + Math.imul(m, O)) | 0),
+                (e = (((e + Math.imul(m, A)) | 0) + Math.imul(g, O)) | 0),
                 (C = (C + Math.imul(g, A)) | 0),
                 (t = (t + Math.imul(d, H)) | 0),
-                (e = (((e + Math.imul(d, O)) | 0) + Math.imul(p, H)) | 0),
-                (C = (C + Math.imul(p, O)) | 0),
+                (e = (((e + Math.imul(d, x)) | 0) + Math.imul(p, H)) | 0),
+                (C = (C + Math.imul(p, x)) | 0),
                 (t = (t + Math.imul(l, D)) | 0),
                 (e = (((e + Math.imul(l, P)) | 0) + Math.imul(h, D)) | 0),
                 (C = (C + Math.imul(h, P)) | 0),
@@ -57196,12 +56107,12 @@
                 (t = (t + Math.imul(w, I)) | 0),
                 (e = (((e + Math.imul(w, E)) | 0) + Math.imul(v, I)) | 0),
                 (C = (C + Math.imul(v, E)) | 0),
-                (t = (t + Math.imul(b, x)) | 0),
-                (e = (((e + Math.imul(b, A)) | 0) + Math.imul(y, x)) | 0),
+                (t = (t + Math.imul(b, O)) | 0),
+                (e = (((e + Math.imul(b, A)) | 0) + Math.imul(y, O)) | 0),
                 (C = (C + Math.imul(y, A)) | 0),
                 (t = (t + Math.imul(m, H)) | 0),
-                (e = (((e + Math.imul(m, O)) | 0) + Math.imul(g, H)) | 0),
-                (C = (C + Math.imul(g, O)) | 0),
+                (e = (((e + Math.imul(m, x)) | 0) + Math.imul(g, H)) | 0),
+                (C = (C + Math.imul(g, x)) | 0),
                 (t = (t + Math.imul(d, D)) | 0),
                 (e = (((e + Math.imul(d, P)) | 0) + Math.imul(p, D)) | 0),
                 (C = (C + Math.imul(p, P)) | 0),
@@ -57232,12 +56143,12 @@
                 (t = (t + Math.imul(U, I)) | 0),
                 (e = (((e + Math.imul(U, E)) | 0) + Math.imul(_, I)) | 0),
                 (C = (C + Math.imul(_, E)) | 0),
-                (t = (t + Math.imul(w, x)) | 0),
-                (e = (((e + Math.imul(w, A)) | 0) + Math.imul(v, x)) | 0),
+                (t = (t + Math.imul(w, O)) | 0),
+                (e = (((e + Math.imul(w, A)) | 0) + Math.imul(v, O)) | 0),
                 (C = (C + Math.imul(v, A)) | 0),
                 (t = (t + Math.imul(b, H)) | 0),
-                (e = (((e + Math.imul(b, O)) | 0) + Math.imul(y, H)) | 0),
-                (C = (C + Math.imul(y, O)) | 0),
+                (e = (((e + Math.imul(b, x)) | 0) + Math.imul(y, H)) | 0),
+                (C = (C + Math.imul(y, x)) | 0),
                 (t = (t + Math.imul(m, D)) | 0),
                 (e = (((e + Math.imul(m, P)) | 0) + Math.imul(g, D)) | 0),
                 (C = (C + Math.imul(g, P)) | 0),
@@ -57268,12 +56179,12 @@
                 (t = Math.imul(j, I)),
                 (e = (Math.imul(j, E) + Math.imul(r, I)) | 0),
                 (C = Math.imul(r, E)),
-                (t = (t + Math.imul(U, x)) | 0),
-                (e = (((e + Math.imul(U, A)) | 0) + Math.imul(_, x)) | 0),
+                (t = (t + Math.imul(U, O)) | 0),
+                (e = (((e + Math.imul(U, A)) | 0) + Math.imul(_, O)) | 0),
                 (C = (C + Math.imul(_, A)) | 0),
                 (t = (t + Math.imul(w, H)) | 0),
-                (e = (((e + Math.imul(w, O)) | 0) + Math.imul(v, H)) | 0),
-                (C = (C + Math.imul(v, O)) | 0),
+                (e = (((e + Math.imul(w, x)) | 0) + Math.imul(v, H)) | 0),
+                (C = (C + Math.imul(v, x)) | 0),
                 (t = (t + Math.imul(b, D)) | 0),
                 (e = (((e + Math.imul(b, P)) | 0) + Math.imul(y, D)) | 0),
                 (C = (C + Math.imul(y, P)) | 0),
@@ -57301,12 +56212,12 @@
                     (S >>> 26)) |
                   0),
                 (S &= 67108863),
-                (t = Math.imul(j, x)),
-                (e = (Math.imul(j, A) + Math.imul(r, x)) | 0),
+                (t = Math.imul(j, O)),
+                (e = (Math.imul(j, A) + Math.imul(r, O)) | 0),
                 (C = Math.imul(r, A)),
                 (t = (t + Math.imul(U, H)) | 0),
-                (e = (((e + Math.imul(U, O)) | 0) + Math.imul(_, H)) | 0),
-                (C = (C + Math.imul(_, O)) | 0),
+                (e = (((e + Math.imul(U, x)) | 0) + Math.imul(_, H)) | 0),
+                (C = (C + Math.imul(_, x)) | 0),
                 (t = (t + Math.imul(w, D)) | 0),
                 (e = (((e + Math.imul(w, P)) | 0) + Math.imul(v, D)) | 0),
                 (C = (C + Math.imul(v, P)) | 0),
@@ -57335,8 +56246,8 @@
                   0),
                 (s &= 67108863),
                 (t = Math.imul(j, H)),
-                (e = (Math.imul(j, O) + Math.imul(r, H)) | 0),
-                (C = Math.imul(r, O)),
+                (e = (Math.imul(j, x) + Math.imul(r, H)) | 0),
+                (C = Math.imul(r, x)),
                 (t = (t + Math.imul(U, D)) | 0),
                 (e = (((e + Math.imul(U, P)) | 0) + Math.imul(_, D)) | 0),
                 (C = (C + Math.imul(_, P)) | 0),
@@ -57448,7 +56359,7 @@
                       (((e + Math.imul(w, n)) | 0) + Math.imul(v, q)) | 0)) <<
                     13)) |
                   0),
-              x =
+              O =
                 ((N =
                   (((((C + Math.imul(v, n)) | 0) + (e >>> 13)) | 0) +
                     (a >>> 26)) |
@@ -57466,9 +56377,9 @@
               A =
                 ((N =
                   (((((C + Math.imul(_, n)) | 0) + (e >>> 13)) | 0) +
-                    (x >>> 26)) |
+                    (O >>> 26)) |
                   0),
-                (x &= 67108863),
+                (O &= 67108863),
                 (((N + (t = Math.imul(j, q))) | 0) +
                   ((8191 & (e = (Math.imul(j, n) + Math.imul(r, q)) | 0)) <<
                     13)) |
@@ -57493,7 +56404,7 @@
               (i[14] = E),
               (i[15] = u),
               (i[16] = a),
-              (i[17] = x),
+              (i[17] = O),
               (i[18] = A),
               0 != N && ((i[19] = N), L.length++),
               L
@@ -58792,7 +57703,7 @@
                 u.sync
                   ? A(a)
                   : ((u.needReadable = !1),
-                    u.emittedReadable || ((u.emittedReadable = !0), x(a))));
+                    u.emittedReadable || ((u.emittedReadable = !0), O(a))));
           else if (
             (i ||
               ((c = f),
@@ -58826,9 +57737,9 @@
                 ((e = f.decoder.write(e)), f.objectMode) ||
                 0 !== e.length
                   ? E(t, f, e, !1)
-                  : O(t, f);
+                  : x(t, f);
             }
-          else n || ((f.reading = !1), O(t, f));
+          else n || ((f.reading = !1), x(t, f));
           return !f.ended && (f.length < f.highWaterMark || 0 === f.length);
         }
         function E(t, e, r, n) {
@@ -58837,7 +57748,7 @@
             : ((e.length += e.objectMode ? 1 : r.length),
               n ? e.buffer.unshift(r) : e.buffer.push(r),
               e.needReadable && A(t)),
-            O(t, e);
+            x(t, e);
         }
         Object.defineProperty(S.prototype, "destroyed", {
           enumerable: !1,
@@ -58921,9 +57832,9 @@
             e.emittedReadable ||
               (y("emitReadable", e.flowing),
               (e.emittedReadable = !0),
-              g.nextTick(x, t));
+              g.nextTick(O, t));
         }
-        function x(t) {
+        function O(t) {
           var e = t._readableState;
           y("emitReadable_", e.destroyed, e.length, e.ended),
             e.destroyed ||
@@ -58933,7 +57844,7 @@
               !e.flowing && !e.ended && e.length <= e.highWaterMark),
             R(t);
         }
-        function O(t, e) {
+        function x(t, e) {
           e.readingMore || ((e.readingMore = !0), g.nextTick(P, t, e));
         }
         function P(t, e) {
@@ -59486,11 +58397,11 @@
                         (i._writableState.errorEmitted = !0),
                         S(i, t),
                         T(i, e)))
-                  : ((r = O(s) || o.destroyed) ||
+                  : ((r = x(s) || o.destroyed) ||
                       s.corked ||
                       s.bufferProcessing ||
                       !s.bufferedRequest ||
-                      x(o, s),
+                      O(o, s),
                     a ? m.nextTick(A, o, s, r, u) : A(o, s, r, u));
             }),
             (this.writecb = null),
@@ -59541,7 +58452,7 @@
             n(),
             T(t, e);
         }
-        function x(t, e) {
+        function O(t, e) {
           e.bufferProcessing = !0;
           var r = e.bufferedRequest;
           if (t._writev && r && r.next) {
@@ -59576,7 +58487,7 @@
           }
           (e.bufferedRequest = r), (e.bufferProcessing = !1);
         }
-        function O(t) {
+        function x(t) {
           return (
             t.ending &&
             0 === t.length &&
@@ -59597,7 +58508,7 @@
         function T(t, e) {
           var r,
             n,
-            i = O(e);
+            i = x(e);
           return (
             i &&
               ((r = t),
@@ -59732,7 +58643,7 @@
                 t.corked ||
                 t.bufferProcessing ||
                 !t.bufferedRequest ||
-                x(this, t));
+                O(this, t));
           }),
           (E.prototype.setDefaultEncoding = function (t) {
             if (
@@ -61800,8 +60711,8 @@
               }
             return this;
           });
-        var x = {};
-        function O(e, r, t) {
+        var O = {};
+        function x(e, r, t) {
           function n() {
             var t;
             return (
@@ -61819,7 +60730,7 @@
             );
           }
           var i;
-          x[e] =
+          O[e] =
             (H(n, t),
             (i = D(n)),
             j(n, [
@@ -61877,7 +60788,7 @@
                         .concat(s, ") and < 2 ** ") +
                       "".concat(8 * (o + 1) - 1).concat(s)
                   : ">= ".concat(e).concat(s, " and <= ").concat(r).concat(s)),
-              new x.ERR_OUT_OF_RANGE("value", e, t))
+              new O.ERR_OUT_OF_RANGE("value", e, t))
             );
           (r = n),
             (s = o),
@@ -61887,21 +60798,21 @@
         }
         function P(t, e) {
           if ("number" != typeof t)
-            throw new x.ERR_INVALID_ARG_TYPE(e, "number", t);
+            throw new O.ERR_INVALID_ARG_TYPE(e, "number", t);
         }
         function T(t, e, r) {
           if (Math.floor(t) !== t)
             throw (
-              (P(t, r), new x.ERR_OUT_OF_RANGE(r || "offset", "an integer", t))
+              (P(t, r), new O.ERR_OUT_OF_RANGE(r || "offset", "an integer", t))
             );
-          if (e < 0) throw new x.ERR_BUFFER_OUT_OF_BOUNDS();
-          throw new x.ERR_OUT_OF_RANGE(
+          if (e < 0) throw new O.ERR_BUFFER_OUT_OF_BOUNDS();
+          throw new O.ERR_OUT_OF_RANGE(
             r || "offset",
             ">= ".concat(r ? 1 : 0, " and <= ").concat(e),
             t
           );
         }
-        O(
+        x(
           "ERR_BUFFER_OUT_OF_BOUNDS",
           function (t) {
             return t
@@ -61910,7 +60821,7 @@
           },
           RangeError
         ),
-          O(
+          x(
             "ERR_INVALID_ARG_TYPE",
             function (t, e) {
               return 'The "'
@@ -61919,7 +60830,7 @@
             },
             TypeError
           ),
-          O(
+          x(
             "ERR_OUT_OF_RANGE",
             function (t, e, r) {
               var t = 'The value of "'.concat(t, '" is out of range.'),
@@ -62503,6 +61414,2214 @@
           );
         }
         t.exports = e.debounce = e;
+      },
+      12495: function (Ut, jt, Ht) {
+        var Dt;
+        !(function () {
+          "use strict";
+          var f,
+            P,
+            o,
+            d = "0123456789abcdef",
+            n =
+              "2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050895982983419677840422862486334095254650828067566662873690987816894829072083255546808437998948262331985283935053089653777326288461633662222876982198867465436674744042432743651550489343149393914796194044002221051017141748003688084012647080685567743216228355220114804663715659121373450747856947683463616792101806445070648000277502684916746550586856935673420670581136429224554405758925724208241314695689016758940256776311356919292033376587141660230105703089634572075440370847469940168269282808481184289314848524948644871927809676271275775397027668605952496716674183485704422507197965004714951050492214776567636938662976979522110718264549734772662425709429322582798502585509785265383207606726317164309505995087807523710333101197857547331541421808427543863591778117054309827482385045648019095610299291824318237525357709750539565187697510374970888692180205189339507238539205144634197265287286965110862571492198849978748873771345686209167058",
+            i =
+              "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989380952572010654858632789",
+            s = {
+              precision: 20,
+              rounding: 4,
+              modulo: 1,
+              toExpNeg: -7,
+              toExpPos: 21,
+              minE: -9e15,
+              maxE: 9e15,
+              crypto: !1,
+            },
+            v = !0,
+            a = "[DecimalError] ",
+            p = a + "Invalid argument: ",
+            j = a + "Precision limit exceeded",
+            H = a + "crypto unavailable",
+            e = "[object Decimal]",
+            T = Math.floor,
+            g = Math.pow,
+            D = /^0b([01]+(\.[01]*)?|\.[01]+)(p[+-]?\d+)?$/i,
+            F = /^0x([0-9a-f]+(\.[0-9a-f]*)?|\.[0-9a-f]+)(p[+-]?\d+)?$/i,
+            K = /^0o([0-7]+(\.[0-7]*)?|\.[0-7]+)(p[+-]?\d+)?$/i,
+            z = /^(\d+(\.\d*)?|\.\d+)(e[+-]?\d+)?$/i,
+            M = 1e7,
+            R = 7,
+            Z = n.length - 1,
+            m = i.length - 1,
+            u = { toStringTag: e };
+          function w(t) {
+            var e,
+              r,
+              n,
+              i = t.length - 1,
+              o = "",
+              s = t[0];
+            if (0 < i) {
+              for (o += s, e = 1; e < i; e++)
+                (n = t[e] + ""), (r = R - n.length) && (o += c(r)), (o += n);
+              (s = t[e]), (r = R - (n = s + "").length) && (o += c(r));
+            } else if (0 === s) return "0";
+            for (; s % 10 == 0; ) s /= 10;
+            return o + s;
+          }
+          function y(t, e, r) {
+            if (t !== ~~t || t < e || r < t) throw Error(p + t);
+          }
+          function _(t, e, r, n) {
+            for (var i, o, s = t[0]; 10 <= s; s /= 10) --e;
+            return (
+              --e < 0
+                ? ((e += R), (i = 0))
+                : ((i = Math.ceil((e + 1) / R)), (e %= R)),
+              (s = g(10, R - e)),
+              (o = t[i] % s | 0),
+              null == n
+                ? e < 3
+                  ? (0 == e
+                      ? (o = (o / 100) | 0)
+                      : 1 == e && (o = (o / 10) | 0),
+                    (r < 4 && 99999 == o) ||
+                      (3 < r && 49999 == o) ||
+                      5e4 == o ||
+                      0 == o)
+                  : (((r < 4 && o + 1 == s) || (3 < r && o + 1 == s / 2)) &&
+                      ((t[i + 1] / s / 100) | 0) == g(10, e - 2) - 1) ||
+                    ((o == s / 2 || 0 == o) && 0 == ((t[i + 1] / s / 100) | 0))
+                : e < 4
+                ? (0 == e
+                    ? (o = (o / 1e3) | 0)
+                    : 1 == e
+                    ? (o = (o / 100) | 0)
+                    : 2 == e && (o = (o / 10) | 0),
+                  ((n || r < 4) && 9999 == o) || (!n && 3 < r && 4999 == o))
+                : (((n || r < 4) && o + 1 == s) ||
+                    (!n && 3 < r && o + 1 == s / 2)) &&
+                  ((t[i + 1] / s / 1e3) | 0) == g(10, e - 3) - 1
+            );
+          }
+          function b(t, e, r) {
+            for (var n, i, o = [0], s = 0, a = t.length; s < a; ) {
+              for (i = o.length; i--; ) o[i] *= e;
+              for (o[0] += d.indexOf(t.charAt(s++)), n = 0; n < o.length; n++)
+                r - 1 < o[n] &&
+                  (void 0 === o[n + 1] && (o[n + 1] = 0),
+                  (o[n + 1] += (o[n] / r) | 0),
+                  (o[n] %= r));
+            }
+            return o.reverse();
+          }
+          (u.absoluteValue = u.abs =
+            function () {
+              var t = new this.constructor(this);
+              return t.s < 0 && (t.s = 1), L(t);
+            }),
+            (u.ceil = function () {
+              return L(new this.constructor(this), this.e + 1, 2);
+            }),
+            (u.clampedTo = u.clamp =
+              function (t, e) {
+                var r = this.constructor;
+                if (((t = new r(t)), (e = new r(e)), !t.s || !e.s))
+                  return new r(NaN);
+                if (t.gt(e)) throw Error(p + e);
+                return this.cmp(t) < 0 ? t : 0 < this.cmp(e) ? e : new r(this);
+              }),
+            (u.comparedTo = u.cmp =
+              function (t) {
+                var e,
+                  r,
+                  n = this.d,
+                  i = (t = new this.constructor(t)).d,
+                  o = this.s,
+                  s = t.s;
+                if (!n || !i)
+                  return o && s
+                    ? o !== s
+                      ? o
+                      : n === i
+                      ? 0
+                      : !n ^ (o < 0)
+                      ? 1
+                      : -1
+                    : NaN;
+                if (!n[0] || !i[0]) return n[0] ? o : i[0] ? -s : 0;
+                if (o !== s) return o;
+                if (this.e !== t.e) return (this.e > t.e) ^ (o < 0) ? 1 : -1;
+                for (
+                  e = 0, r = (s = n.length) < (t = i.length) ? s : t;
+                  e < r;
+                  ++e
+                )
+                  if (n[e] !== i[e]) return (n[e] > i[e]) ^ (o < 0) ? 1 : -1;
+                return s === t ? 0 : (t < s) ^ (o < 0) ? 1 : -1;
+              }),
+            (u.cosine = u.cos =
+              function () {
+                var t,
+                  e,
+                  r = this,
+                  n = r.constructor;
+                return r.d
+                  ? r.d[0]
+                    ? ((t = n.precision),
+                      (e = n.rounding),
+                      (n.precision = t + Math.max(r.e, r.sd()) + R),
+                      (n.rounding = 1),
+                      (r = (function (t, e) {
+                        var r, n;
+                        if (!e.isZero()) {
+                          (n =
+                            (n = e.d.length) < 32
+                              ? (1 / U(4, (r = Math.ceil(n / 3)))).toString()
+                              : ((r = 16), "2.3283064365386962890625e-10")),
+                            (t.precision += r),
+                            (e = x(t, 1, e.times(n), new t(1)));
+                          for (var i = r; i--; ) {
+                            var o = e.times(e);
+                            e = o.times(o).minus(o).times(8).plus(1);
+                          }
+                          t.precision -= r;
+                        }
+                        return e;
+                      })(n, Y(n, r))),
+                      (n.precision = t),
+                      (n.rounding = e),
+                      L(2 == o || 3 == o ? r.neg() : r, t, e, !0))
+                    : new n(1)
+                  : new n(NaN);
+              }),
+            (u.cubeRoot = u.cbrt =
+              function () {
+                var t,
+                  e,
+                  r,
+                  n,
+                  i,
+                  o,
+                  s,
+                  a,
+                  u,
+                  c,
+                  f = this,
+                  h = f.constructor;
+                if (!f.isFinite() || f.isZero()) return new h(f);
+                for (
+                  v = !1,
+                    (o = f.s * g(f.s * f, 1 / 3)) && Math.abs(o) != 1 / 0
+                      ? (n = new h(o.toString()))
+                      : ((r = w(f.d)),
+                        (o = ((t = f.e) - r.length + 1) % 3) &&
+                          (r += 1 == o || -2 == o ? "0" : "00"),
+                        (o = g(r, 1 / 3)),
+                        (t = T((t + 1) / 3) - (t % 3 == (t < 0 ? -1 : 2))),
+                        ((n = new h(
+                          (r =
+                            o == 1 / 0
+                              ? "5e" + t
+                              : (r = o.toExponential()).slice(
+                                  0,
+                                  r.indexOf("e") + 1
+                                ) + t)
+                        )).s = f.s)),
+                    s = (t = h.precision) + 3;
+                  ;
+
+                )
+                  if (
+                    ((c = (u = (a = n).times(a).times(a)).plus(f)),
+                    (n = S(c.plus(f).times(a), c.plus(u), s + 2, 1)),
+                    w(a.d).slice(0, s) === (r = w(n.d)).slice(0, s))
+                  ) {
+                    if (
+                      "9999" != (r = r.slice(s - 3, s + 1)) &&
+                      (i || "4999" != r)
+                    ) {
+                      (+r && (+r.slice(1) || "5" != r.charAt(0))) ||
+                        (L(n, t + 1, 1), (e = !n.times(n).times(n).eq(f)));
+                      break;
+                    }
+                    if (!i && (L(a, t + 1, 0), a.times(a).times(a).eq(f))) {
+                      n = a;
+                      break;
+                    }
+                    (s += 4), (i = 1);
+                  }
+                return (v = !0), L(n, t, h.rounding, e);
+              }),
+            (u.decimalPlaces = u.dp =
+              function () {
+                var t,
+                  e = this.d,
+                  r = NaN;
+                if (e) {
+                  if (
+                    ((r = ((t = e.length - 1) - T(this.e / R)) * R), (t = e[t]))
+                  )
+                    for (; t % 10 == 0; t /= 10) r--;
+                  r < 0 && (r = 0);
+                }
+                return r;
+              }),
+            (u.dividedBy = u.div =
+              function (t) {
+                return S(this, new this.constructor(t));
+              }),
+            (u.dividedToIntegerBy = u.divToInt =
+              function (t) {
+                var e = this.constructor;
+                return L(S(this, new e(t), 0, 1, 1), e.precision, e.rounding);
+              }),
+            (u.equals = u.eq =
+              function (t) {
+                return 0 === this.cmp(t);
+              }),
+            (u.floor = function () {
+              return L(new this.constructor(this), this.e + 1, 3);
+            }),
+            (u.greaterThan = u.gt =
+              function (t) {
+                return 0 < this.cmp(t);
+              }),
+            (u.greaterThanOrEqualTo = u.gte =
+              function (t) {
+                t = this.cmp(t);
+                return 1 == t || 0 === t;
+              }),
+            (u.hyperbolicCosine = u.cosh =
+              function () {
+                var t,
+                  e,
+                  r,
+                  n = (a = this).constructor,
+                  i = new n(1);
+                if (!a.isFinite()) return new n(a.s ? 1 / 0 : NaN);
+                if (a.isZero()) return i;
+                (e = n.precision),
+                  (r = n.rounding),
+                  (n.precision = e + Math.max(a.e, a.sd()) + 4),
+                  (n.rounding = 1);
+                for (
+                  var o,
+                    s =
+                      (s = a.d.length) < 32
+                        ? (1 / U(4, (t = Math.ceil(s / 3)))).toString()
+                        : ((t = 16), "2.3283064365386962890625e-10"),
+                    a = x(n, 1, a.times(s), new n(1), !0),
+                    u = t,
+                    c = new n(8);
+                  u--;
+
+                )
+                  (o = a.times(a)), (a = i.minus(o.times(c.minus(o.times(c)))));
+                return L(a, (n.precision = e), (n.rounding = r), !0);
+              }),
+            (u.hyperbolicSine = u.sinh =
+              function () {
+                var t,
+                  e,
+                  r,
+                  n = (s = this).constructor;
+                if (!s.isFinite() || s.isZero()) return new n(s);
+                if (
+                  ((t = n.precision),
+                  (e = n.rounding),
+                  (n.precision = t + Math.max(s.e, s.sd()) + 4),
+                  (n.rounding = 1),
+                  (r = s.d.length) < 3)
+                )
+                  s = x(n, 2, s, s, !0);
+                else
+                  for (
+                    var i,
+                      o = 16 < (o = 1.4 * Math.sqrt(r)) ? 16 : 0 | o,
+                      s = x(n, 2, (s = s.times(1 / U(5, o))), s, !0),
+                      a = new n(5),
+                      u = new n(16),
+                      c = new n(20);
+                    o--;
+
+                  )
+                    (i = s.times(s)),
+                      (s = s.times(a.plus(i.times(u.times(i).plus(c)))));
+                return L(s, (n.precision = t), (n.rounding = e), !0);
+              }),
+            (u.hyperbolicTangent = u.tanh =
+              function () {
+                var t,
+                  e,
+                  r = this.constructor;
+                return this.isFinite()
+                  ? this.isZero()
+                    ? new r(this)
+                    : ((t = r.precision),
+                      (e = r.rounding),
+                      (r.precision = t + 7),
+                      (r.rounding = 1),
+                      S(
+                        this.sinh(),
+                        this.cosh(),
+                        (r.precision = t),
+                        (r.rounding = e)
+                      ))
+                  : new r(this.s);
+              }),
+            (u.inverseCosine = u.acos =
+              function () {
+                var t,
+                  e = this.constructor,
+                  r = this.abs().cmp(1),
+                  n = e.precision,
+                  i = e.rounding;
+                return -1 !== r
+                  ? 0 === r
+                    ? this.isNeg()
+                      ? A(e, n, i)
+                      : new e(0)
+                    : new e(NaN)
+                  : this.isZero()
+                  ? A(e, n + 4, i).times(0.5)
+                  : ((e.precision = n + 6),
+                    (e.rounding = 1),
+                    (r = this.asin()),
+                    (t = A(e, n + 4, i).times(0.5)),
+                    (e.precision = n),
+                    (e.rounding = i),
+                    t.minus(r));
+              }),
+            (u.inverseHyperbolicCosine = u.acosh =
+              function () {
+                var t,
+                  e,
+                  r = this,
+                  n = r.constructor;
+                return r.lte(1)
+                  ? new n(r.eq(1) ? 0 : NaN)
+                  : r.isFinite()
+                  ? ((t = n.precision),
+                    (e = n.rounding),
+                    (n.precision = t + Math.max(Math.abs(r.e), r.sd()) + 4),
+                    (n.rounding = 1),
+                    (v = !1),
+                    (r = r.times(r).minus(1).sqrt().plus(r)),
+                    (v = !0),
+                    (n.precision = t),
+                    (n.rounding = e),
+                    r.ln())
+                  : new n(r);
+              }),
+            (u.inverseHyperbolicSine = u.asinh =
+              function () {
+                var t,
+                  e,
+                  r = this,
+                  n = r.constructor;
+                return !r.isFinite() || r.isZero()
+                  ? new n(r)
+                  : ((t = n.precision),
+                    (e = n.rounding),
+                    (n.precision = t + 2 * Math.max(Math.abs(r.e), r.sd()) + 6),
+                    (n.rounding = 1),
+                    (v = !1),
+                    (r = r.times(r).plus(1).sqrt().plus(r)),
+                    (v = !0),
+                    (n.precision = t),
+                    (n.rounding = e),
+                    r.ln());
+              }),
+            (u.inverseHyperbolicTangent = u.atanh =
+              function () {
+                var t,
+                  e,
+                  r,
+                  n = this,
+                  i = n.constructor;
+                return n.isFinite()
+                  ? 0 <= n.e
+                    ? new i(n.abs().eq(1) ? n.s / 0 : n.isZero() ? n : NaN)
+                    : ((t = i.precision),
+                      (e = i.rounding),
+                      (r = n.sd()),
+                      Math.max(r, t) < 2 * -n.e - 1
+                        ? L(new i(n), t, e, !0)
+                        : ((i.precision = r = r - n.e),
+                          (n = S(n.plus(1), new i(1).minus(n), r + t, 1)),
+                          (i.precision = t + 4),
+                          (i.rounding = 1),
+                          (n = n.ln()),
+                          (i.precision = t),
+                          (i.rounding = e),
+                          n.times(0.5)))
+                  : new i(NaN);
+              }),
+            (u.inverseSine = u.asin =
+              function () {
+                var t,
+                  e,
+                  r,
+                  n = this,
+                  i = n.constructor;
+                return n.isZero()
+                  ? new i(n)
+                  : ((t = n.abs().cmp(1)),
+                    (e = i.precision),
+                    (r = i.rounding),
+                    -1 !== t
+                      ? 0 === t
+                        ? (((t = A(i, e + 4, r).times(0.5)).s = n.s), t)
+                        : new i(NaN)
+                      : ((i.precision = e + 6),
+                        (i.rounding = 1),
+                        (n = n
+                          .div(new i(1).minus(n.times(n)).sqrt().plus(1))
+                          .atan()),
+                        (i.precision = e),
+                        (i.rounding = r),
+                        n.times(2)));
+              }),
+            (u.inverseTangent = u.atan =
+              function () {
+                var t,
+                  e,
+                  r,
+                  n,
+                  i,
+                  o,
+                  s,
+                  a,
+                  u,
+                  c = this,
+                  f = c.constructor,
+                  h = f.precision,
+                  l = f.rounding;
+                if (c.isFinite()) {
+                  if (c.isZero()) return new f(c);
+                  if (c.abs().eq(1) && h + 4 <= m)
+                    return ((s = A(f, h + 4, l).times(0.25)).s = c.s), s;
+                } else {
+                  if (!c.s) return new f(NaN);
+                  if (h + 4 <= m)
+                    return ((s = A(f, h + 4, l).times(0.5)).s = c.s), s;
+                }
+                for (
+                  f.precision = a = h + 10,
+                    f.rounding = 1,
+                    t = r = Math.min(28, (a / R + 2) | 0);
+                  t;
+                  --t
+                )
+                  c = c.div(c.times(c).plus(1).sqrt().plus(1));
+                for (
+                  v = !1,
+                    e = Math.ceil(a / R),
+                    n = 1,
+                    u = c.times(c),
+                    s = new f(c),
+                    i = c;
+                  -1 !== t;
+
+                )
+                  if (
+                    ((i = i.times(u)),
+                    (o = s.minus(i.div((n += 2)))),
+                    (i = i.times(u)),
+                    void 0 !== (s = o.plus(i.div((n += 2)))).d[e])
+                  )
+                    for (t = e; s.d[t] === o.d[t] && t--; );
+                return (
+                  r && (s = s.times(2 << (r - 1))),
+                  (v = !0),
+                  L(s, (f.precision = h), (f.rounding = l), !0)
+                );
+              }),
+            (u.isFinite = function () {
+              return !!this.d;
+            }),
+            (u.isInteger = u.isInt =
+              function () {
+                return !!this.d && T(this.e / R) > this.d.length - 2;
+              }),
+            (u.isNaN = function () {
+              return !this.s;
+            }),
+            (u.isNegative = u.isNeg =
+              function () {
+                return this.s < 0;
+              }),
+            (u.isPositive = u.isPos =
+              function () {
+                return 0 < this.s;
+              }),
+            (u.isZero = function () {
+              return !!this.d && 0 === this.d[0];
+            }),
+            (u.lessThan = u.lt =
+              function (t) {
+                return this.cmp(t) < 0;
+              }),
+            (u.lessThanOrEqualTo = u.lte =
+              function (t) {
+                return this.cmp(t) < 1;
+              }),
+            (u.logarithm = u.log =
+              function (t) {
+                var e,
+                  r,
+                  n,
+                  i,
+                  o,
+                  s,
+                  a,
+                  u,
+                  c = this.constructor,
+                  f = c.precision,
+                  h = c.rounding;
+                if (null == t) (t = new c(10)), (e = !0);
+                else {
+                  if (
+                    ((r = (t = new c(t)).d), t.s < 0 || !r || !r[0] || t.eq(1))
+                  )
+                    return new c(NaN);
+                  e = t.eq(10);
+                }
+                if (((r = this.d), this.s < 0 || !r || !r[0] || this.eq(1)))
+                  return new c(
+                    r && !r[0] ? -1 / 0 : 1 != this.s ? NaN : r ? 0 : 1 / 0
+                  );
+                if (e)
+                  if (1 < r.length) o = !0;
+                  else {
+                    for (i = r[0]; i % 10 == 0; ) i /= 10;
+                    o = 1 !== i;
+                  }
+                if (
+                  ((v = !1),
+                  (s = O(this, (a = f + 5))),
+                  (n = e ? I(c, a + 10) : O(t, a)),
+                  _((u = S(s, n, a, 1)).d, (i = f), h))
+                )
+                  do {
+                    if (
+                      ((s = O(this, (a += 10))),
+                      (n = e ? I(c, a + 10) : O(t, a)),
+                      (u = S(s, n, a, 1)),
+                      !o)
+                    ) {
+                      +w(u.d).slice(i + 1, i + 15) + 1 == 1e14 &&
+                        (u = L(u, f + 1, 0));
+                      break;
+                    }
+                  } while (_(u.d, (i += 10), h));
+                return (v = !0), L(u, f, h);
+              }),
+            (u.minus = u.sub =
+              function (t) {
+                var e,
+                  r,
+                  n,
+                  i,
+                  o,
+                  s,
+                  a,
+                  u,
+                  c,
+                  f,
+                  h,
+                  l = this,
+                  p = l.constructor;
+                if (((t = new p(t)), !l.d || !t.d))
+                  return (
+                    l.s && t.s
+                      ? l.d
+                        ? (t.s = -t.s)
+                        : (t = new p(t.d || l.s !== t.s ? l : NaN))
+                      : (t = new p(NaN)),
+                    t
+                  );
+                if (l.s != t.s) return (t.s = -t.s), l.plus(t);
+                if (
+                  ((c = l.d),
+                  (h = t.d),
+                  (a = p.precision),
+                  (u = p.rounding),
+                  !c[0] || !h[0])
+                ) {
+                  if (h[0]) t.s = -t.s;
+                  else {
+                    if (!c[0]) return new p(3 === u ? -0 : 0);
+                    t = new p(l);
+                  }
+                  return v ? L(t, a, u) : t;
+                }
+                if (
+                  ((r = T(t.e / R)),
+                  (l = T(l.e / R)),
+                  (c = c.slice()),
+                  (o = l - r))
+                ) {
+                  for (
+                    s = (
+                      (f = o < 0)
+                        ? ((e = c), (o = -o), h)
+                        : ((e = h), (r = l), c)
+                    ).length,
+                      o > (n = Math.max(Math.ceil(a / R), s) + 2) &&
+                        ((o = n), (e.length = 1)),
+                      e.reverse(),
+                      n = o;
+                    n--;
+
+                  )
+                    e.push(0);
+                  e.reverse();
+                } else {
+                  for (
+                    (f = (n = c.length) < (s = h.length)) && (s = n), n = 0;
+                    n < s;
+                    n++
+                  )
+                    if (c[n] != h[n]) {
+                      f = c[n] < h[n];
+                      break;
+                    }
+                  o = 0;
+                }
+                for (
+                  f && ((e = c), (c = h), (h = e), (t.s = -t.s)),
+                    s = c.length,
+                    n = h.length - s;
+                  0 < n;
+                  --n
+                )
+                  c[s++] = 0;
+                for (n = h.length; o < n; ) {
+                  if (c[--n] < h[n]) {
+                    for (i = n; i && 0 === c[--i]; ) c[i] = M - 1;
+                    --c[i], (c[n] += M);
+                  }
+                  c[n] -= h[n];
+                }
+                for (; 0 === c[--s]; ) c.pop();
+                for (; 0 === c[0]; c.shift()) --r;
+                return c[0]
+                  ? ((t.d = c), (t.e = E(c, r)), v ? L(t, a, u) : t)
+                  : new p(3 === u ? -0 : 0);
+              }),
+            (u.modulo = u.mod =
+              function (t) {
+                var e,
+                  r = this.constructor;
+                return (
+                  (t = new r(t)),
+                  !this.d || !t.s || (t.d && !t.d[0])
+                    ? new r(NaN)
+                    : !t.d || (this.d && !this.d[0])
+                    ? L(new r(this), r.precision, r.rounding)
+                    : ((v = !1),
+                      9 == r.modulo
+                        ? ((e = S(this, t.abs(), 0, 3, 1)).s *= t.s)
+                        : (e = S(this, t, 0, r.modulo, 1)),
+                      (e = e.times(t)),
+                      (v = !0),
+                      this.minus(e))
+                );
+              }),
+            (u.naturalExponential = u.exp =
+              function () {
+                return h(this);
+              }),
+            (u.naturalLogarithm = u.ln =
+              function () {
+                return O(this);
+              }),
+            (u.negated = u.neg =
+              function () {
+                var t = new this.constructor(this);
+                return (t.s = -t.s), L(t);
+              }),
+            (u.plus = u.add =
+              function (t) {
+                var e,
+                  r,
+                  n,
+                  i,
+                  o,
+                  s,
+                  a,
+                  u,
+                  c,
+                  f,
+                  h = this,
+                  l = h.constructor;
+                if (((t = new l(t)), !h.d || !t.d))
+                  return (
+                    h.s && t.s
+                      ? h.d || (t = new l(t.d || h.s === t.s ? h : NaN))
+                      : (t = new l(NaN)),
+                    t
+                  );
+                if (h.s != t.s) return (t.s = -t.s), h.minus(t);
+                if (
+                  ((c = h.d),
+                  (f = t.d),
+                  (a = l.precision),
+                  (u = l.rounding),
+                  c[0] && f[0])
+                ) {
+                  if (
+                    ((o = T(h.e / R)),
+                    (n = T(t.e / R)),
+                    (c = c.slice()),
+                    (i = o - n))
+                  ) {
+                    for (
+                      s = (
+                        i < 0 ? ((r = c), (i = -i), f) : ((r = f), (n = o), c)
+                      ).length,
+                        i > (s = (o = Math.ceil(a / R)) > s ? o + 1 : s + 1) &&
+                          ((i = s), (r.length = 1)),
+                        r.reverse();
+                      i--;
+
+                    )
+                      r.push(0);
+                    r.reverse();
+                  }
+                  for (
+                    (s = c.length) - (i = f.length) < 0 &&
+                      ((i = s), (r = f), (f = c), (c = r)),
+                      e = 0;
+                    i;
+
+                  )
+                    (e = ((c[--i] = c[i] + f[i] + e) / M) | 0), (c[i] %= M);
+                  for (e && (c.unshift(e), ++n), s = c.length; 0 == c[--s]; )
+                    c.pop();
+                  (t.d = c), (t.e = E(c, n));
+                } else f[0] || (t = new l(h));
+                return v ? L(t, a, u) : t;
+              }),
+            (u.precision = u.sd =
+              function (t) {
+                var e;
+                if (void 0 !== t && t !== !!t && 1 !== t && 0 !== t)
+                  throw Error(p + t);
+                return (
+                  this.d
+                    ? ((e = q(this.d)), t && this.e + 1 > e && (e = this.e + 1))
+                    : (e = NaN),
+                  e
+                );
+              }),
+            (u.round = function () {
+              var t = this.constructor;
+              return L(new t(this), this.e + 1, t.rounding);
+            }),
+            (u.sine = u.sin =
+              function () {
+                var t,
+                  e,
+                  r = this,
+                  n = r.constructor;
+                return r.isFinite()
+                  ? r.isZero()
+                    ? new n(r)
+                    : ((t = n.precision),
+                      (e = n.rounding),
+                      (n.precision = t + Math.max(r.e, r.sd()) + R),
+                      (n.rounding = 1),
+                      (r = (function (t, e) {
+                        var r,
+                          n = e.d.length;
+                        if (n < 3) return e.isZero() ? e : x(t, 2, e, e);
+                        (r = 16 < (r = 1.4 * Math.sqrt(n)) ? 16 : 0 | r),
+                          (e = x(t, 2, (e = e.times(1 / U(5, r))), e));
+                        for (
+                          var i, o = new t(5), s = new t(16), a = new t(20);
+                          r--;
+
+                        )
+                          (i = e.times(e)),
+                            (e = e.times(o.plus(i.times(s.times(i).minus(a)))));
+                        return e;
+                      })(n, Y(n, r))),
+                      (n.precision = t),
+                      (n.rounding = e),
+                      L(2 < o ? r.neg() : r, t, e, !0))
+                  : new n(NaN);
+              }),
+            (u.squareRoot = u.sqrt =
+              function () {
+                var t,
+                  e,
+                  r,
+                  n,
+                  i,
+                  o,
+                  s = this.d,
+                  a = this.e,
+                  u = this.s,
+                  c = this.constructor;
+                if (1 !== u || !s || !s[0])
+                  return new c(
+                    !u || (u < 0 && (!s || s[0])) ? NaN : s ? this : 1 / 0
+                  );
+                for (
+                  v = !1,
+                    n =
+                      0 == (u = Math.sqrt(+this)) || u == 1 / 0
+                        ? (((e = w(s)).length + a) % 2 == 0 && (e += "0"),
+                          (u = Math.sqrt(e)),
+                          (a = T((a + 1) / 2) - (a < 0 || a % 2)),
+                          new c(
+                            (e =
+                              u == 1 / 0
+                                ? "5e" + a
+                                : (e = u.toExponential()).slice(
+                                    0,
+                                    e.indexOf("e") + 1
+                                  ) + a)
+                          ))
+                        : new c(u.toString()),
+                    r = (a = c.precision) + 3;
+                  ;
+
+                )
+                  if (
+                    ((n = (o = n).plus(S(this, o, r + 2, 1)).times(0.5)),
+                    w(o.d).slice(0, r) === (e = w(n.d)).slice(0, r))
+                  ) {
+                    if (
+                      "9999" != (e = e.slice(r - 3, r + 1)) &&
+                      (i || "4999" != e)
+                    ) {
+                      (+e && (+e.slice(1) || "5" != e.charAt(0))) ||
+                        (L(n, a + 1, 1), (t = !n.times(n).eq(this)));
+                      break;
+                    }
+                    if (!i && (L(o, a + 1, 0), o.times(o).eq(this))) {
+                      n = o;
+                      break;
+                    }
+                    (r += 4), (i = 1);
+                  }
+                return (v = !0), L(n, a, c.rounding, t);
+              }),
+            (u.tangent = u.tan =
+              function () {
+                var t,
+                  e,
+                  r = this,
+                  n = r.constructor;
+                return r.isFinite()
+                  ? r.isZero()
+                    ? new n(r)
+                    : ((t = n.precision),
+                      (e = n.rounding),
+                      (n.precision = t + 10),
+                      (n.rounding = 1),
+                      ((r = r.sin()).s = 1),
+                      (r = S(r, new n(1).minus(r.times(r)).sqrt(), t + 10, 0)),
+                      (n.precision = t),
+                      (n.rounding = e),
+                      L(2 == o || 4 == o ? r.neg() : r, t, e, !0))
+                  : new n(NaN);
+              }),
+            (u.times = u.mul =
+              function (t) {
+                var e,
+                  r,
+                  n,
+                  i,
+                  o,
+                  s,
+                  a,
+                  u,
+                  c,
+                  f = this.constructor,
+                  h = this.d,
+                  l = (t = new f(t)).d;
+                if (((t.s *= this.s), !(h && h[0] && l && l[0])))
+                  return new f(
+                    !t.s || (h && !h[0] && !l) || (l && !l[0] && !h)
+                      ? NaN
+                      : h && l
+                      ? 0 * t.s
+                      : t.s / 0
+                  );
+                for (
+                  r = T(this.e / R) + T(t.e / R),
+                    (u = h.length) < (c = l.length) &&
+                      ((o = h), (h = l), (l = o), (s = u), (u = c), (c = s)),
+                    o = [],
+                    n = s = u + c;
+                  n--;
+
+                )
+                  o.push(0);
+                for (n = c; 0 <= --n; ) {
+                  for (e = 0, i = u + n; n < i; )
+                    (a = o[i] + l[n] * h[i - n - 1] + e),
+                      (o[i--] = a % M | 0),
+                      (e = (a / M) | 0);
+                  o[i] = (o[i] + e) % M | 0;
+                }
+                for (; !o[--s]; ) o.pop();
+                return (
+                  e ? ++r : o.shift(),
+                  (t.d = o),
+                  (t.e = E(o, r)),
+                  v ? L(t, f.precision, f.rounding) : t
+                );
+              }),
+            (u.toBinary = function (t, e) {
+              return r(this, 2, t, e);
+            }),
+            (u.toDecimalPlaces = u.toDP =
+              function (t, e) {
+                var r = this.constructor,
+                  n = new r(this);
+                return void 0 === t
+                  ? n
+                  : (y(t, 0, 1e9),
+                    void 0 === e ? (e = r.rounding) : y(e, 0, 8),
+                    L(n, t + n.e + 1, e));
+              }),
+            (u.toExponential = function (t, e) {
+              var r = this,
+                n = r.constructor,
+                n =
+                  void 0 === t
+                    ? k(r, !0)
+                    : (y(t, 0, 1e9),
+                      void 0 === e ? (e = n.rounding) : y(e, 0, 8),
+                      k((r = L(new n(r), t + 1, e)), !0, t + 1));
+              return r.isNeg() && !r.isZero() ? "-" + n : n;
+            }),
+            (u.toFixed = function (t, e) {
+              var r = this.constructor,
+                e =
+                  void 0 === t
+                    ? k(this)
+                    : (y(t, 0, 1e9),
+                      void 0 === e ? (e = r.rounding) : y(e, 0, 8),
+                      k(
+                        (r = L(new r(this), t + this.e + 1, e)),
+                        !1,
+                        t + r.e + 1
+                      ));
+              return this.isNeg() && !this.isZero() ? "-" + e : e;
+            }),
+            (u.toFraction = function (t) {
+              var e,
+                r,
+                n,
+                i,
+                o,
+                s,
+                a,
+                u,
+                c,
+                f,
+                h = this.d,
+                l = this.constructor;
+              if (!h) return new l(this);
+              if (
+                ((u = r = new l(1)),
+                (n = a = new l(0)),
+                (c = (o = (e = new l(n)).e = q(h) - this.e - 1) % R),
+                (e.d[0] = g(10, c < 0 ? R + c : c)),
+                null == t)
+              )
+                t = 0 < o ? e : u;
+              else {
+                if (!(s = new l(t)).isInt() || s.lt(u)) throw Error(p + s);
+                t = s.gt(e) ? (0 < o ? e : u) : s;
+              }
+              for (
+                v = !1,
+                  s = new l(w(h)),
+                  c = l.precision,
+                  l.precision = o = h.length * R * 2;
+                (f = S(s, e, 0, 1, 1)), 1 != (i = r.plus(f.times(n))).cmp(t);
+
+              )
+                (r = n),
+                  (n = i),
+                  (i = u),
+                  (u = a.plus(f.times(i))),
+                  (a = i),
+                  (i = e),
+                  (e = s.minus(f.times(i))),
+                  (s = i);
+              return (
+                (i = S(t.minus(r), n, 0, 1, 1)),
+                (a = a.plus(i.times(u))),
+                (r = r.plus(i.times(n))),
+                (a.s = u.s = this.s),
+                (h =
+                  S(u, n, o, 1)
+                    .minus(this)
+                    .abs()
+                    .cmp(S(a, r, o, 1).minus(this).abs()) < 1
+                    ? [u, n]
+                    : [a, r]),
+                (l.precision = c),
+                (v = !0),
+                h
+              );
+            }),
+            (u.toHexadecimal = u.toHex =
+              function (t, e) {
+                return r(this, 16, t, e);
+              }),
+            (u.toNearest = function (t, e) {
+              var r = (n = this).constructor,
+                n = new r(n);
+              if (null == t) {
+                if (!n.d) return n;
+                (t = new r(1)), (e = r.rounding);
+              } else {
+                if (
+                  ((t = new r(t)),
+                  void 0 === e ? (e = r.rounding) : y(e, 0, 8),
+                  !n.d)
+                )
+                  return t.s ? n : t;
+                if (!t.d) return t.s && (t.s = n.s), t;
+              }
+              return (
+                t.d[0]
+                  ? ((v = !1), (n = S(n, t, 0, e, 1).times(t)), (v = !0), L(n))
+                  : ((t.s = n.s), (n = t)),
+                n
+              );
+            }),
+            (u.toNumber = function () {
+              return +this;
+            }),
+            (u.toOctal = function (t, e) {
+              return r(this, 8, t, e);
+            }),
+            (u.toPower = u.pow =
+              function (t) {
+                var e,
+                  r,
+                  n,
+                  i,
+                  o,
+                  s,
+                  a = this,
+                  u = a.constructor,
+                  c = +(t = new u(t));
+                if (!(a.d && t.d && a.d[0] && t.d[0])) return new u(g(+a, c));
+                if ((a = new u(a)).eq(1)) return a;
+                if (((n = u.precision), (o = u.rounding), t.eq(1)))
+                  return L(a, n, o);
+                if (
+                  (e = T(t.e / R)) >= t.d.length - 1 &&
+                  (r = c < 0 ? -c : c) <= 9007199254740991
+                )
+                  return (
+                    (i = V(u, a, r, n)), t.s < 0 ? new u(1).div(i) : L(i, n, o)
+                  );
+                if ((s = a.s) < 0) {
+                  if (e < t.d.length - 1) return new u(NaN);
+                  if (
+                    (0 == (1 & t.d[e]) && (s = 1),
+                    0 == a.e && 1 == a.d[0] && 1 == a.d.length)
+                  )
+                    return (a.s = s), a;
+                }
+                return (e =
+                  0 != (r = g(+a, c)) && isFinite(r)
+                    ? new u(r + "").e
+                    : T(c * (Math.log("0." + w(a.d)) / Math.LN10 + a.e + 1))) >
+                  u.maxE + 1 || e < u.minE - 1
+                  ? new u(0 < e ? s / 0 : 0)
+                  : ((v = !1),
+                    (u.rounding = a.s = 1),
+                    (r = Math.min(12, (e + "").length)),
+                    ((i =
+                      (i = h(t.times(O(a, n + r)), n)).d &&
+                      _((i = L(i, n + 5, 1)).d, n, o) &&
+                      +w(
+                        (i = L(h(t.times(O(a, (e = n + 10) + r)), e), e + 5, 1))
+                          .d
+                      ).slice(n + 1, n + 15) +
+                        1 ==
+                        1e14
+                        ? L(i, n + 1, 0)
+                        : i).s = s),
+                    (v = !0),
+                    L(i, n, (u.rounding = o)));
+              }),
+            (u.toPrecision = function (t, e) {
+              var r = this,
+                n = r.constructor,
+                e =
+                  void 0 === t
+                    ? k(r, r.e <= n.toExpNeg || r.e >= n.toExpPos)
+                    : (y(t, 1, 1e9),
+                      void 0 === e ? (e = n.rounding) : y(e, 0, 8),
+                      k(
+                        (r = L(new n(r), t, e)),
+                        t <= r.e || r.e <= n.toExpNeg,
+                        t
+                      ));
+              return r.isNeg() && !r.isZero() ? "-" + e : e;
+            }),
+            (u.toSignificantDigits = u.toSD =
+              function (t, e) {
+                var r = this.constructor;
+                return (
+                  void 0 === t
+                    ? ((t = r.precision), (e = r.rounding))
+                    : (y(t, 1, 1e9),
+                      void 0 === e ? (e = r.rounding) : y(e, 0, 8)),
+                  L(new r(this), t, e)
+                );
+              }),
+            (u.toString = function () {
+              var t = this.constructor,
+                t = k(this, this.e <= t.toExpNeg || this.e >= t.toExpPos);
+              return this.isNeg() && !this.isZero() ? "-" + t : t;
+            }),
+            (u.truncated = u.trunc =
+              function () {
+                return L(new this.constructor(this), this.e + 1, 1);
+              }),
+            (u.valueOf = u.toJSON =
+              function () {
+                var t = this.constructor,
+                  t = k(this, this.e <= t.toExpNeg || this.e >= t.toExpPos);
+                return this.isNeg() ? "-" + t : t;
+              });
+          var S = function (t, e, r, n, i, o) {
+            var s,
+              a,
+              u,
+              c,
+              f,
+              h,
+              l,
+              p,
+              d,
+              g,
+              m,
+              y,
+              b,
+              v,
+              w,
+              _,
+              S,
+              k,
+              E,
+              I = t.constructor,
+              A = t.s == e.s ? 1 : -1,
+              O = t.d,
+              x = e.d;
+            if (!(O && O[0] && x && x[0]))
+              return new I(
+                t.s && e.s && (O ? !x || O[0] != x[0] : x)
+                  ? (O && 0 == O[0]) || !x
+                    ? 0 * A
+                    : A / 0
+                  : NaN
+              );
+            for (
+              a = o
+                ? ((f = 1), t.e - e.e)
+                : ((o = M), T(t.e / (f = R)) - T(e.e / f)),
+                k = x.length,
+                _ = O.length,
+                d = (A = new I(A)).d = [],
+                u = 0;
+              x[u] == (O[u] || 0);
+              u++
+            );
+            if (
+              (x[u] > (O[u] || 0) && a--,
+              null == r
+                ? ((b = r = I.precision), (n = I.rounding))
+                : (b = i ? r + (t.e - e.e) + 1 : r),
+              b < 0)
+            )
+              d.push(1), (h = !0);
+            else {
+              if (((b = (b / f + 2) | 0), (u = 0), 1 == k)) {
+                for (x = x[(c = 0)], b++; (u < _ || c) && b--; u++)
+                  (v = c * o + (O[u] || 0)),
+                    (d[u] = (v / x) | 0),
+                    (c = v % x | 0);
+                h = c || u < _;
+              } else {
+                for (
+                  1 < (c = (o / (x[0] + 1)) | 0) &&
+                    ((x = B(x, c, o)),
+                    (O = B(O, c, o)),
+                    (k = x.length),
+                    (_ = O.length)),
+                    w = k,
+                    m = (g = O.slice(0, k)).length;
+                  m < k;
+
+                )
+                  g[m++] = 0;
+                for (
+                  (E = x.slice()).unshift(0), S = x[0], x[1] >= o / 2 && ++S;
+                  (c = 0),
+                    (s = N(x, g, k, m)) < 0
+                      ? ((y = g[0]),
+                        1 <
+                        (c = ((y = k != m ? y * o + (g[1] || 0) : y) / S) | 0)
+                          ? 1 ==
+                              (s = N(
+                                (l = B(x, (c = o <= c ? o - 1 : c), o)),
+                                g,
+                                (p = l.length),
+                                (m = g.length)
+                              )) && (c--, C(l, k < p ? E : x, p, o))
+                          : (0 == c && (s = c = 1), (l = x.slice())),
+                        (p = l.length) < m && l.unshift(0),
+                        C(g, l, m, o),
+                        -1 == s &&
+                          (s = N(x, g, k, (m = g.length))) < 1 &&
+                          (c++, C(g, k < m ? E : x, m, o)),
+                        (m = g.length))
+                      : 0 === s && (c++, (g = [0])),
+                    (d[u++] = c),
+                    s && g[0] ? (g[m++] = O[w] || 0) : ((g = [O[w]]), (m = 1)),
+                    (w++ < _ || void 0 !== g[0]) && b--;
+
+                );
+                h = void 0 !== g[0];
+              }
+              d[0] || d.shift();
+            }
+            if (1 == f) (A.e = a), (P = h);
+            else {
+              for (u = 1, c = d[0]; 10 <= c; c /= 10) u++;
+              (A.e = u + a * f - 1), L(A, i ? r + A.e + 1 : r, n, h);
+            }
+            return A;
+          };
+          function B(t, e, r) {
+            var n,
+              i = 0,
+              o = t.length;
+            for (t = t.slice(); o--; )
+              (n = t[o] * e + i), (t[o] = n % r | 0), (i = (n / r) | 0);
+            return i && t.unshift(i), t;
+          }
+          function N(t, e, r, n) {
+            var i, o;
+            if (r != n) o = n < r ? 1 : -1;
+            else
+              for (i = o = 0; i < r; i++)
+                if (t[i] != e[i]) {
+                  o = t[i] > e[i] ? 1 : -1;
+                  break;
+                }
+            return o;
+          }
+          function C(t, e, r, n) {
+            for (var i = 0; r--; )
+              (t[r] -= i),
+                (i = t[r] < e[r] ? 1 : 0),
+                (t[r] = i * n + t[r] - e[r]);
+            for (; !t[0] && 1 < t.length; ) t.shift();
+          }
+          function L(t, e, r, n) {
+            var i,
+              o,
+              s,
+              a,
+              u,
+              c,
+              f,
+              h,
+              l = t.constructor;
+            t: if (null != e) {
+              if (!(f = t.d)) return t;
+              for (i = 1, a = f[0]; 10 <= a; a /= 10) i++;
+              if ((o = e - i) < 0)
+                (o += R),
+                  (s = e),
+                  (u = ((c = f[(h = 0)]) / g(10, i - s - 1)) % 10 | 0);
+              else if ((h = Math.ceil((o + 1) / R)) >= (a = f.length)) {
+                if (!n) break t;
+                for (; a++ <= h; ) f.push(0);
+                (c = u = 0), (s = (o %= R) - R + (i = 1));
+              } else {
+                for (c = a = f[h], i = 1; 10 <= a; a /= 10) i++;
+                u =
+                  (s = (o %= R) - R + i) < 0
+                    ? 0
+                    : (c / g(10, i - s - 1)) % 10 | 0;
+              }
+              if (
+                ((n =
+                  n ||
+                  e < 0 ||
+                  void 0 !== f[h + 1] ||
+                  (s < 0 ? c : c % g(10, i - s - 1))),
+                (u =
+                  r < 4
+                    ? (u || n) && (0 == r || r == (t.s < 0 ? 3 : 2))
+                    : 5 < u ||
+                      (5 == u &&
+                        (4 == r ||
+                          n ||
+                          (6 == r &&
+                            (0 < o
+                              ? 0 < s
+                                ? c / g(10, i - s)
+                                : 0
+                              : f[h - 1]) %
+                              10 &
+                              1) ||
+                          r == (t.s < 0 ? 8 : 7)))),
+                e < 1 || !f[0])
+              )
+                return (
+                  (f.length = 0),
+                  u
+                    ? ((e -= t.e + 1),
+                      (f[0] = g(10, (R - (e % R)) % R)),
+                      (t.e = -e || 0))
+                    : (f[0] = t.e = 0),
+                  t
+                );
+              if (
+                (0 == o
+                  ? ((f.length = h), (a = 1), h--)
+                  : ((f.length = h + 1),
+                    (a = g(10, R - o)),
+                    (f[h] =
+                      0 < s ? ((c / g(10, i - s)) % g(10, s) | 0) * a : 0)),
+                u)
+              )
+                for (;;) {
+                  if (0 == h) {
+                    for (o = 1, s = f[0]; 10 <= s; s /= 10) o++;
+                    for (s = f[0] += a, a = 1; 10 <= s; s /= 10) a++;
+                    o != a && (t.e++, f[0] == M) && (f[0] = 1);
+                    break;
+                  }
+                  if (((f[h] += a), f[h] != M)) break;
+                  (f[h--] = 0), (a = 1);
+                }
+              for (o = f.length; 0 === f[--o]; ) f.pop();
+            }
+            return (
+              v &&
+                (t.e > l.maxE
+                  ? ((t.d = null), (t.e = NaN))
+                  : t.e < l.minE && ((t.e = 0), (t.d = [0]))),
+              t
+            );
+          }
+          function k(t, e, r) {
+            var n, i, o, s;
+            return t.isFinite()
+              ? ((i = t.e),
+                (s = (o = w(t.d)).length),
+                e
+                  ? (r && 0 < (n = r - s)
+                      ? (o = o.charAt(0) + "." + o.slice(1) + c(n))
+                      : 1 < s && (o = o.charAt(0) + "." + o.slice(1)),
+                    (o = o + (t.e < 0 ? "e" : "e+") + t.e))
+                  : i < 0
+                  ? ((o = "0." + c(-i - 1) + o),
+                    r && 0 < (n = r - s) && (o += c(n)))
+                  : s <= i
+                  ? ((o += c(i + 1 - s)),
+                    r && 0 < (n = r - i - 1) && (o = o + "." + c(n)))
+                  : ((n = i + 1) < s && (o = o.slice(0, n) + "." + o.slice(n)),
+                    r &&
+                      0 < (n = r - s) &&
+                      (i + 1 === s && (o += "."), (o += c(n)))),
+                o)
+              : G(t);
+          }
+          function E(t, e) {
+            var r = t[0];
+            for (e *= R; 10 <= r; r /= 10) e++;
+            return e;
+          }
+          function I(t, e, r) {
+            if (Z < e) throw ((v = !0), r && (t.precision = r), Error(j));
+            return L(new t(n), e, 1, !0);
+          }
+          function A(t, e, r) {
+            if (m < e) throw Error(j);
+            return L(new t(i), e, r, !0);
+          }
+          function q(t) {
+            var e = t.length - 1,
+              r = e * R + 1;
+            if ((e = t[e])) {
+              for (; e % 10 == 0; e /= 10) r--;
+              for (e = t[0]; 10 <= e; e /= 10) r++;
+            }
+            return r;
+          }
+          function c(t) {
+            for (var e = ""; t--; ) e += "0";
+            return e;
+          }
+          function V(t, e, r, n) {
+            var i,
+              o = new t(1),
+              s = Math.ceil(n / R + 4);
+            for (v = !1; ; ) {
+              if (
+                (r % 2 && X((o = o.times(e)).d, s) && (i = !0),
+                0 === (r = T(r / 2)))
+              ) {
+                (r = o.d.length - 1), i && 0 === o.d[r] && ++o.d[r];
+                break;
+              }
+              X((e = e.times(e)).d, s);
+            }
+            return (v = !0), o;
+          }
+          function W(t) {
+            return 1 & t.d[t.d.length - 1];
+          }
+          function t(t, e, r) {
+            for (var n, i = new t(e[0]), o = 0; ++o < e.length; ) {
+              if (!(n = new t(e[o])).s) {
+                i = n;
+                break;
+              }
+              i[r](n) && (i = n);
+            }
+            return i;
+          }
+          function h(t, e) {
+            var r,
+              n,
+              i,
+              o,
+              s,
+              a,
+              u,
+              c = 0,
+              f = 0,
+              h = 0,
+              l = t.constructor,
+              p = l.rounding,
+              d = l.precision;
+            if (!t.d || !t.d[0] || 17 < t.e)
+              return new l(
+                t.d
+                  ? t.d[0]
+                    ? t.s < 0
+                      ? 0
+                      : 1 / 0
+                    : 1
+                  : t.s
+                  ? t.s < 0
+                    ? 0
+                    : t
+                  : NaN
+              );
+            for (
+              u = null == e ? ((v = !1), d) : e, a = new l(0.03125);
+              -2 < t.e;
+
+            )
+              (t = t.times(a)), (h += 5);
+            for (
+              u += n = ((Math.log(g(2, h)) / Math.LN10) * 2 + 5) | 0,
+                r = o = s = new l(1),
+                l.precision = u;
+              ;
+
+            ) {
+              if (
+                ((o = L(o.times(t), u, 1)),
+                (r = r.times(++f)),
+                w((a = s.plus(S(o, r, u, 1))).d).slice(0, u) ===
+                  w(s.d).slice(0, u))
+              ) {
+                for (i = h; i--; ) s = L(s.times(s), u, 1);
+                if (null != e) return (l.precision = d), s;
+                if (!(c < 3 && _(s.d, u - n, p, c)))
+                  return L(s, (l.precision = d), p, (v = !0));
+                (l.precision = u += 10), (r = o = a = new l(1)), (f = 0), c++;
+              }
+              s = a;
+            }
+          }
+          function O(t, e) {
+            var r,
+              n,
+              i,
+              o,
+              s,
+              a,
+              u,
+              c,
+              f,
+              h,
+              l,
+              p = 1,
+              d = t,
+              g = d.d,
+              m = d.constructor,
+              y = m.rounding,
+              b = m.precision;
+            if (d.s < 0 || !g || !g[0] || (!d.e && 1 == g[0] && 1 == g.length))
+              return new m(g && !g[0] ? -1 / 0 : 1 != d.s ? NaN : g ? 0 : d);
+            if (
+              ((f = null == e ? ((v = !1), b) : e),
+              (m.precision = f += 10),
+              (n = (r = w(g)).charAt(0)),
+              !(Math.abs((o = d.e)) < 15e14))
+            )
+              return (
+                (c = I(m, f + 2, b).times(o + "")),
+                (d = O(new m(n + "." + r.slice(1)), f - 10).plus(c)),
+                (m.precision = b),
+                null == e ? L(d, b, y, (v = !0)) : d
+              );
+            for (; (n < 7 && 1 != n) || (1 == n && 3 < r.charAt(1)); )
+              (n = (r = w((d = d.times(t)).d)).charAt(0)), p++;
+            for (
+              o = d.e,
+                1 < n
+                  ? ((d = new m("0." + r)), o++)
+                  : (d = new m(n + "." + r.slice(1))),
+                u = s = d = S((h = d).minus(1), d.plus(1), f, 1),
+                l = L(d.times(d), f, 1),
+                i = 3;
+              ;
+
+            ) {
+              if (
+                ((s = L(s.times(l), f, 1)),
+                w((c = u.plus(S(s, new m(i), f, 1))).d).slice(0, f) ===
+                  w(u.d).slice(0, f))
+              ) {
+                if (
+                  ((u = u.times(2)),
+                  0 !== o && (u = u.plus(I(m, f + 2, b).times(o + ""))),
+                  (u = S(u, new m(p), f, 1)),
+                  null != e)
+                )
+                  return (m.precision = b), u;
+                if (!_(u.d, f - 10, y, a))
+                  return L(u, (m.precision = b), y, (v = !0));
+                (m.precision = f += 10),
+                  (c = s = d = S(h.minus(1), h.plus(1), f, 1)),
+                  (l = L(d.times(d), f, 1)),
+                  (i = a = 1);
+              }
+              (u = c), (i += 2);
+            }
+          }
+          function G(t) {
+            return String((t.s * t.s) / 0);
+          }
+          function l(t, e) {
+            var r, n, i;
+            for (
+              0 <
+              (n = (e =
+                -1 < (r = e.indexOf(".")) ? e.replace(".", "") : e).search(
+                /e/i
+              ))
+                ? (r < 0 && (r = n),
+                  (r += +e.slice(n + 1)),
+                  (e = e.substring(0, n)))
+                : r < 0 && (r = e.length),
+                n = 0;
+              48 === e.charCodeAt(n);
+              n++
+            );
+            for (i = e.length; 48 === e.charCodeAt(i - 1); --i);
+            if ((e = e.slice(n, i))) {
+              if (
+                ((i -= n),
+                (t.e = r = r - n - 1),
+                (t.d = []),
+                (n = (r + 1) % R),
+                r < 0 && (n += R),
+                n < i)
+              ) {
+                for (n && t.d.push(+e.slice(0, n)), i -= R; n < i; )
+                  t.d.push(+e.slice(n, (n += R)));
+                (e = e.slice(n)), (n = R - e.length);
+              } else n -= i;
+              for (; n--; ) e += "0";
+              t.d.push(+e),
+                v &&
+                  (t.e > t.constructor.maxE
+                    ? ((t.d = null), (t.e = NaN))
+                    : t.e < t.constructor.minE && ((t.e = 0), (t.d = [0])));
+            } else (t.e = 0), (t.d = [0]);
+            return t;
+          }
+          function x(t, e, r, n, i) {
+            var o,
+              s,
+              a,
+              u,
+              c = t.precision,
+              f = Math.ceil(c / R);
+            for (v = !1, u = r.times(r), a = new t(n); ; ) {
+              if (
+                ((s = S(a.times(u), new t(e++ * e++), c, 1)),
+                (a = i ? n.plus(s) : n.minus(s)),
+                (n = S(s.times(u), new t(e++ * e++), c, 1)),
+                void 0 !== (s = a.plus(n)).d[f])
+              ) {
+                for (o = f; s.d[o] === a.d[o] && o--; );
+                if (-1 == o) break;
+              }
+              (o = a), (a = n), (n = s), (s = o);
+            }
+            return (v = !0), (s.d.length = f + 1), s;
+          }
+          function U(t, e) {
+            for (var r = t; --e; ) r *= t;
+            return r;
+          }
+          function Y(t, e) {
+            var r,
+              n = e.s < 0,
+              t = A(t, t.precision, 1),
+              i = t.times(0.5);
+            if ((e = e.abs()).lte(i)) return (o = n ? 4 : 1), e;
+            if ((r = e.divToInt(t)).isZero()) o = n ? 3 : 2;
+            else {
+              if ((e = e.minus(r.times(t))).lte(i))
+                return (o = W(r) ? (n ? 2 : 3) : n ? 4 : 1), e;
+              o = W(r) ? (n ? 1 : 4) : n ? 3 : 2;
+            }
+            return e.minus(t).abs();
+          }
+          function r(t, e, r, n) {
+            var i,
+              o,
+              s,
+              a,
+              u,
+              c,
+              f,
+              h,
+              l = t.constructor,
+              p = void 0 !== r;
+            if (
+              (p
+                ? (y(r, 1, 1e9), void 0 === n ? (n = l.rounding) : y(n, 0, 8))
+                : ((r = l.precision), (n = l.rounding)),
+              t.isFinite())
+            ) {
+              for (
+                p
+                  ? ((i = 2),
+                    16 == e ? (r = 4 * r - 3) : 8 == e && (r = 3 * r - 2))
+                  : (i = e),
+                  0 <= (s = (c = k(t)).indexOf(".")) &&
+                    ((c = c.replace(".", "")),
+                    ((h = new l(1)).e = c.length - s),
+                    (h.d = b(k(h), 10, i)),
+                    (h.e = h.d.length)),
+                  o = a = (f = b(c, 10, i)).length;
+                0 == f[--a];
+
+              )
+                f.pop();
+              if (f[0]) {
+                if (
+                  (s < 0
+                    ? o--
+                    : (((t = new l(t)).d = f),
+                      (t.e = o),
+                      (f = (t = S(t, h, r, n, 0, i)).d),
+                      (o = t.e),
+                      (u = P)),
+                  (s = f[r]),
+                  (l = i / 2),
+                  (u = u || void 0 !== f[r + 1]),
+                  (u =
+                    n < 4
+                      ? (void 0 !== s || u) &&
+                        (0 === n || n === (t.s < 0 ? 3 : 2))
+                      : l < s ||
+                        (s === l &&
+                          (4 === n ||
+                            u ||
+                            (6 === n && 1 & f[r - 1]) ||
+                            n === (t.s < 0 ? 8 : 7)))),
+                  (f.length = r),
+                  u)
+                )
+                  for (; ++f[--r] > i - 1; )
+                    (f[r] = 0), r || (++o, f.unshift(1));
+                for (a = f.length; !f[a - 1]; --a);
+                for (s = 0, c = ""; s < a; s++) c += d.charAt(f[s]);
+                if (p) {
+                  if (1 < a)
+                    if (16 == e || 8 == e) {
+                      for (s = 16 == e ? 4 : 3, --a; a % s; a++) c += "0";
+                      for (a = (f = b(c, i, e)).length; !f[a - 1]; --a);
+                      for (s = 1, c = "1."; s < a; s++) c += d.charAt(f[s]);
+                    } else c = c.charAt(0) + "." + c.slice(1);
+                  c = c + (o < 0 ? "p" : "p+") + o;
+                } else if (o < 0) {
+                  for (; ++o; ) c = "0" + c;
+                  c = "0." + c;
+                } else if (++o > a) for (o -= a; o--; ) c += "0";
+                else o < a && (c = c.slice(0, o) + "." + c.slice(o));
+              } else c = p ? "0p+0" : "0";
+              c = (16 == e ? "0x" : 2 == e ? "0b" : 8 == e ? "0o" : "") + c;
+            } else c = G(t);
+            return t.s < 0 ? "-" + c : c;
+          }
+          function X(t, e) {
+            return t.length > e && ((t.length = e), 1);
+          }
+          function J(t) {
+            return new this(t).abs();
+          }
+          function $(t) {
+            return new this(t).acos();
+          }
+          function Q(t) {
+            return new this(t).acosh();
+          }
+          function tt(t, e) {
+            return new this(t).plus(e);
+          }
+          function et(t) {
+            return new this(t).asin();
+          }
+          function rt(t) {
+            return new this(t).asinh();
+          }
+          function nt(t) {
+            return new this(t).atan();
+          }
+          function it(t) {
+            return new this(t).atanh();
+          }
+          function ot(t, e) {
+            (t = new this(t)), (e = new this(e));
+            var r,
+              n = this.precision,
+              i = this.rounding,
+              o = n + 4;
+            return (
+              t.s && e.s
+                ? t.d || e.d
+                  ? !e.d || t.isZero()
+                    ? ((r = e.s < 0 ? A(this, n, i) : new this(0)).s = t.s)
+                    : !t.d || e.isZero()
+                    ? ((r = A(this, o, 1).times(0.5)).s = t.s)
+                    : (r =
+                        e.s < 0
+                          ? ((this.precision = o),
+                            (this.rounding = 1),
+                            (r = this.atan(S(t, e, o, 1))),
+                            (e = A(this, o, 1)),
+                            (this.precision = n),
+                            (this.rounding = i),
+                            t.s < 0 ? r.minus(e) : r.plus(e))
+                          : this.atan(S(t, e, o, 1)))
+                  : ((r = A(this, o, 1).times(0 < e.s ? 0.25 : 0.75)).s = t.s)
+                : (r = new this(NaN)),
+              r
+            );
+          }
+          function st(t) {
+            return new this(t).cbrt();
+          }
+          function at(t) {
+            return L((t = new this(t)), t.e + 1, 2);
+          }
+          function ut(t, e, r) {
+            return new this(t).clamp(e, r);
+          }
+          function ct(t) {
+            if (!t || "object" != typeof t) throw Error(a + "Object expected");
+            for (
+              var e,
+                r,
+                n = !0 === t.defaults,
+                i = [
+                  "precision",
+                  1,
+                  1e9,
+                  "rounding",
+                  0,
+                  8,
+                  "toExpNeg",
+                  -9e15,
+                  0,
+                  "toExpPos",
+                  0,
+                  9e15,
+                  "maxE",
+                  0,
+                  9e15,
+                  "minE",
+                  -9e15,
+                  0,
+                  "modulo",
+                  0,
+                  9,
+                ],
+                o = 0;
+              o < i.length;
+              o += 3
+            )
+              if (((e = i[o]), n && (this[e] = s[e]), void 0 !== (r = t[e]))) {
+                if (!(T(r) === r && i[o + 1] <= r && r <= i[o + 2]))
+                  throw Error(p + e + ": " + r);
+                this[e] = r;
+              }
+            if (
+              ((e = "crypto"), n && (this[e] = s[e]), void 0 !== (r = t[e]))
+            ) {
+              if (!0 !== r && !1 !== r && 0 !== r && 1 !== r)
+                throw Error(p + e + ": " + r);
+              if (r) {
+                if (
+                  "undefined" == typeof crypto ||
+                  !crypto ||
+                  (!crypto.getRandomValues && !crypto.randomBytes)
+                )
+                  throw Error(H);
+                this[e] = !0;
+              } else this[e] = !1;
+            }
+            return this;
+          }
+          function ft(t) {
+            return new this(t).cos();
+          }
+          function ht(t) {
+            return new this(t).cosh();
+          }
+          function lt(t, e) {
+            return new this(t).div(e);
+          }
+          function pt(t) {
+            return new this(t).exp();
+          }
+          function dt(t) {
+            return L((t = new this(t)), t.e + 1, 3);
+          }
+          function gt() {
+            var t,
+              e,
+              r = new this(0);
+            for (v = !1, t = 0; t < arguments.length; )
+              if ((e = new this(arguments[t++])).d)
+                r.d && (r = r.plus(e.times(e)));
+              else {
+                if (e.s) return (v = !0), new this(1 / 0);
+                r = e;
+              }
+            return (v = !0), r.sqrt();
+          }
+          function mt(t) {
+            return t instanceof f || (t && t.toStringTag === e) || !1;
+          }
+          function yt(t) {
+            return new this(t).ln();
+          }
+          function bt(t, e) {
+            return new this(t).log(e);
+          }
+          function vt(t) {
+            return new this(t).log(2);
+          }
+          function wt(t) {
+            return new this(t).log(10);
+          }
+          function _t() {
+            return t(this, arguments, "lt");
+          }
+          function St() {
+            return t(this, arguments, "gt");
+          }
+          function kt(t, e) {
+            return new this(t).mod(e);
+          }
+          function Et(t, e) {
+            return new this(t).mul(e);
+          }
+          function It(t, e) {
+            return new this(t).pow(e);
+          }
+          function At(t) {
+            var e,
+              r,
+              n,
+              i,
+              o = 0,
+              s = new this(1),
+              a = [];
+            if (
+              (void 0 === t ? (t = this.precision) : y(t, 1, 1e9),
+              (n = Math.ceil(t / R)),
+              this.crypto)
+            )
+              if (crypto.getRandomValues)
+                for (e = crypto.getRandomValues(new Uint32Array(n)); o < n; )
+                  429e7 <= (i = e[o])
+                    ? (e[o] = crypto.getRandomValues(new Uint32Array(1))[0])
+                    : (a[o++] = i % 1e7);
+              else {
+                if (!crypto.randomBytes) throw Error(H);
+                for (e = crypto.randomBytes((n *= 4)); o < n; )
+                  214e7 <=
+                  (i =
+                    e[o] +
+                    (e[o + 1] << 8) +
+                    (e[o + 2] << 16) +
+                    ((127 & e[o + 3]) << 24))
+                    ? crypto.randomBytes(4).copy(e, o)
+                    : (a.push(i % 1e7), (o += 4));
+                o = n / 4;
+              }
+            else for (; o < n; ) a[o++] = (1e7 * Math.random()) | 0;
+            for (
+              n = a[--o],
+                t %= R,
+                n && t && ((i = g(10, R - t)), (a[o] = ((n / i) | 0) * i));
+              0 === a[o];
+              o--
+            )
+              a.pop();
+            if (o < 0) a = [(r = 0)];
+            else {
+              for (r = -1; 0 === a[0]; r -= R) a.shift();
+              for (n = 1, i = a[0]; 10 <= i; i /= 10) n++;
+              n < R && (r -= R - n);
+            }
+            return (s.e = r), (s.d = a), s;
+          }
+          function Ot(t) {
+            return L((t = new this(t)), t.e + 1, this.rounding);
+          }
+          function xt(t) {
+            return (t = new this(t)).d ? (t.d[0] ? t.s : 0 * t.s) : t.s || NaN;
+          }
+          function Pt(t) {
+            return new this(t).sin();
+          }
+          function Tt(t) {
+            return new this(t).sinh();
+          }
+          function Mt(t) {
+            return new this(t).sqrt();
+          }
+          function Rt(t, e) {
+            return new this(t).sub(e);
+          }
+          function Bt() {
+            var t = 0,
+              e = arguments,
+              r = new this(e[t]);
+            for (v = !1; r.s && ++t < e.length; ) r = r.plus(e[t]);
+            return (v = !0), L(r, this.precision, this.rounding);
+          }
+          function Nt(t) {
+            return new this(t).tan();
+          }
+          function Ct(t) {
+            return new this(t).tanh();
+          }
+          function Lt(t) {
+            return L((t = new this(t)), t.e + 1, 1);
+          }
+          (((f = (function t(e) {
+            var r, n, i;
+            function o(t) {
+              var e,
+                r,
+                n,
+                i = this;
+              if (!(i instanceof o)) return new o(t);
+              if (((i.constructor = o), !mt(t))) {
+                if ("number" == (n = typeof t)) {
+                  if (0 === t)
+                    return (
+                      (i.s = 1 / t < 0 ? -1 : 1), (i.e = 0), void (i.d = [0])
+                    );
+                  if (
+                    (t < 0 ? ((t = -t), (i.s = -1)) : (i.s = 1),
+                    t === ~~t && t < 1e7)
+                  ) {
+                    for (e = 0, r = t; 10 <= r; r /= 10) e++;
+                    return void (v
+                      ? o.maxE < e
+                        ? ((i.e = NaN), (i.d = null))
+                        : e < o.minE
+                        ? ((i.e = 0), (i.d = [0]))
+                        : ((i.e = e), (i.d = [t]))
+                      : ((i.e = e), (i.d = [t])));
+                  }
+                  return 0 * t != 0
+                    ? (t || (i.s = NaN), (i.e = NaN), void (i.d = null))
+                    : l(i, t.toString());
+                }
+                if ("string" != n) throw Error(p + t);
+                return (
+                  45 === (r = t.charCodeAt(0))
+                    ? ((t = t.slice(1)), (i.s = -1))
+                    : (43 === r && (t = t.slice(1)), (i.s = 1)),
+                  (z.test(t)
+                    ? l
+                    : function (t, e) {
+                        var r, n, i, o, s, a, u, c;
+                        if (-1 < e.indexOf("_")) {
+                          if (
+                            ((e = e.replace(/(\d)_(?=\d)/g, "$1")), z.test(e))
+                          )
+                            return l(t, e);
+                        } else if ("Infinity" === e || "NaN" === e)
+                          return (
+                            +e || (t.s = NaN), (t.e = NaN), (t.d = null), t
+                          );
+                        if (F.test(e)) (r = 16), (e = e.toLowerCase());
+                        else if (D.test(e)) r = 2;
+                        else {
+                          if (!K.test(e)) throw Error(p + e);
+                          r = 8;
+                        }
+                        for (
+                          s =
+                            0 <=
+                            (o = (e =
+                              0 < (o = e.search(/p/i))
+                                ? ((u = +e.slice(o + 1)), e.substring(2, o))
+                                : e.slice(2)).indexOf(".")),
+                            n = t.constructor,
+                            s &&
+                              ((o = (a = (e = e.replace(".", "")).length) - o),
+                              (i = V(n, new n(r), o, 2 * o))),
+                            o = e = (c = b(e, r, M)).length - 1;
+                          0 === c[o];
+                          --o
+                        )
+                          c.pop();
+                        return o < 0
+                          ? new n(0 * t.s)
+                          : ((t.e = E(c, e)),
+                            (t.d = c),
+                            (v = !1),
+                            s && (t = S(t, i, 4 * a)),
+                            u &&
+                              (t = t.times(
+                                Math.abs(u) < 54 ? g(2, u) : f.pow(2, u)
+                              )),
+                            (v = !0),
+                            t);
+                      })(i, t)
+                );
+              }
+              (i.s = t.s),
+                v
+                  ? !t.d || t.e > o.maxE
+                    ? ((i.e = NaN), (i.d = null))
+                    : t.e < o.minE
+                    ? ((i.e = 0), (i.d = [0]))
+                    : ((i.e = t.e), (i.d = t.d.slice()))
+                  : ((i.e = t.e), (i.d = t.d && t.d.slice()));
+            }
+            if (
+              ((o.prototype = u),
+              (o.ROUND_UP = 0),
+              (o.ROUND_DOWN = 1),
+              (o.ROUND_CEIL = 2),
+              (o.ROUND_FLOOR = 3),
+              (o.ROUND_HALF_UP = 4),
+              (o.ROUND_HALF_DOWN = 5),
+              (o.ROUND_HALF_EVEN = 6),
+              (o.ROUND_HALF_CEIL = 7),
+              (o.ROUND_HALF_FLOOR = 8),
+              (o.EUCLID = 9),
+              (o.config = o.set = ct),
+              (o.clone = t),
+              (o.isDecimal = mt),
+              (o.abs = J),
+              (o.acos = $),
+              (o.acosh = Q),
+              (o.add = tt),
+              (o.asin = et),
+              (o.asinh = rt),
+              (o.atan = nt),
+              (o.atanh = it),
+              (o.atan2 = ot),
+              (o.cbrt = st),
+              (o.ceil = at),
+              (o.clamp = ut),
+              (o.cos = ft),
+              (o.cosh = ht),
+              (o.div = lt),
+              (o.exp = pt),
+              (o.floor = dt),
+              (o.hypot = gt),
+              (o.ln = yt),
+              (o.log = bt),
+              (o.log10 = wt),
+              (o.log2 = vt),
+              (o.max = _t),
+              (o.min = St),
+              (o.mod = kt),
+              (o.mul = Et),
+              (o.pow = It),
+              (o.random = At),
+              (o.round = Ot),
+              (o.sign = xt),
+              (o.sin = Pt),
+              (o.sinh = Tt),
+              (o.sqrt = Mt),
+              (o.sub = Rt),
+              (o.sum = Bt),
+              (o.tan = Nt),
+              (o.tanh = Ct),
+              (o.trunc = Lt),
+              (e = void 0 === e ? {} : e) && !0 !== e.defaults)
+            )
+              for (
+                i = [
+                  "precision",
+                  "rounding",
+                  "toExpNeg",
+                  "toExpPos",
+                  "maxE",
+                  "minE",
+                  "modulo",
+                  "crypto",
+                ],
+                  r = 0;
+                r < i.length;
+
+              )
+                e.hasOwnProperty((n = i[r++])) || (e[n] = this[n]);
+            return o.config(e), o;
+          })(s)).prototype.constructor = f).default = f.Decimal =
+            f),
+            (n = new f(n)),
+            (i = new f(i)),
+            void 0 !==
+              (Dt = function () {
+                return f;
+              }.call(jt, Ht, jt, Ut)) && (Ut.exports = Dt);
+        })();
       },
       60113: function (t, e, r) {
         "use strict";
@@ -68602,7 +69721,7 @@
                 u.sync
                   ? A(a)
                   : ((u.needReadable = !1),
-                    u.emittedReadable || ((u.emittedReadable = !0), x(a))));
+                    u.emittedReadable || ((u.emittedReadable = !0), O(a))));
           else if (
             (i ||
               ((c = f),
@@ -68636,9 +69755,9 @@
                 ((e = f.decoder.write(e)), f.objectMode) ||
                 0 !== e.length
                   ? E(t, f, e, !1)
-                  : O(t, f);
+                  : x(t, f);
             }
-          else n || ((f.reading = !1), O(t, f));
+          else n || ((f.reading = !1), x(t, f));
           return !f.ended && (f.length < f.highWaterMark || 0 === f.length);
         }
         function E(t, e, r, n) {
@@ -68647,7 +69766,7 @@
             : ((e.length += e.objectMode ? 1 : r.length),
               n ? e.buffer.unshift(r) : e.buffer.push(r),
               e.needReadable && A(t)),
-            O(t, e);
+            x(t, e);
         }
         Object.defineProperty(S.prototype, "destroyed", {
           enumerable: !1,
@@ -68731,9 +69850,9 @@
             e.emittedReadable ||
               (y("emitReadable", e.flowing),
               (e.emittedReadable = !0),
-              g.nextTick(x, t));
+              g.nextTick(O, t));
         }
-        function x(t) {
+        function O(t) {
           var e = t._readableState;
           y("emitReadable_", e.destroyed, e.length, e.ended),
             e.destroyed ||
@@ -68743,7 +69862,7 @@
               !e.flowing && !e.ended && e.length <= e.highWaterMark),
             R(t);
         }
-        function O(t, e) {
+        function x(t, e) {
           e.readingMore || ((e.readingMore = !0), g.nextTick(P, t, e));
         }
         function P(t, e) {
@@ -69296,11 +70415,11 @@
                         (i._writableState.errorEmitted = !0),
                         S(i, t),
                         T(i, e)))
-                  : ((r = O(s) || o.destroyed) ||
+                  : ((r = x(s) || o.destroyed) ||
                       s.corked ||
                       s.bufferProcessing ||
                       !s.bufferedRequest ||
-                      x(o, s),
+                      O(o, s),
                     a ? m.nextTick(A, o, s, r, u) : A(o, s, r, u));
             }),
             (this.writecb = null),
@@ -69351,7 +70470,7 @@
             n(),
             T(t, e);
         }
-        function x(t, e) {
+        function O(t, e) {
           e.bufferProcessing = !0;
           var r = e.bufferedRequest;
           if (t._writev && r && r.next) {
@@ -69386,7 +70505,7 @@
           }
           (e.bufferedRequest = r), (e.bufferProcessing = !1);
         }
-        function O(t) {
+        function x(t) {
           return (
             t.ending &&
             0 === t.length &&
@@ -69407,7 +70526,7 @@
         function T(t, e) {
           var r,
             n,
-            i = O(e);
+            i = x(e);
           return (
             i &&
               ((r = t),
@@ -69542,7 +70661,7 @@
                 t.corked ||
                 t.bufferProcessing ||
                 !t.bufferedRequest ||
-                x(this, t));
+                O(this, t));
           }),
           (E.prototype.setDefaultEncoding = function (t) {
             if (
@@ -70818,21 +71937,21 @@
                   (w = (l & (w = d)) ^ (~l & m)) < 0 && (w += 4294967296),
                   this.k[v]),
                 A = this.k[v + 1],
-                x = r[v],
-                O = r[v + 1],
-                P = U(_, S, k, E, T, w, I, A, x, O),
-                T = j(_, S, k, E, T, w, I, A, x, O),
+                O = r[v],
+                x = r[v + 1],
+                P = U(_, S, k, E, T, w, I, A, O, x),
+                T = j(_, S, k, E, T, w, I, A, O, x),
                 I =
                   ((I = R((w = n), (I = i), 28) ^ R(I, w, 2) ^ R(I, w, 7)) <
                     0 && (I += 4294967296),
                   (_ = I),
-                  (x = B((A = n), (x = i), 28) ^ B(x, A, 2) ^ B(x, A, 7)) < 0 &&
-                    (x += 4294967296),
-                  (O = ((O = n) & o) ^ (O & a) ^ (o & a)) < 0 &&
+                  (O = B((A = n), (O = i), 28) ^ B(O, A, 2) ^ B(O, A, 7)) < 0 &&
                     (O += 4294967296),
+                  (x = ((x = n) & o) ^ (x & a) ^ (o & a)) < 0 &&
+                    (x += 4294967296),
                   (w = ((w = i) & s) ^ (w & u) ^ (s & u)) < 0 &&
                     (w += 4294967296),
-                  C(_, (S = x), (k = O), (E = w))),
+                  C(_, (S = O), (k = x), (E = w))),
                 A = L(_, S, k, E),
                 y = g,
                 b = m,
@@ -72416,8 +73535,8 @@
           E = r(99970),
           I = r(5313),
           A = r(84279),
-          x = r(96579),
-          O = r(93750),
+          O = r(96579),
+          x = r(93750),
           P = r(46296),
           T = r(98267),
           M = r(92142),
@@ -72468,11 +73587,11 @@
                   l = h == U || "[object GeneratorFunction]" == h;
                 if (T(n)) return v(n, u);
                 if (h == j || h == L || (l && !e)) {
-                  if (((a = c || l ? {} : O(n)), !u))
+                  if (((a = c || l ? {} : x(n)), !u))
                     return c ? S(n, b(a, n)) : _(n, y(a, n));
                 } else {
                   if (!H[h]) return e ? n : {};
-                  a = x(n, h, u);
+                  a = O(n, h, u);
                 }
               }
               l = (s = s || new d()).get(n);
@@ -73335,9 +74454,9 @@
           return o(t) ? n(t, !0) : i(t);
         };
       },
-      84433: function (x, O, P) {
+      84433: function (O, x, P) {
         var T;
-        (x = P.nmd(x)),
+        (O = P.nmd(O)),
           function () {
             var Bo,
               No = "Expected a function",
@@ -73383,8 +74502,8 @@
               Es = "[object Uint8ClampedArray]",
               Is = "[object Uint16Array]",
               As = "[object Uint32Array]",
-              xs = /\b__p \+= '';/g,
-              Os = /\b(__p \+=) '' \+/g,
+              Os = /\b__p \+= '';/g,
+              xs = /\b(__p \+=) '' \+/g,
               Ps = /(__e\(.*?\)|\b__t\)) \+\n'';/g,
               Ts = /&(?:amp|lt|gt|quot|#39);/g,
               Ms = /[&<>"']/g,
@@ -73576,8 +74695,8 @@
                 self.Object === Object &&
                 self,
               Jo = e || d || Function("return this")(),
-              o = O && !O.nodeType && O,
-              k = o && x && !x.nodeType && x,
+              o = x && !x.nodeType && x,
+              k = o && O && !O.nodeType && O,
               pa = k && k.exports === o,
               E = pa && e.process,
               i = (function () {
@@ -73677,7 +74796,7 @@
               return !1;
             }
             var I = Ra("length");
-            function xa(t, n, e) {
+            function Oa(t, n, e) {
               var i;
               return (
                 e(t, function (t, e, r) {
@@ -73686,13 +74805,13 @@
                 i
               );
             }
-            function Oa(t, e, r, n) {
+            function xa(t, e, r, n) {
               for (var i = t.length, o = r + (n ? 1 : -1); n ? o-- : ++o < i; )
                 if (e(t[o], o, t)) return o;
               return -1;
             }
             function ns(t, e, r) {
-              if (e != e) return Oa(t, Ta, r);
+              if (e != e) return xa(t, Ta, r);
               for (var n = t, i = e, o = r - 1, s = n.length; ++o < s; )
                 if (n[o] === i) return o;
               return -1;
@@ -74100,8 +75219,8 @@
                   It = zr(t, "Set"),
                   t = zr(t, "WeakMap"),
                   At = zr(y, "create"),
-                  xt = t && new t(),
-                  Ot = {},
+                  Ot = t && new t(),
+                  xt = {},
                   Pt = gn(U),
                   Tt = gn(kt),
                   Mt = gn(Et),
@@ -74835,8 +75954,8 @@
                     ? L
                     : "object" == typeof t
                     ? k(t)
-                      ? Oe(t[0], t[1])
-                      : xe(t)
+                      ? xe(t[0], t[1])
+                      : Oe(t)
                     : wo(t);
                 }
                 function Ee(t) {
@@ -74860,7 +75979,7 @@
                     o
                   );
                 }
-                function xe(e) {
+                function Oe(e) {
                   var r = Kr(e);
                   return 1 == r.length && r[0][2]
                     ? en(r[0][0], r[0][1])
@@ -74868,7 +75987,7 @@
                         return t === e || _e(t, e, r);
                       };
                 }
-                function Oe(r, n) {
+                function xe(r, n) {
                   return Xr(r) && tn(n)
                     ? en(dn(r), n)
                     : function (t) {
@@ -74911,7 +76030,7 @@
                                           : [])
                                       : bi(p) || ci(p)
                                       ? ci((d = l))
-                                        ? (d = Oi(l))
+                                        ? (d = xi(l))
                                         : (I(l) && !pi(l)) || (d = Wr(p))
                                       : (n = !1)),
                                   n &&
@@ -75054,9 +76173,9 @@
                     }
                   return t;
                 }
-                var je = xt
+                var je = Ot
                     ? function (t, e) {
-                        return xt.set(t, e), t;
+                        return Ot.set(t, e), t;
                       }
                     : L,
                   e = ct
@@ -75171,7 +76290,7 @@
                     u = a;
                   if (r) (s = !1), (i = ka);
                   else if (200 <= o) {
-                    var c = e ? null : Or(t);
+                    var c = e ? null : xr(t);
                     if (c) return Va(c);
                     (s = !1), (i = ja), (u = new Kt());
                   } else u = e ? [] : a;
@@ -75240,7 +76359,7 @@
                   return "function" == typeof t ? t : L;
                 }
                 function Qe(t, e) {
-                  return k(t) ? t : Xr(t, e) ? [t] : pn(O(t));
+                  return k(t) ? t : Xr(t, e) ? [t] : pn(x(t));
                 }
                 var tr = s;
                 function er(t, e, r) {
@@ -75401,7 +76520,7 @@
                 }
                 function dr(n) {
                   return function (t) {
-                    var e = os((t = O(t))) ? us(t) : Bo,
+                    var e = os((t = x(t))) ? us(t) : Bo,
                       r = e ? e[0] : t.charAt(0),
                       e = e ? er(e, 1).join("") : t.slice(1);
                     return r[n]() + e;
@@ -75616,7 +76735,7 @@
                   return function (t, e) {
                     return (
                       ("string" == typeof t && "string" == typeof e) ||
-                        ((t = x(t)), (e = x(e))),
+                        ((t = O(t)), (e = O(e))),
                       r(t, e)
                     );
                   };
@@ -75641,16 +76760,16 @@
                     o = r.apply(Bo, i);
                   return Jr(t) && sn(o, i), (o.placeholder = n), cn(o, t, e);
                 }
-                function xr(t) {
+                function Or(t) {
                   var n = D[t];
                   return function (t, e) {
                     var r;
                     return (
-                      (t = x(t)),
+                      (t = O(t)),
                       (e = null == e ? 0 : B(N(e), 292)) && mt(t)
-                        ? ((r = (O(t) + "e").split("e")),
+                        ? ((r = (x(t) + "e").split("e")),
                           +(
-                            (r = (O(n(r[0] + "e" + (+r[1] + e))) + "e").split(
+                            (r = (x(n(r[0] + "e" + (+r[1] + e))) + "e").split(
                               "e"
                             ))[0] +
                             "e" +
@@ -75660,7 +76779,7 @@
                     );
                   };
                 }
-                var Or =
+                var xr =
                   It && 1 / Va(new It([, -0]))[1] == 1 / 0
                     ? function (t) {
                         return new It(t);
@@ -75707,8 +76826,8 @@
                     E,
                     I,
                     A,
-                    x,
                     O,
+                    x,
                     P = 2 & e;
                   if (P || "function" == typeof t)
                     return (
@@ -75723,26 +76842,26 @@
                         ((E = c),
                         (s = (o = f)[1]),
                         (A = E[1]),
-                        (x = s | A),
-                        (O =
+                        (O = s | A),
+                        (x =
                           (128 == A && 8 == s) ||
                           (128 == A && 256 == s && o[7].length <= E[8]) ||
                           (384 == A && E[7].length <= E[8] && 8 == s)),
-                        x < 131 || O) &&
-                        (1 & A && ((o[2] = E[2]), (x |= 1 & s ? 0 : 4)),
-                        (O = E[3]) &&
+                        O < 131 || x) &&
+                        (1 & A && ((o[2] = E[2]), (O |= 1 & s ? 0 : 4)),
+                        (x = E[3]) &&
                           ((I = o[3]),
-                          (o[3] = I ? ar(I, O, E[4]) : O),
+                          (o[3] = I ? ar(I, x, E[4]) : x),
                           (o[4] = I ? ss(o[3], fs) : E[4])),
-                        (O = E[5]) &&
+                        (x = E[5]) &&
                           ((I = o[5]),
-                          (o[5] = I ? ur(I, O, E[6]) : O),
+                          (o[5] = I ? ur(I, x, E[6]) : x),
                           (o[6] = I ? ss(o[5], fs) : E[6])),
-                        (O = E[7]) && (o[7] = O),
+                        (x = E[7]) && (o[7] = x),
                         128 & A && (o[8] = null == o[8] ? E[8] : B(o[8], E[8])),
                         null == o[9] && (o[9] = E[9]),
                         (o[0] = E[0]),
-                        (o[1] = x)),
+                        (o[1] = O)),
                       (t = f[0]),
                       (e = f[1]),
                       (r = f[2]),
@@ -75898,16 +77017,16 @@
                 function Ur(t) {
                   return pe(t, C, qr);
                 }
-                var jr = xt
+                var jr = Ot
                   ? function (t) {
-                      return xt.get(t);
+                      return Ot.get(t);
                     }
                   : mo;
                 function Hr(t) {
                   for (
                     var e = t.name + "",
-                      r = Ot[e],
-                      n = b.call(Ot, e) ? r.length : 0;
+                      r = xt[e],
+                      n = b.call(xt, e) ? r.length : 0;
                     n--;
 
                   ) {
@@ -76219,7 +77338,7 @@
                   var n = null == t ? 0 : t.length;
                   return n
                     ? ((r = null == r ? 0 : N(r)) < 0 && (r = R(n + r, 0)),
-                      Oa(t, f(e, 3), r))
+                      xa(t, f(e, 3), r))
                     : -1;
                 }
                 function bn(t, e, r) {
@@ -76229,7 +77348,7 @@
                     ? ((n = i - 1),
                       r !== Bo &&
                         ((n = N(r)), (n = r < 0 ? R(i + n, 0) : B(n, i - 1))),
-                      Oa(t, f(e, 3), n, !0))
+                      xa(t, f(e, 3), n, !0))
                     : -1;
                 }
                 function vn(t) {
@@ -76293,7 +77412,7 @@
                     var e = "function" == typeof (e = n(t)) ? e : Bo;
                     return Ze(u(t, 1, E, !0), Bo, e);
                   });
-                function xn(e) {
+                function On(e) {
                   var r;
                   return e && e.length
                     ? ((r = 0),
@@ -76305,9 +77424,9 @@
                       }))
                     : [];
                 }
-                function On(t, e) {
+                function xn(t, e) {
                   return t && t.length
-                    ? ((t = xn(t)),
+                    ? ((t = On(t)),
                       null == e
                         ? t
                         : es(t, function (t) {
@@ -76329,14 +77448,14 @@
                     var e = "function" == typeof (e = n(t)) ? e : Bo;
                     return Ye(ts(t, E), Bo, e);
                   }),
-                  Bn = s(xn),
+                  Bn = s(On),
                   Nn = s(function (t) {
                     var e = t.length,
                       e =
                         "function" == typeof (e = 1 < e ? t[e - 1] : Bo)
                           ? (t.pop(), e)
                           : Bo;
-                    return On(t, e);
+                    return xn(t, e);
                   });
                 function Cn(t) {
                   t = d(t);
@@ -76507,10 +77626,10 @@
                     return u === Bo && (u = an(g, r)), a;
                   }
                   return (
-                    (r = x(r) || 0),
+                    (r = O(r) || 0),
                     I(t) &&
                       ((h = !!t.leading),
-                      (s = (l = "maxWait" in t) ? R(x(t.maxWait) || 0, r) : s),
+                      (s = (l = "maxWait" in t) ? R(O(t.maxWait) || 0, r) : s),
                       (e = "trailing" in t ? !!t.trailing : e)),
                     (y.cancel = function () {
                       u !== Bo && rr(u), (f = 0), (i = c = o = u = Bo);
@@ -76525,7 +77644,7 @@
                     return te(t, 1, e);
                   }),
                   ei = s(function (t, e, r) {
-                    return te(t, x(e) || 0, r);
+                    return te(t, O(e) || 0, r);
                   });
                 function ri(n, i) {
                   if (
@@ -76713,7 +77832,7 @@
                 }
                 function Ai(t) {
                   return t
-                    ? (t = x(t)) === 1 / 0 || t === -1 / 0
+                    ? (t = O(t)) === 1 / 0 || t === -1 / 0
                       ? 17976931348623157e292 * (t < 0 ? -1 : 1)
                       : t == t
                       ? t
@@ -76727,10 +77846,10 @@
                     e = t % 1;
                   return t == t ? (e ? t - e : t) : 0;
                 }
-                function xi(t) {
+                function Oi(t) {
                   return t ? $t(N(t), 0, Lo) : 0;
                 }
-                function x(t) {
+                function O(t) {
                   if ("number" == typeof t) return t;
                   if (A(t)) return NaN;
                   if (
@@ -76752,10 +77871,10 @@
                     ? NaN
                     : +t;
                 }
-                function Oi(t) {
+                function xi(t) {
                   return cr(t, C(t));
                 }
-                function O(t) {
+                function x(t) {
                   return null == t ? "" : c(t);
                 }
                 var Pi = hr(function (t, e) {
@@ -76881,10 +78000,10 @@
                   return (e = e.toLowerCase()), t + (r ? Xi(e) : e);
                 });
                 function Xi(t) {
-                  return io(O(t).toLowerCase());
+                  return io(x(t).toLowerCase());
                 }
                 function Ji(t) {
-                  return (t = O(t)) && t.replace(ra, Fa).replace(sa, "");
+                  return (t = x(t)) && t.replace(ra, Fa).replace(sa, "");
                 }
                 var $i = gr(function (t, e, r) {
                     return t + (r ? "-" : "") + e.toLowerCase();
@@ -76905,7 +78024,7 @@
                   io = dr("toUpperCase");
                 function oo(t, e, r) {
                   return (
-                    (t = O(t)),
+                    (t = x(t)),
                     (e = r ? Bo : e) === Bo
                       ? ((r = t),
                         ua.test(r) ? t.match(aa) || [] : t.match(Vs) || [])
@@ -77008,15 +78127,15 @@
                   Ao = _r(function (t, e) {
                     return t + e;
                   }, 0),
-                  xo = xr("ceil"),
-                  Oo = _r(function (t, e) {
+                  Oo = Or("ceil"),
+                  xo = _r(function (t, e) {
                     return t / e;
                   }, 1),
-                  Po = xr("floor"),
+                  Po = Or("floor"),
                   To = _r(function (t, e) {
                     return t * e;
                   }, 1),
-                  Mo = xr("round"),
+                  Mo = Or("round"),
                   Ro = _r(function (t, e) {
                     return t - e;
                   }, 0);
@@ -77162,7 +78281,7 @@
                       for (
                         (a = N(a)) < 0 && (a = i < -a ? 0 : i + a),
                           (u = u === Bo || i < u ? i : N(u)) < 0 && (u += i),
-                          u = u < a ? 0 : xi(u);
+                          u = u < a ? 0 : Oi(u);
                         a < u;
 
                       )
@@ -77250,10 +78369,10 @@
                     );
                   }),
                   (d.matches = function (t) {
-                    return xe(v(t, 1));
+                    return Oe(v(t, 1));
                   }),
                   (d.matchesProperty = function (t, e) {
-                    return Oe(t, v(e, 1));
+                    return xe(t, v(e, 1));
                   }),
                   (d.memoize = ri),
                   (d.merge = Fi),
@@ -77391,7 +78510,7 @@
                     return (
                       r && "number" != typeof r && h(t, e, r) && (e = r = Bo),
                       (r = r === Bo ? Lo : r >>> 0)
-                        ? (t = O(t)) &&
+                        ? (t = x(t)) &&
                           ("string" == typeof e || (null != e && !vi(e))) &&
                           !(e = c(e)) &&
                           os(t)
@@ -77455,9 +78574,9 @@
                   (d.toPairs = Vi),
                   (d.toPairsIn = Wi),
                   (d.toPath = function (t) {
-                    return k(t) ? es(t, dn) : A(t) ? [t] : S(pn(O(t)));
+                    return k(t) ? es(t, dn) : A(t) ? [t] : S(pn(x(t)));
                   }),
-                  (d.toPlainObject = Oi),
+                  (d.toPlainObject = xi),
                   (d.transform = function (t, n, i) {
                     var e,
                       r = k(t),
@@ -77500,8 +78619,8 @@
                   (d.unset = function (t, e) {
                     return null == t || qe(t, e);
                   }),
-                  (d.unzip = xn),
-                  (d.unzipWith = On),
+                  (d.unzip = On),
+                  (d.unzipWith = xn),
                   (d.update = function (t, e, r) {
                     return null == t ? t : Ve(t, e, $e(r));
                   }),
@@ -77540,13 +78659,13 @@
                   (d.attempt = so),
                   (d.camelCase = Yi),
                   (d.capitalize = Xi),
-                  (d.ceil = xo),
+                  (d.ceil = Oo),
                   (d.clamp = function (t, e, r) {
                     return (
                       r === Bo && ((r = e), (e = Bo)),
-                      r !== Bo && (r = (r = x(r)) == r ? r : 0),
-                      e !== Bo && (e = (e = x(e)) == e ? e : 0),
-                      $t(x(t), e, r)
+                      r !== Bo && (r = (r = O(r)) == r ? r : 0),
+                      e !== Bo && (e = (e = O(e)) == e ? e : 0),
+                      $t(O(t), e, r)
                     );
                   }),
                   (d.clone = function (t) {
@@ -77568,19 +78687,19 @@
                   (d.defaultTo = function (t, e) {
                     return null == t || t != t ? e : t;
                   }),
-                  (d.divide = Oo),
+                  (d.divide = xo),
                   (d.endsWith = function (t, e, r) {
-                    (t = O(t)), (e = c(e));
+                    (t = x(t)), (e = c(e));
                     var n = t.length,
                       n = (r = r === Bo ? n : $t(N(r), 0, n));
                     return 0 <= (r -= e.length) && t.slice(r, n) == e;
                   }),
                   (d.eq = l),
                   (d.escape = function (t) {
-                    return (t = O(t)) && Bs.test(t) ? t.replace(Ms, Ka) : t;
+                    return (t = x(t)) && Bs.test(t) ? t.replace(Ms, Ka) : t;
                   }),
                   (d.escapeRegExp = function (t) {
-                    return (t = O(t)) && Fs.test(t) ? t.replace(Ds, "\\$&") : t;
+                    return (t = x(t)) && Fs.test(t) ? t.replace(Ds, "\\$&") : t;
                   }),
                   (d.every = function (t, e, r) {
                     return (k(t) ? _a : ie)(
@@ -77591,12 +78710,12 @@
                   (d.find = Hn),
                   (d.findIndex = yn),
                   (d.findKey = function (t, e) {
-                    return xa(t, f(e, 3), ce);
+                    return Oa(t, f(e, 3), ce);
                   }),
                   (d.findLast = Dn),
                   (d.findLastIndex = bn),
                   (d.findLastKey = function (t, e) {
-                    return xa(t, f(e, 3), fe);
+                    return Oa(t, f(e, 3), fe);
                   }),
                   (d.floor = Po),
                   (d.forEach = Fn),
@@ -77646,7 +78765,7 @@
                     return (
                       (e = Ai(e)),
                       r === Bo ? ((r = e), (e = 0)) : (r = Ai(r)),
-                      (t = t = x(t)) >= B((e = e), (r = r)) && t < R(e, r)
+                      (t = t = O(t)) >= B((e = e), (r = r)) && t < R(e, r)
                     );
                   }),
                   (d.invoke = Di),
@@ -77764,7 +78883,7 @@
                         for (var a = i + 1; a--; ) if (o[a] === s) return a;
                         return a;
                         return;
-                      } else return Oa(t, Ta, i, !0);
+                      } else return xa(t, Ta, i, !0);
                     }
                     return -1;
                   }),
@@ -77811,26 +78930,26 @@
                   (d.noop = mo),
                   (d.now = Yn),
                   (d.pad = function (t, e, r) {
-                    t = O(t);
+                    t = x(t);
                     var n = (e = N(e)) ? as(t) : 0;
                     return !e || e <= n
                       ? t
                       : kr(dt((e = (e - n) / 2)), r) + t + kr(pt(e), r);
                   }),
                   (d.padEnd = function (t, e, r) {
-                    t = O(t);
+                    t = x(t);
                     var n = (e = N(e)) ? as(t) : 0;
                     return e && n < e ? t + kr(e - n, r) : t;
                   }),
                   (d.padStart = function (t, e, r) {
-                    t = O(t);
+                    t = x(t);
                     var n = (e = N(e)) ? as(t) : 0;
                     return e && n < e ? kr(e - n, r) + t : t;
                   }),
                   (d.parseInt = function (t, e, r) {
                     return (
                       (e = r || null == e ? 0 : e && +e),
-                      wt(O(t).replace(Ks, ""), e || 0)
+                      wt(x(t).replace(Ks, ""), e || 0)
                     );
                   }),
                   (d.random = function (t, e, r) {
@@ -77867,12 +78986,12 @@
                   }),
                   (d.repeat = function (t, e, r) {
                     return (
-                      (e = (r ? h(t, e, r) : e === Bo) ? 1 : N(e)), Le(O(t), e)
+                      (e = (r ? h(t, e, r) : e === Bo) ? 1 : N(e)), Le(x(t), e)
                     );
                   }),
                   (d.replace = function () {
                     var t = arguments,
-                      e = O(t[0]);
+                      e = x(t[0]);
                     return t.length < 3 ? e : e.replace(t[1], t[2]);
                   }),
                   (d.result = function (t, e, r) {
@@ -77945,7 +79064,7 @@
                   (d.startCase = ro),
                   (d.startsWith = function (t, e, r) {
                     return (
-                      (t = O(t)),
+                      (t = x(t)),
                       (r = null == r ? 0 : $t(N(r), 0, t.length)),
                       (e = c(e)),
                       t.slice(r, r + e.length) == e
@@ -77961,7 +79080,7 @@
                   (d.template = function (s, t, e) {
                     var r = d.templateSettings;
                     e && h(s, t, e) && (t = Bo),
-                      (s = O(s)),
+                      (s = x(s)),
                       (t = Mi({}, t, r, Mr));
                     var a,
                       u,
@@ -78012,8 +79131,8 @@
                           "Invalid `variable` option passed into `_.template`"
                         );
                     } else f = "with (obj) {\n" + f + "\n}\n";
-                    f = (u ? f.replace(xs, "") : f)
-                      .replace(Os, "$1")
+                    f = (u ? f.replace(Os, "") : f)
+                      .replace(xs, "$1")
                       .replace(Ps, "$1;");
                     (f =
                       "function(" +
@@ -78043,20 +79162,20 @@
                   }),
                   (d.toFinite = Ai),
                   (d.toInteger = N),
-                  (d.toLength = xi),
+                  (d.toLength = Oi),
                   (d.toLower = function (t) {
-                    return O(t).toLowerCase();
+                    return x(t).toLowerCase();
                   }),
-                  (d.toNumber = x),
+                  (d.toNumber = O),
                   (d.toSafeInteger = function (t) {
                     return t ? $t(N(t), -Co, Co) : 0 === t ? t : 0;
                   }),
-                  (d.toString = O),
+                  (d.toString = x),
                   (d.toUpper = function (t) {
-                    return O(t).toUpperCase();
+                    return x(t).toUpperCase();
                   }),
                   (d.trim = function (t, e, r) {
-                    return (t = O(t)) && (r || e === Bo)
+                    return (t = x(t)) && (r || e === Bo)
                       ? La(t)
                       : t && (e = c(e))
                       ? er((r = us(t)), Ha(r, (e = us(e))), Da(r, e) + 1).join(
@@ -78065,14 +79184,14 @@
                       : t;
                   }),
                   (d.trimEnd = function (t, e, r) {
-                    return (t = O(t)) && (r || e === Bo)
+                    return (t = x(t)) && (r || e === Bo)
                       ? t.slice(0, Wa(t) + 1)
                       : t && (e = c(e))
                       ? er((r = us(t)), 0, Da(r, us(e)) + 1).join("")
                       : t;
                   }),
                   (d.trimStart = function (t, e, r) {
-                    return (t = O(t)) && (r || e === Bo)
+                    return (t = x(t)) && (r || e === Bo)
                       ? t.replace(Ks, "")
                       : t && (e = c(e))
                       ? er((r = us(t)), Ha(r, us(e))).join("")
@@ -78087,7 +79206,7 @@
                           ((r = "separator" in e ? e.separator : r),
                           (n = "length" in e ? N(e.length) : n),
                           (i = "omission" in e ? c(e.omission) : i)),
-                        (t = O(t)).length);
+                        (t = x(t)).length);
                     if ((e = os(t) ? (o = us(t)).length : e) <= n) return t;
                     e = n - as(i);
                     if (e < 1) return i;
@@ -78101,7 +79220,7 @@
                           for (
                             (r = r.global
                               ? r
-                              : F(r.source, O(Xs.exec(r)) + "g")).lastIndex = 0;
+                              : F(r.source, x(Xs.exec(r)) + "g")).lastIndex = 0;
                             (s = r.exec(a));
 
                           )
@@ -78115,11 +79234,11 @@
                     return n + i;
                   }),
                   (d.unescape = function (t) {
-                    return (t = O(t)) && Rs.test(t) ? t.replace(Ts, Ga) : t;
+                    return (t = x(t)) && Rs.test(t) ? t.replace(Ts, Ga) : t;
                   }),
                   (d.uniqueId = function (t) {
                     var e = ++G;
-                    return O(t) + e;
+                    return x(t) + e;
                   }),
                   (d.upperCase = no),
                   (d.upperFirst = io),
@@ -78294,10 +79413,10 @@
                       n = d[e];
                     n &&
                       ((r = n.name + ""),
-                      b.call(Ot, r) || (Ot[r] = []),
-                      Ot[r].push({ name: e, func: n }));
+                      b.call(xt, r) || (xt[r] = []),
+                      xt[r].push({ name: e, func: n }));
                   }),
-                  (Ot[vr(Bo, 2).name] = [{ name: "wrapper", func: Bo }]),
+                  (xt[vr(Bo, 2).name] = [{ name: "wrapper", func: Bo }]),
                   (m.prototype.clone = function () {
                     var t = new m(this.__wrapped__);
                     return (
@@ -78431,7 +79550,7 @@
             (Jo._ = Ya),
               (T = function () {
                 return Ya;
-              }.call(O, P, O, x)) !== Bo && (x.exports = T);
+              }.call(x, P, x, O)) !== Bo && (O.exports = T);
           }.call(this);
       },
       92128: function (t) {
@@ -80551,8 +81670,8 @@
         function A(t) {
           return "object" == typeof t && null !== t && t.$$typeof === l;
         }
-        var x = /\/+/g;
-        function O(t, e) {
+        var O = /\/+/g;
+        function x(t, e) {
           return "object" == typeof t && null !== t && null != t.key
             ? ((t = "" + t.key),
               (r = { "=": "=0", ":": "=2" }),
@@ -80593,13 +81712,13 @@
                 if (c)
                   return (
                     (o = o((c = e))),
-                    (e = "" === i ? "." + O(c, 0) : i),
+                    (e = "" === i ? "." + x(c, 0) : i),
                     _(o)
                       ? ((n = ""),
                         t(
                           o,
                           r,
-                          (n = null != e ? e.replace(x, "$&/") + "/" : n),
+                          (n = null != e ? e.replace(O, "$&/") + "/" : n),
                           "",
                           function (t) {
                             return t;
@@ -80611,7 +81730,7 @@
                             n +
                             (!(s = o).key || (c && c.key === o.key)
                               ? ""
-                              : ("" + o.key).replace(x, "$&/") + "/") +
+                              : ("" + o.key).replace(O, "$&/") + "/") +
                             e),
                           (o = {
                             $$typeof: l,
@@ -80626,7 +81745,7 @@
                   );
                 if (((c = 0), (i = "" === i ? "." : i + ":"), _(e)))
                   for (var f = 0; f < e.length; f++) {
-                    var h = i + O((u = e[f]), f);
+                    var h = i + x((u = e[f]), f);
                     c += t(u, r, n, h, o);
                   }
                 else if (
@@ -80639,7 +81758,7 @@
                       : null)
                 )
                   for (e = h.call(e), f = 0; !(u = e.next()).done; )
-                    c += t((u = u.value), r, n, (h = i + O(u, f++)), o);
+                    c += t((u = u.value), r, n, (h = i + x(u, f++)), o);
                 else if ("object" === u)
                   throw (
                     ((r = String(e)),
@@ -81157,7 +82276,7 @@
               e.sync ? y.nextTick(S, t) : S(t));
         }
         function S(t) {
-          w("emit readable"), t.emit("readable"), x(t);
+          w("emit readable"), t.emit("readable"), O(t);
         }
         function k(t, e) {
           e.readingMore || ((e.readingMore = !0), y.nextTick(E, t, e));
@@ -81183,14 +82302,14 @@
             (e.resumeScheduled = !1),
             (e.awaitDrain = 0),
             t.emit("resume"),
-            x(t),
+            O(t),
             e.flowing && !e.reading && t.read(0);
         }
-        function x(t) {
+        function O(t) {
           var e = t._readableState;
           for (w("flow", e.flowing); e.flowing && null !== t.read(); );
         }
-        function O(t, e) {
+        function x(t, e) {
           return 0 === e.length
             ? null
             : (e.objectMode
@@ -81312,7 +82431,7 @@
                     this._read(r.highWaterMark),
                     (r.sync = !1),
                     r.reading || (t = g(n, r))),
-                null === (e = 0 < t ? O(t, r) : null)
+                null === (e = 0 < t ? x(t, r) : null)
                   ? ((r.needReadable = !0), (t = 0))
                   : (r.length -= t),
                 0 === r.length &&
@@ -81375,7 +82494,7 @@
                   t.awaitDrain && t.awaitDrain--,
                   0 === t.awaitDrain &&
                     b(e, "data") &&
-                    ((t.flowing = !0), x(e));
+                    ((t.flowing = !0), O(e));
               },
               c = (n.on("drain", u), !1),
               f = !1;
@@ -81537,7 +82656,7 @@
               return this._readableState.highWaterMark;
             },
           }),
-          (f._fromList = O);
+          (f._fromList = x);
       },
       34805: function (t, e, r) {
         "use strict";
@@ -82528,11 +83647,11 @@
               e = I(e, r, !1);
               return !P(e) && !!e.has(t);
             }
-            function x(t, e, r) {
+            function O(t, e, r) {
               e = I(e, r, !1);
               if (!P(e)) return e.get(t);
             }
-            function O(t, e, r, n) {
+            function x(t, e, r, n) {
               I(r, n, !0).set(t, e);
             }
             function H(t, e) {
@@ -82940,11 +84059,11 @@
                     })()
                   )
                     throw new TypeError();
-                  O(r, n, t, e);
+                  x(r, n, t, e);
                 };
               }),
               g("defineMetadata", function (t, e, r, n) {
-                if (M(r)) return O(t, e, r, (n = P(n) ? n : R(n)));
+                if (M(r)) return x(t, e, r, (n = P(n) ? n : R(n)));
                 throw new TypeError();
               }),
               g("hasMetadata", function (t, e, r) {
@@ -82962,7 +84081,7 @@
                 if (M(e))
                   return (function t(e, r, n) {
                     return A(e, r, n)
-                      ? x(e, r, n)
+                      ? O(e, r, n)
                       : T((r = N(r)))
                       ? void 0
                       : t(e, r, n);
@@ -82970,7 +84089,7 @@
                 throw new TypeError();
               }),
               g("getOwnMetadata", function (t, e, r) {
-                if (M(e)) return x(t, e, (r = P(r) ? r : R(r)));
+                if (M(e)) return O(t, e, (r = P(r) ? r : R(r)));
                 throw new TypeError();
               }),
               g("getMetadataKeys", function (t, e) {
@@ -83070,10 +84189,10 @@
         function A(t, e, r, n, i, o, s, a) {
           return (k((t + ((e | ~r) ^ n) + o + s) | 0, a) + i) | 0;
         }
-        function x(t, e, r, n, i, o, s, a) {
+        function O(t, e, r, n, i, o, s, a) {
           return (k((t + ((e & n) | (r & ~n)) + o + s) | 0, a) + i) | 0;
         }
-        function O(t, e, r, n, i, o, s, a) {
+        function x(t, e, r, n, i, o, s, a) {
           return (k((t + (e ^ (r | ~n)) + o + s) | 0, a) + i) | 0;
         }
         i(s, o),
@@ -83099,17 +84218,17 @@
                 d =
                   l < 16
                     ? ((p = E(r, n, i, o, s, t[y[l]], _[0], v[l])),
-                      O(a, u, c, f, h, t[b[l]], S[0], w[l]))
+                      x(a, u, c, f, h, t[b[l]], S[0], w[l]))
                     : l < 32
                     ? ((p = I(r, n, i, o, s, t[y[l]], _[1], v[l])),
-                      x(a, u, c, f, h, t[b[l]], S[1], w[l]))
+                      O(a, u, c, f, h, t[b[l]], S[1], w[l]))
                     : l < 48
                     ? ((p = A(r, n, i, o, s, t[y[l]], _[2], v[l])),
                       A(a, u, c, f, h, t[b[l]], S[2], w[l]))
                     : l < 64
-                    ? ((p = x(r, n, i, o, s, t[y[l]], _[3], v[l])),
+                    ? ((p = O(r, n, i, o, s, t[y[l]], _[3], v[l])),
                       I(a, u, c, f, h, t[b[l]], S[3], w[l]))
-                    : ((p = O(r, n, i, o, s, t[y[l]], _[4], v[l])),
+                    : ((p = x(r, n, i, o, s, t[y[l]], _[4], v[l])),
                       E(a, u, c, f, h, t[b[l]], S[4], w[l])),
                 r = s,
                 s = o,
@@ -84084,21 +85203,21 @@
                 E = e[b - 14 + 1],
                 I = e[b - 32],
                 A = e[b - 32 + 1],
-                x = (S + E) | 0,
-                O =
-                  ((O =
-                    ((O = (_ + v + Z(x, S)) | 0) +
+                O = (S + E) | 0,
+                x =
+                  ((x =
+                    ((x = (_ + v + Z(O, S)) | 0) +
                       k +
-                      Z((x = (x + w) | 0), w)) |
+                      Z((O = (O + w) | 0), w)) |
                     0) +
                     I +
-                    Z((x = (x + A) | 0), A)) |
+                    Z((O = (O + A) | 0), A)) |
                   0;
-              (e[b] = O), (e[b + 1] = x);
+              (e[b] = x), (e[b + 1] = O);
             }
             for (var P = 0; P < 160; P += 2) {
-              O = e[P];
-              var x = e[P + 1],
+              x = e[P];
+              var O = e[P + 1],
                 L = F(r, n, i),
                 U = F(f, h, l),
                 j = K(r, f),
@@ -84115,8 +85234,8 @@
                     H[P] +
                     Z((R = (R + B) | 0), B)) |
                     0) +
-                    O +
-                    Z((R = (R + x) | 0), x)) |
+                    x +
+                    Z((R = (R + O) | 0), O)) |
                   0,
                 N = (T + U) | 0,
                 C = (j + L + Z(N, T)) | 0,
@@ -84500,7 +85619,7 @@
                 u.sync
                   ? A(a)
                   : ((u.needReadable = !1),
-                    u.emittedReadable || ((u.emittedReadable = !0), x(a))));
+                    u.emittedReadable || ((u.emittedReadable = !0), O(a))));
           else if (
             (i ||
               ((c = f),
@@ -84534,9 +85653,9 @@
                 ((e = f.decoder.write(e)), f.objectMode) ||
                 0 !== e.length
                   ? E(t, f, e, !1)
-                  : O(t, f);
+                  : x(t, f);
             }
-          else n || ((f.reading = !1), O(t, f));
+          else n || ((f.reading = !1), x(t, f));
           return !f.ended && (f.length < f.highWaterMark || 0 === f.length);
         }
         function E(t, e, r, n) {
@@ -84545,7 +85664,7 @@
             : ((e.length += e.objectMode ? 1 : r.length),
               n ? e.buffer.unshift(r) : e.buffer.push(r),
               e.needReadable && A(t)),
-            O(t, e);
+            x(t, e);
         }
         Object.defineProperty(S.prototype, "destroyed", {
           enumerable: !1,
@@ -84629,9 +85748,9 @@
             e.emittedReadable ||
               (y("emitReadable", e.flowing),
               (e.emittedReadable = !0),
-              g.nextTick(x, t));
+              g.nextTick(O, t));
         }
-        function x(t) {
+        function O(t) {
           var e = t._readableState;
           y("emitReadable_", e.destroyed, e.length, e.ended),
             e.destroyed ||
@@ -84641,7 +85760,7 @@
               !e.flowing && !e.ended && e.length <= e.highWaterMark),
             R(t);
         }
-        function O(t, e) {
+        function x(t, e) {
           e.readingMore || ((e.readingMore = !0), g.nextTick(P, t, e));
         }
         function P(t, e) {
@@ -85194,11 +86313,11 @@
                         (i._writableState.errorEmitted = !0),
                         S(i, t),
                         T(i, e)))
-                  : ((r = O(s) || o.destroyed) ||
+                  : ((r = x(s) || o.destroyed) ||
                       s.corked ||
                       s.bufferProcessing ||
                       !s.bufferedRequest ||
-                      x(o, s),
+                      O(o, s),
                     a ? m.nextTick(A, o, s, r, u) : A(o, s, r, u));
             }),
             (this.writecb = null),
@@ -85249,7 +86368,7 @@
             n(),
             T(t, e);
         }
-        function x(t, e) {
+        function O(t, e) {
           e.bufferProcessing = !0;
           var r = e.bufferedRequest;
           if (t._writev && r && r.next) {
@@ -85284,7 +86403,7 @@
           }
           (e.bufferedRequest = r), (e.bufferProcessing = !1);
         }
-        function O(t) {
+        function x(t) {
           return (
             t.ending &&
             0 === t.length &&
@@ -85305,7 +86424,7 @@
         function T(t, e) {
           var r,
             n,
-            i = O(e);
+            i = x(e);
           return (
             i &&
               ((r = t),
@@ -85440,7 +86559,7 @@
                 t.corked ||
                 t.bufferProcessing ||
                 !t.bufferedRequest ||
-                x(this, t));
+                O(this, t));
           }),
           (E.prototype.setDefaultEncoding = function (t) {
             if (
@@ -91566,15 +92685,15 @@
                   if (this.stack.length < (k += E))
                     return !(this.errstr =
                       "SCRIPT_ERR_INVALID_STACK_OPERATION");
-                  var x = C.fromScriptNumBuffer(
+                  var O = C.fromScriptNumBuffer(
                     this.stack[this.stack.length - k],
                     s
                   ).toNumber();
-                  if (x < 0 || E < x)
+                  if (O < 0 || E < O)
                     return !(this.errstr = "SCRIPT_ERR_SIG_COUNT");
-                  var O,
+                  var x,
                     P = ++k;
-                  if (this.stack.length < (k += x))
+                  if (this.stack.length < (k += O))
                     return !(this.errstr =
                       "SCRIPT_ERR_INVALID_STACK_OPERATION");
                   if (
@@ -91583,10 +92702,10 @@
                     })),
                     this.sigversion === M.SIGVERSION_BASE)
                   )
-                    for (var T = 0; T < x; T++)
+                    for (var T = 0; T < O; T++)
                       (e = this.stack[this.stack.length - P - T]),
                         S.findAndDelete(new B().add(e));
-                  for (o = !0; o && 0 < x; ) {
+                  for (o = !0; o && 0 < O; ) {
                     if (
                       ((e = this.stack[this.stack.length - P]),
                       (r = this.stack[this.stack.length - I]),
@@ -91597,7 +92716,7 @@
                     try {
                       (n = U.fromTxFormat(e)),
                         (i = j.fromBuffer(r, !1)),
-                        (O = this.tx.verifySignature(
+                        (x = this.tx.verifySignature(
                           n,
                           i,
                           this.nin,
@@ -91606,9 +92725,9 @@
                           this.satoshis
                         ));
                     } catch (_) {
-                      O = !1;
+                      x = !1;
                     }
-                    O && (P++, x--), I++, x > --E && (o = !1);
+                    x && (P++, O--), I++, O > --E && (o = !1);
                   }
                   for (; 1 < k--; ) {
                     if (
@@ -93509,8 +94628,8 @@
           E = _.MultiSigScriptHash,
           I = _.MultiSig,
           A = r(95508),
-          x = r(11050),
-          O = r(85438),
+          O = r(11050),
+          x = r(85438),
           P = r(8368),
           T = r(21266);
         function M(t, e) {
@@ -93766,7 +94885,7 @@
               c.each(r.inputs, function (t) {
                 if (t.output && t.output.script) {
                   var e,
-                    r = new x(t.output.script);
+                    r = new O(t.output.script);
                   if (r.isPublicKeyHashOut()) e = new _.PublicKeyHash(t);
                   else if (r.isScriptHashOut() && t.publicKeys && t.threshold)
                     e = new _.MultiSigScriptHash(
@@ -93789,7 +94908,7 @@
                 n.addOutput(new A(t));
               }),
               r.changeIndex && (this._changeIndex = r.changeIndex),
-              r.changeScript && (this._changeScript = new x(r.changeScript)),
+              r.changeScript && (this._changeScript = new O(r.changeScript)),
               r.fee && (this._fee = r.fee),
               (this.nLockTime = r.nLockTime),
               (this.version = r.version),
@@ -93922,7 +95041,7 @@
                 prevTxId: t.txId,
                 outputIndex: t.outputIndex,
                 sequenceNumber: t.sequenceNumber,
-                script: x.empty(),
+                script: O.empty(),
               };
             return o(i, [t].concat(e && r ? [e, r, !1, n] : []));
           }),
@@ -93947,7 +95066,7 @@
                 t.output ||
                   !e ||
                   c.isUndefined(r) ||
-                  ((e = e instanceof x ? e : new x(e)),
+                  ((e = e instanceof O ? e : new O(e)),
                   l.checkArgumentType(r, "number", "satoshis"),
                   (t.output = new A({ script: e, satoshis: r }))),
                 this.uncheckedAddInput(t)
@@ -93999,7 +95118,7 @@
           (M.prototype.change = function (t) {
             return (
               l.checkArgument(t, "address is required"),
-              (this._changeScript = x.fromAddress(t)),
+              (this._changeScript = O.fromAddress(t)),
               this._updateChangeOutput(),
               this
             );
@@ -94021,13 +95140,13 @@
                     h.isNaturalNumber(e),
                     "Amount is expected to be a positive integer"
                   ),
-                  this.addOutput(new A({ script: x(new v(t)), satoshis: e }))),
+                  this.addOutput(new A({ script: O(new v(t)), satoshis: e }))),
               this
             );
           }),
           (M.prototype.addData = function (t) {
             return (
-              this.addOutput(new A({ script: x.buildDataOut(t), satoshis: 0 })),
+              this.addOutput(new A({ script: O.buildDataOut(t), satoshis: 0 })),
               this
             );
           }),
@@ -94234,7 +95353,7 @@
             );
           }),
           (M.prototype.getSignatures = function (r, n, i) {
-            (r = new O(r)), (n = n || m.SIGHASH_ALL);
+            (r = new x(r)), (n = n || m.SIGHASH_ALL);
             var o = this,
               s = [],
               a = g.sha256ripemd160(r.publicKey.toBuffer());
@@ -102802,8 +103921,8 @@
             "\n",
             "\t",
           ]),
-          x = ["'"].concat(e),
-          O = ["%", "/", "?", ";", "#"].concat(x),
+          O = ["'"].concat(e),
+          x = ["%", "/", "?", ";", "#"].concat(O),
           P = ["/", "?", "#"],
           T = /^[+a-z0-9A-Z_-]{0,63}$/,
           M = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
@@ -102877,10 +103996,10 @@
                 (this.auth = decodeURIComponent(i))),
                 u = -1,
                 c = 0;
-              c < O.length;
+              c < x.length;
               c++
             )
-              -1 !== (a = o.indexOf(O[c])) && (-1 === u || a < u) && (u = a);
+              -1 !== (a = o.indexOf(x[c])) && (-1 === u || a < u) && (u = a);
             -1 === u && (u = o.length),
               (this.host = o.slice(0, u)),
               (o = o.slice(u)),
@@ -102927,9 +104046,9 @@
                 (o = "/" + o);
           }
           if (!R[s])
-            for (c = 0, h = x.length; c < h; c++) {
+            for (c = 0, h = O.length; c < h; c++) {
               var _,
-                S = x[c];
+                S = O[c];
               -1 !== o.indexOf(S) &&
                 ((_ = encodeURIComponent(S)) === S && (_ = escape(S)),
                 (o = o.split(S).join(_)));
@@ -103353,7 +104472,7 @@
         function A(t) {
           return "[object SharedArrayBuffer]" === l(t);
         }
-        function x(t) {
+        function O(t) {
           return (
             void 0 !== I &&
             ((A.working = void 0 === A.working ? A(new I()) : A.working)
@@ -103361,7 +104480,7 @@
               : t instanceof I)
           );
         }
-        function O(t) {
+        function x(t) {
           return m(t, p);
         }
         function P(t) {
@@ -103376,7 +104495,7 @@
         function R(t) {
           return h && m(t, c);
         }
-        (e.isSharedArrayBuffer = x),
+        (e.isSharedArrayBuffer = O),
           (e.isAsyncFunction = function (t) {
             return "[object AsyncFunction]" === l(t);
           }),
@@ -103392,16 +104511,16 @@
           (e.isWebAssemblyCompiledModule = function (t) {
             return "[object WebAssembly.Module]" === l(t);
           }),
-          (e.isNumberObject = O),
+          (e.isNumberObject = x),
           (e.isStringObject = P),
           (e.isBooleanObject = T),
           (e.isBigIntObject = M),
           (e.isSymbolObject = R),
           (e.isBoxedPrimitive = function (t) {
-            return O(t) || P(t) || T(t) || M(t) || R(t);
+            return x(t) || P(t) || T(t) || M(t) || R(t);
           }),
           (e.isAnyArrayBuffer = function (t) {
-            return "undefined" != typeof Uint8Array && (S(t) || x(t));
+            return "undefined" != typeof Uint8Array && (S(t) || O(t));
           }),
           ["isProxy", "isExternal", "isModuleNamespaceObject"].forEach(
             function (t) {
@@ -103697,7 +104816,7 @@
         function l(t) {
           return Object.prototype.toString.call(t);
         }
-        function x(t) {
+        function O(t) {
           return t < 10 ? "0" + t.toString(10) : t.toString(10);
         }
         s.env.NODE_DEBUG &&
@@ -103779,7 +104898,7 @@
             );
           }),
           (p.isBuffer = e(58128));
-        var O = [
+        var x = [
           "Jan",
           "Feb",
           "Mar",
@@ -103801,11 +104920,11 @@
           console.log(
             "%s - %s",
             ((e = [
-              x((t = new Date()).getHours()),
-              x(t.getMinutes()),
-              x(t.getSeconds()),
+              O((t = new Date()).getHours()),
+              O(t.getMinutes()),
+              O(t.getSeconds()),
             ].join(":")),
-            [t.getDate(), O[t.getMonth()], e].join(" ")),
+            [t.getDate(), x[t.getMonth()], e].join(" ")),
             p.format.apply(p, arguments)
           );
         }),
@@ -106591,12 +107710,12 @@
             f,
             p,
             y,
-            r = (O.prototype = {
-              constructor: O,
+            r = (x.prototype = {
+              constructor: x,
               toString: null,
               valueOf: null,
             }),
-            d = new O(1),
+            d = new x(1),
             b = 20,
             v = 4,
             g = -7,
@@ -106617,8 +107736,8 @@
               suffix: "",
             },
             A = "0123456789abcdefghijklmnopqrstuvwxyz",
-            x = !0;
-          function O(t, e) {
+            O = !0;
+          function x(t, e) {
             var r,
               n,
               i,
@@ -106628,7 +107747,7 @@
               u,
               c,
               f = this;
-            if (!(f instanceof O)) return new O(t, e);
+            if (!(f instanceof x)) return new x(t, e);
             if (null == e) {
               if (t && !0 === t._isBigNumber)
                 return (
@@ -106661,13 +107780,13 @@
                   (c = c.substring(0, s)))
                 : o < 0 && (o = c.length);
             } else {
-              if ((G(e, 2, A.length, "Base"), 10 == e && x))
-                return T((f = new O(t)), b + f.e + 1, v);
+              if ((G(e, 2, A.length, "Base"), 10 == e && O))
+                return T((f = new x(t)), b + f.e + 1, v);
               if (((c = String(t)), (a = "number" == typeof t))) {
                 if (0 * t != 0) return l(f, c, a, e);
                 if (
                   ((f.s = 1 / t < 0 ? ((c = c.slice(1)), -1) : 1),
-                  O.DEBUG && 15 < c.replace(/^0\.0*|\./, "").length)
+                  x.DEBUG && 15 < c.replace(/^0\.0*|\./, "").length)
                 )
                   throw Error(F + t);
               } else f.s = 45 === c.charCodeAt(0) ? ((c = c.slice(1)), -1) : 1;
@@ -106696,7 +107815,7 @@
             for (s = 0; 48 === c.charCodeAt(s); s++);
             for (u = c.length; 48 === c.charCodeAt(--u); );
             if ((c = c.slice(s, ++u))) {
-              if (((u -= s), a && O.DEBUG && 15 < u && (z < t || t !== H(t))))
+              if (((u -= s), a && x.DEBUG && 15 < u && (z < t || t !== H(t))))
                 throw Error(F + f.s * t);
               if ((o = o - s - 1) > S) f.c = f.e = null;
               else if (o < _) f.c = [(f.e = 0)];
@@ -106727,7 +107846,7 @@
                     ? X(a, o)
                     : J(a, o, "0"));
             else if (
-              ((r = (t = T(new O(t), e, r)).e),
+              ((r = (t = T(new x(t), e, r)).e),
               (s = (a = V(t.c)).length),
               1 == n || (2 == n && (e <= r || r <= g)))
             ) {
@@ -106740,8 +107859,8 @@
             return t.s < 0 && i ? "-" + a : a;
           }
           function o(t, e) {
-            for (var r, n = 1, i = new O(t[0]); n < t.length; n++) {
-              if (!(r = new O(t[n])).s) {
+            for (var r, n = 1, i = new x(t[0]); n < t.length; n++) {
+              if (!(r = new x(t[n])).s) {
                 i = r;
                 break;
               }
@@ -106852,18 +107971,18 @@
                 t.s < 0 ? "-" + e : e);
           }
           return (
-            (O.clone = L),
-            (O.ROUND_UP = 0),
-            (O.ROUND_DOWN = 1),
-            (O.ROUND_CEIL = 2),
-            (O.ROUND_FLOOR = 3),
-            (O.ROUND_HALF_UP = 4),
-            (O.ROUND_HALF_DOWN = 5),
-            (O.ROUND_HALF_EVEN = 6),
-            (O.ROUND_HALF_CEIL = 7),
-            (O.ROUND_HALF_FLOOR = 8),
-            (O.EUCLID = 9),
-            (O.config = O.set =
+            (x.clone = L),
+            (x.ROUND_UP = 0),
+            (x.ROUND_DOWN = 1),
+            (x.ROUND_CEIL = 2),
+            (x.ROUND_FLOOR = 3),
+            (x.ROUND_HALF_UP = 4),
+            (x.ROUND_HALF_DOWN = 5),
+            (x.ROUND_HALF_EVEN = 6),
+            (x.ROUND_HALF_CEIL = 7),
+            (x.ROUND_HALF_FLOOR = 8),
+            (x.EUCLID = 9),
+            (x.config = x.set =
               function (t) {
                 var e, r;
                 if (null != t) {
@@ -106922,7 +108041,7 @@
                       /^.?$|[+\-.\s]|(.).*\1/.test(r)
                     )
                       throw Error(D + e + " invalid: " + r);
-                    (x = "0123456789" == r.slice(0, 10)), (A = r);
+                    (O = "0123456789" == r.slice(0, 10)), (A = r);
                   }
                 }
                 return {
@@ -106937,9 +108056,9 @@
                   ALPHABET: A,
                 };
               }),
-            (O.isBigNumber = function (t) {
+            (x.isBigNumber = function (t) {
               if (!t || !0 !== t._isBigNumber) return !1;
-              if (!O.DEBUG) return !0;
+              if (!x.DEBUG) return !0;
               var e,
                 r,
                 n = t.c,
@@ -106970,15 +108089,15 @@
                 return !0;
               throw Error(D + "Invalid BigNumber: " + t);
             }),
-            (O.maximum = O.max =
+            (x.maximum = x.max =
               function () {
                 return o(arguments, r.lt);
               }),
-            (O.minimum = O.min =
+            (x.minimum = x.min =
               function () {
                 return o(arguments, r.gt);
               }),
-            (O.random =
+            (x.random =
               ((e = 9007199254740992),
               (c =
                 (Math.random() * e) & 2097151
@@ -106999,7 +108118,7 @@
                   o,
                   s = 0,
                   a = [],
-                  u = new O(d);
+                  u = new x(d);
                 if ((null == t ? (t = b) : G(t, 0, 1e9), (i = j(t / 14)), k))
                   if (crypto.getRandomValues) {
                     for (
@@ -107045,8 +108164,8 @@
                 }
                 return (u.e = n), (u.c = a), u;
               })),
-            (O.sum = function () {
-              for (var t = 1, e = arguments, r = new O(e[0]); t < e.length; )
+            (x.sum = function () {
+              for (var t = 1, e = arguments, r = new x(e[0]); t < e.length; )
                 r = r.plus(e[t++]);
               return r;
             }),
@@ -107068,7 +108187,7 @@
                   ((u = E),
                   (E = 0),
                   (t = t.replace(".", "")),
-                  (f = (l = new O(e)).pow(t.length - p)),
+                  (f = (l = new x(e)).pow(t.length - p)),
                   (E = u),
                   (l.c = C(J(V(f.c), f.e, "0"), 10, r, y)),
                   (l.e = l.c.length)),
@@ -107134,7 +108253,7 @@
                 k = t.c,
                 E = e.c;
               if (!(k && k[0] && E && E[0]))
-                return new O(
+                return new x(
                   t.s && e.s && (k ? !E || k[0] != E[0] : E)
                     ? (k && 0 == k[0]) || !E
                       ? 0 * S
@@ -107142,7 +108261,7 @@
                     : NaN
                 );
               for (
-                p = (l = new O(S)).c = [],
+                p = (l = new x(S)).c = [],
                   S = r + (s = t.e - e.e) + 1,
                   i ||
                     ((i = K),
@@ -107230,8 +108349,8 @@
                   n && ((i = n), (o = o.replace(a, "$1").replace(u, "0.$1"))),
                   e != o)
                 )
-                  return new O(o, i);
-                if (O.DEBUG)
+                  return new x(o, i);
+                if (x.DEBUG)
                   throw Error(
                     D + "Not a" + (n ? " base " + n : "") + " number: " + e
                   );
@@ -107241,11 +108360,11 @@
             }),
             (r.absoluteValue = r.abs =
               function () {
-                var t = new O(this);
+                var t = new x(this);
                 return t.s < 0 && (t.s = 1), t;
               }),
             (r.comparedTo = function (t, e) {
-              return W(this, new O(t, e));
+              return W(this, new x(t, e));
             }),
             (r.decimalPlaces = r.dp =
               function (t, e) {
@@ -107254,7 +108373,7 @@
                   return (
                     G(t, 0, 1e9),
                     null == e ? (e = v) : G(e, 0, 8),
-                    T(new O(this), t + this.e + 1, e)
+                    T(new x(this), t + this.e + 1, e)
                   );
                 if (!(t = this.c)) return null;
                 if (
@@ -107265,11 +108384,11 @@
               }),
             (r.dividedBy = r.div =
               function (t, e) {
-                return m(this, new O(t, e), b, v);
+                return m(this, new x(t, e), b, v);
               }),
             (r.dividedToIntegerBy = r.idiv =
               function (t, e) {
-                return m(this, new O(t, e), 0, 1);
+                return m(this, new x(t, e), 0, 1);
               }),
             (r.exponentiatedBy = r.pow =
               function (t, e) {
@@ -107282,10 +108401,10 @@
                   u,
                   c,
                   f = this;
-                if ((t = new O(t)).c && !t.isInteger())
+                if ((t = new x(t)).c && !t.isInteger())
                   throw Error(D + "Exponent not an integer: " + M(t));
                 if (
-                  (null != e && (e = new O(e)),
+                  (null != e && (e = new x(e)),
                   (s = 14 < t.e),
                   !f.c ||
                     !f.c[0] ||
@@ -107294,11 +108413,11 @@
                     !t.c[0])
                 )
                   return (
-                    (c = new O(Math.pow(+M(f), s ? t.s * (2 - Y(t)) : +M(t)))),
+                    (c = new x(Math.pow(+M(f), s ? t.s * (2 - Y(t)) : +M(t)))),
                     e ? c.mod(e) : c
                   );
                 if (((a = t.s < 0), e)) {
-                  if (e.c ? !e.c[0] : !e.s) return new O(NaN);
+                  if (e.c ? !e.c[0] : !e.s) return new x(NaN);
                   (n = !a && f.isInteger() && e.isInteger()) && (f = f.mod(e));
                 } else {
                   if (
@@ -107312,15 +108431,15 @@
                     return (
                       (o = f.s < 0 && Y(t) ? -0 : 0),
                       -1 < f.e && (o = 1 / o),
-                      new O(a ? 1 / o : o)
+                      new x(a ? 1 / o : o)
                     );
                   E && (o = j(E / 14 + 2));
                 }
                 for (
                   u = s
-                    ? ((r = new O(0.5)), a && (t.s = 1), Y(t))
+                    ? ((r = new x(0.5)), a && (t.s = 1), Y(t))
                     : (i = Math.abs(+M(t))) % 2,
-                    c = new O(d);
+                    c = new x(d);
                   ;
 
                 ) {
@@ -107350,34 +108469,34 @@
                     e ? c.mod(e) : o ? T(c, E, v, void 0) : c);
               }),
             (r.integerValue = function (t) {
-              var e = new O(this);
+              var e = new x(this);
               return null == t ? (t = v) : G(t, 0, 8), T(e, e.e + 1, t);
             }),
             (r.isEqualTo = r.eq =
               function (t, e) {
-                return 0 === W(this, new O(t, e));
+                return 0 === W(this, new x(t, e));
               }),
             (r.isFinite = function () {
               return !!this.c;
             }),
             (r.isGreaterThan = r.gt =
               function (t, e) {
-                return 0 < W(this, new O(t, e));
+                return 0 < W(this, new x(t, e));
               }),
             (r.isGreaterThanOrEqualTo = r.gte =
               function (t, e) {
-                return 1 === (e = W(this, new O(t, e))) || 0 === e;
+                return 1 === (e = W(this, new x(t, e))) || 0 === e;
               }),
             (r.isInteger = function () {
               return !!this.c && q(this.e / 14) > this.c.length - 2;
             }),
             (r.isLessThan = r.lt =
               function (t, e) {
-                return W(this, new O(t, e)) < 0;
+                return W(this, new x(t, e)) < 0;
               }),
             (r.isLessThanOrEqualTo = r.lte =
               function (t, e) {
-                return -1 === (e = W(this, new O(t, e))) || 0 === e;
+                return -1 === (e = W(this, new x(t, e))) || 0 === e;
               }),
             (r.isNaN = function () {
               return !this.s;
@@ -107397,7 +108516,7 @@
                 i,
                 o,
                 s = this.s;
-              if (((e = (t = new O(t, e)).s), !s || !e)) return new O(NaN);
+              if (((e = (t = new x(t, e)).s), !s || !e)) return new x(NaN);
               if (s != e) return (t.s = -e), this.plus(t);
               var a = this.e / 14,
                 u = t.e / 14,
@@ -107405,11 +108524,11 @@
                 f = t.c;
               if (!a || !u) {
                 if (!c || !f)
-                  return c ? ((t.s = -e), t) : new O(f ? this : NaN);
+                  return c ? ((t.s = -e), t) : new x(f ? this : NaN);
                 if (!c[0] || !f[0])
                   return f[0]
                     ? ((t.s = -e), t)
-                    : new O(c[0] ? this : 3 == v ? -0 : 0);
+                    : new x(c[0] ? this : 3 == v ? -0 : 0);
               }
               if (((a = q(a)), (u = q(u)), (c = c.slice()), (s = a - u))) {
                 for (
@@ -107450,11 +108569,11 @@
               function (t, e) {
                 var r;
                 return (
-                  (t = new O(t, e)),
+                  (t = new x(t, e)),
                   !this.c || !t.s || (t.c && !t.c[0])
-                    ? new O(NaN)
+                    ? new x(NaN)
                     : !t.c || (this.c && !this.c[0])
-                    ? new O(this)
+                    ? new x(this)
                     : (9 == n
                         ? ((e = t.s),
                           (t.s = 1),
@@ -107483,7 +108602,7 @@
                   l,
                   p,
                   d = this.c,
-                  g = (t = new O(t, e)).c;
+                  g = (t = new x(t, e)).c;
                 if (!(d && g && d[0] && g[0]))
                   return (
                     !this.s || !t.s || (d && !d[0] && !g) || (g && !g[0] && !d)
@@ -107524,22 +108643,22 @@
                 return r ? ++e : p.splice(0, 1), P(t, p, e);
               }),
             (r.negated = function () {
-              var t = new O(this);
+              var t = new x(this);
               return (t.s = -t.s || null), t;
             }),
             (r.plus = function (t, e) {
               var r,
                 n = this.s;
-              if (((e = (t = new O(t, e)).s), !n || !e)) return new O(NaN);
+              if (((e = (t = new x(t, e)).s), !n || !e)) return new x(NaN);
               if (n != e) return (t.s = -e), this.minus(t);
               var i = this.e / 14,
                 o = t.e / 14,
                 s = this.c,
                 a = t.c;
               if (!i || !o) {
-                if (!s || !a) return new O(n / 0);
+                if (!s || !a) return new x(n / 0);
                 if (!s[0] || !a[0])
-                  return a[0] ? t : new O(s[0] ? this : 0 * n);
+                  return a[0] ? t : new x(s[0] ? this : 0 * n);
               }
               if (((i = q(i)), (o = q(o)), (s = s.slice()), (n = i - o))) {
                 for (
@@ -107567,7 +108686,7 @@
                   return (
                     G(t, 1, 1e9),
                     null == e ? (e = v) : G(e, 0, 8),
-                    T(new O(this), t, e)
+                    T(new x(this), t, e)
                   );
                 if (!(e = this.c)) return null;
                 if (((r = 14 * (n = e.length - 1) + 1), (n = e[n]))) {
@@ -107590,9 +108709,9 @@
                   s = this.s,
                   a = this.e,
                   u = b + 4,
-                  c = new O("0.5");
+                  c = new x("0.5");
                 if (1 !== s || !o || !o[0])
-                  return new O(
+                  return new x(
                     !s || (s < 0 && (!o || o[0])) ? NaN : o ? this : 1 / 0
                   );
                 if (
@@ -107601,7 +108720,7 @@
                       ? (((e = V(o)).length + a) % 2 == 0 && (e += "0"),
                         (s = Math.sqrt(+e)),
                         (a = q((a + 1) / 2) - (a < 0 || a % 2)),
-                        new O(
+                        new x(
                           (e =
                             s == 1 / 0
                               ? "5e" + a
@@ -107610,7 +108729,7 @@
                                   e.indexOf("e") + 1
                                 ) + a)
                         ))
-                      : new O(s + "")).c[0]
+                      : new x(s + "")).c[0]
                 )
                   for ((s = (a = r.e) + u) < 3 && (s = 0); ; )
                     if (
@@ -107695,7 +108814,7 @@
                 h = this.c;
               if (
                 null != t &&
-                ((!(a = new O(t)).isInteger() && (a.c || 1 !== a.s)) || a.lt(d))
+                ((!(a = new x(t)).isInteger() && (a.c || 1 !== a.s)) || a.lt(d))
               )
                 throw Error(
                   D +
@@ -107703,18 +108822,18 @@
                     (a.isInteger() ? "out of range: " : "not an integer: ") +
                     M(a)
                 );
-              if (!h) return new O(this);
+              if (!h) return new x(this);
               for (
-                e = new O(d),
-                  c = r = new O(d),
-                  n = u = new O(d),
+                e = new x(d),
+                  c = r = new x(d),
+                  n = u = new x(d),
                   h = V(h),
                   o = e.e = h.length - this.e - 1,
                   e.c[0] = Z[(s = o % 14) < 0 ? 14 + s : s],
                   t = !t || 0 < a.comparedTo(e) ? (0 < o ? e : c) : a,
                   s = S,
                   S = 1 / 0,
-                  a = new O(h),
+                  a = new x(h),
                   u.c[0] = 0;
                 (f = m(a, e, 0, 1)),
                   1 != (i = r.plus(f.times(n))).comparedTo(t);
@@ -107763,8 +108882,8 @@
                         ? i <= g || w <= i
                           ? X(V(r.c), i)
                           : J(V(r.c), i, "0")
-                        : 10 === t && x
-                        ? J(V((r = T(new O(r), b + i + 1, v)).c), r.e, "0")
+                        : 10 === t && O
+                        ? J(V((r = T(new x(r), b + i + 1, v)).c), r.e, "0")
                         : (G(t, 2, A.length, "Base"),
                           h(J(V(r.c), i, "0"), 10, t, n, !0))),
                     n < 0 && r.c[0] && (e = "-" + e)),
@@ -107778,8 +108897,8 @@
             (r._isBigNumber = !0),
             (r[Symbol.toStringTag] = "BigNumber"),
             (r[Symbol.for("nodejs.util.inspect.custom")] = r.valueOf),
-            null != t && O.set(t),
-            O
+            null != t && x.set(t),
+            x
           );
           function R(t, e, r) {
             var n,
@@ -107943,10 +109062,10 @@
             J.r(X),
               J.d(X, {
                 __initializeContext: function () {
-                  return x;
+                  return O;
                 },
                 isPoint: function () {
-                  return O;
+                  return x;
                 },
                 isPointCompressed: function () {
                   return P;
@@ -108051,10 +109170,10 @@
                 y.fill(0);
               }
             }
-            function x() {
+            function O() {
               u.Z.initializeContext();
             }
-            function O(t) {
+            function x(t) {
               return a.DV(t) && A(t);
             }
             function P(t) {
@@ -108328,7 +109447,7 @@
             return y;
           },
           IB: function () {
-            return O;
+            return x;
           },
           K7: function () {
             return R;
@@ -108355,7 +109474,7 @@
             return c;
           },
           ax: function () {
-            return x;
+            return O;
           },
           bl: function () {
             return k;
@@ -108444,10 +109563,10 @@
         function A(t) {
           (g((t = t)) && t.length === u && m(t, p) < 0) || (0, n._y)(n.NQ);
         }
-        function x(t) {
+        function O(t) {
           (g((t = t)) && t.length === c) || (0, n._y)(n.AI);
         }
-        function O(t) {
+        function x(t) {
           void 0 === (t = t) || (g(t) && t.length === f) || (0, n._y)(n.B6);
         }
         function P(t) {

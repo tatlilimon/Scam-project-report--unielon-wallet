@@ -42,7 +42,7 @@
   "Payment__Faild": { "message": "Payment Faild" },
   "Change__Password": { "message": "Change Password" },
   "Private__Key": { "message": "Private Key" },
-  "Recipients__BTC__address": { "message": "Recipient’s DOGE address" },
+  "Recipients__DOGE__address": { "message": "Recipient’s DOGE address" },
   "Secret__Recovery__Phrase": { "message": "Secret Recovery Phrase" },
   "Confirm__Password": { "message": "Confirm Password" },
   "Successfully__created": { "message": "Successfully created" },
@@ -83,7 +83,7 @@
   "Send": { "message": "Send" },
   "Canadian__Dollar": { "message": "Canadian Dollar" },
   "Successfully__imported": { "message": "Successfully imported" },
-  "This__address__can__only__receive__Btc": { "message": "This address can only receive Doge" },
+  "This__address__can__only__receive__Doge": { "message": "This address can only receive Doge" },
   "This__is__an__imported__account": { "message": "This is an imported account" },
   "Password_must_contain_at_least_5_characters": { "message": "Password must contain at least 5 characters" },
   "appDescription": {
