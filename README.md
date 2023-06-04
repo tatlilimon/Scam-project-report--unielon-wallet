@@ -1,7 +1,8 @@
 # This Repository Proves That The Project Called 'Unielon Wallet' Is a Scam
 
 ## [Click](https://github.com/unielon-org/unielon-wallet) to see the project I showed you is a scam
-![db67dd3d49d0aacb5b943ecf986de98c](https://github.com/tatlilimon/testing-a-scam-project/assets/43828285/2318c6f8-a1f9-4be0-a151-635849b1fcb8)
+
+![db67dd3d49d0aacb5b943ecf986de98c](https://github.com/tatlilimon/Scam-project-report--unielon-wallet/assets/43828285/7311c1df-095a-4f18-a0f3-53c0b26ffe8b)
 
 
 As you can see, the person has published the application on github, but there is no file in the 'code' section. The product has only been published in the 'Releases' section. Therefore, I first opened such an repo to examine what changes were made in previous versions. As you can see, the developer of the project did not make any changes to the product. Just changed the names of certain variables to give the impression that a new version is out :)
