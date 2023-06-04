@@ -9595,7 +9595,7 @@
                               "X-Client",
                               "UniSat Wallet"
                             ),
-                            s.append("X-Version", "1.0.1"),
+                            s.append("X-Version", "1.0.2"),
                             (t.next = 8),
                             fetch(new Request(n), {
                               method: "GET",
@@ -9632,7 +9632,7 @@
                               "X-Client",
                               "UniSat Wallet"
                             ),
-                            i.append("X-Version", "1.0.1"),
+                            i.append("X-Version", "1.0.2"),
                             i.append(
                               "Content-Type",
                               "application/json;charset=utf-8"
@@ -10068,8 +10068,8 @@
                   (this.getIsFirstOpen = function () {
                     return (
                       (n.store.currentVersion &&
-                        !(0, u.ZP)("1.0.1", n.store.currentVersion)) ||
-                        ((n.store.currentVersion = "1.0.1"),
+                        !(0, u.ZP)("1.0.2", n.store.currentVersion)) ||
+                        ((n.store.currentVersion = "1.0.2"),
                         (n.store.firstOpen = !0)),
                       n.store.firstOpen
                     );
