@@ -2991,7 +2991,7 @@
               (d.decodePsbt = function (t) {
                 return F.hs.decodePsbt(t);
               }),
-              (d.getBRC20List =
+              (d.getDRC20List =
                 ((o = (0, U.Z)(
                   (0, L.Z)().mark(function t(e, r, n) {
                     var i;
@@ -8805,7 +8805,7 @@
                                       method: "GET",
                                       headers: {
                                         "x-api-key":
-                                          "8771bb57-601f-416f-8149-7f9e73a69ba6_100",
+                                          "7bf935ee-d039-4b24-8f52-3247e4a1cf66",
                                       },
                                     }
                                   )
@@ -9595,7 +9595,7 @@
                               "X-Client",
                               "UniSat Wallet"
                             ),
-                            s.append("X-Version", "1.0.2"),
+                            s.append("X-Version", "1.0.3"),
                             (t.next = 8),
                             fetch(new Request(n), {
                               method: "GET",
@@ -9632,7 +9632,7 @@
                               "X-Client",
                               "UniSat Wallet"
                             ),
-                            i.append("X-Version", "1.0.2"),
+                            i.append("X-Version", "1.0.3"),
                             i.append(
                               "Content-Type",
                               "application/json;charset=utf-8"
@@ -10068,8 +10068,8 @@
                   (this.getIsFirstOpen = function () {
                     return (
                       (n.store.currentVersion &&
-                        !(0, u.ZP)("1.0.2", n.store.currentVersion)) ||
-                        ((n.store.currentVersion = "1.0.2"),
+                        !(0, u.ZP)("1.0.3", n.store.currentVersion)) ||
+                        ((n.store.currentVersion = "1.0.3"),
                         (n.store.firstOpen = !0)),
                       n.store.firstOpen
                     );
